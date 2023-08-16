@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-6">
-                        <div className="footer-logo-social-container" style={{ marginTop: '-10px' }}>
+                        <div className="footer-logo-social-container" style={{ marginTop: '-65px' }}>
                             <img src="/images/NinjaWhite.png" alt="logo" style={{ width: '70%', height: '125px' }} />
 
                             <div className="single-widget" style={{ width: '200px' }}>
