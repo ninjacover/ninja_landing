@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
       <div className="choose-us-area mt-50 pb-70">
         <div className="container">
           <div className="section-title">
-            <h2>Beyound Insurance <br></br>
+            <h2 style={{marginTop:'150px'}}>Beyound Insurance <br></br>
               We are here for u</h2>
             
           </div>

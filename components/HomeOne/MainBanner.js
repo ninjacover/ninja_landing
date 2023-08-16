@@ -1,67 +1,58 @@
 import React from "react";
 import Link from "next/link";
 
+
+import ImageSlider from "./ImageSlider";
 const MainBanner = () => {
+  const slides = [
+    { url: "/images/ChatbotNinja.png", title: "chatbot" },
+    { url: "/images/2.png", title: "boat" },
+    { url: "/images/3.png", title: "forest" },
+    
+  ];
+  const containerStyles = {
+    width: "500px",
+    height: "280px",
+    margin: "0 auto",
+  };
   return (
-    <>
-      <div className="main-banner-area">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="banner-text">
+    <div>
+      <div style={containerStyles}>
+        <ImageSlider slides={slides} />
+        <div className="banner-text">
           
 
               
 
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  data-aos-duration="1200"
-                  data-aos-once="true"
-                >
-                  
-                </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
+            
+          </div>
 
-                <div
-                  className="banner-btn"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                  data-aos-duration="1200"
-                  data-aos-once="true"
-                >
-                  <Link href="/contact">
-                    <a className="default-btn">Get Started</a>
-                  </Link>
+          <div
+            className="banner-btn" style={{marginTop:'40px',paddingLeft:'17%'}}
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1200"
+            data-aos-once="true"
+          >
+            <Link href="/contact">
+              <a className="default-btn">Get Started</a>
+            </Link>
 
-                  <Link href="/contact">
-                    <a className="default-btn active">Find An Agent</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 pr-0">
-              <div
-                className="banner-img"
-                data-aos="fade-up"
-                data-aos-delay="600"
-                data-aos-duration="1200"
-                data-aos-once="true"
-              >
-              </div>
-            </div>
+            <Link href="/contact">
+              <a className="default-btn active">Find An Agent</a>
+            </Link>
           </div>
         </div>
-
-        {/* Shape Images */}
-        <div className="shape">
-        </div>
-        <div className="banner-shape-right">
-          <img src="/images/banner/banner-shape-right.png" alt="Image" />
-        </div>
       </div>
-    </>
+    </div>
   );
 };
+
 
 export default MainBanner;

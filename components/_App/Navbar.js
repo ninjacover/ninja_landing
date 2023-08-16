@@ -41,13 +41,13 @@ const Navbar = () => {
         {/* TopHeader */}
         <TopHeader />
 
-        <div id="navbar" className="navbar-area">
+        <div id="navbar" className="navbar-area" >
           <div className="main-nav">
             <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container">
                 <Link href="/">
                   <a onClick={toggleNavbar} className="navbar-brand">
-                    <img src="/images/logo.png" alt="logo" />
+                    <img src="/images/logo.png" alt="logo" style={{height:'110px',marginTop:'30px'}}/>
                   </a>
                 </Link>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                   <span className="icon-bar bottom-bar"></span>
                 </button>
 
-                <div className={classOne} id="navbarSupportedContent">
+                <div className={classOne} id="navbarSupportedContent" style={{marginTop:'50px'}}>
                   <ul className="navbar-nav m-auto">
                     <li className="nav-item">
                       <Link href="#" activeClassName="active">
@@ -166,7 +166,7 @@ const Navbar = () => {
                   </ul>
                 </div>
 
-                <div className="others-option">
+                <div className="others-option" style={{marginTop:'50px'}}>
                   <div className="option-item">
                     <i
                       className="search-btn bx bx-search"
