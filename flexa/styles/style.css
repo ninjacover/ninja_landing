@@ -1186,61 +1186,43 @@ Sidebar Modal Area Style
 /*
 Banner Area Style
 ======================================================*/
+
+
+.slide-one{}
+
+
 .main-banner-area {
   position: relative;
-  background-color: #c6e3fd;
-  padding-top: 225px;
-  padding-bottom: 125px;
+  background-color: #ffffff;
+  /* padding-top: 225px; */
+  /* padding-bottom: 125px; */
   z-index: 1;
   overflow: hidden;
+  height: 700px;
 }
 
-.main-banner-area .banner-text {
-  max-width: 540px;
-  margin-left: auto;
+.slide-one{
+  background-image: url(../public/images/Chatbot\ Ninja.png);
+}
+.slide-two{
+  background-image: url(../public/images/2.png);
+}
+.slide-three{
+  background-image: url(../public/images/3.png);
 }
 
-.main-banner-area .banner-text {
-  position: relative;
+.banner-slide{
+  height: 600px;
+
+}
+.btn{
+  margin: 311px;
+  padding: 17px;
+  border-radius: 5px;
+  width: 183px;
+  background: #e3e9e9;
 }
 
-.main-banner-area .banner-text span {
-  font-size: 16px;
-  color: #31abfc;
-  margin-bottom: 20px;
-  display: block;
-  font-weight: 600;
-}
-
-.main-banner-area .banner-text h1 {
-  font-size: 45px;
-  margin-bottom: 25px;
-}
-
-.main-banner-area .banner-text p {
-  font-size: 16px;
-  margin-bottom: 35px;
-}
-
-.main-banner-area .shape {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 0;
-  z-index: -1;
-}
-
-.main-banner-area .shape img {
-  width: 100%;
-}
-
-.main-banner-area .banner-shape-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
 
 /*
 Choose Us Area Style

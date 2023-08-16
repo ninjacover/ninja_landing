@@ -19,56 +19,12 @@ const MainBanner = () => {
     <>
       <div className="main-banner-area">
         <Slider {...settings}>
-          <div className="banner-slide">
+          <div className="banner-slide slide-one  ">
             {/* Slide 1 */}
+            <button className="btn">Expert Life advice</button>
+
             <div className="container-fluid">
             <div className="row align-items-center">
-                <div className="col-lg-6">
-                  <div className="banner-text">
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 1 Title
-                    </span>
-
-                    <h1
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 1 Content
-                    </h1>
-
-                    <div
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <p>Slide 1 Description</p>
-                    </div>
-
-                    <div
-                      className="banner-btn"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <Link href="/contact">
-                        <a className="default-btn">Get Started</a>
-                      </Link>
-
-                      <Link href="/contact">
-                        <a className="default-btn active">Find An Agent</a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="col-lg-6 pr-0">
                   <div
@@ -78,61 +34,21 @@ const MainBanner = () => {
                     data-aos-duration="1200"
                     data-aos-once="true"
                   >
-                    <img src="https://picsum.photos/id/25/5000/3333" alt="Image" />
                   </div>
                 </div>
               </div>            </div>
           </div>
 
-          <div className="banner-slide">
+          <div
+          
+          className="banner-slide slide-two">
             {/* Slide 2 */}
+            <button className="btn">Compare isnurance</button>
+
             <div className="container-fluid">
             <div className="row align-items-center">
                 <div className="col-lg-6">
-                  <div className="banner-text">
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 2 Title
-                    </span>
-
-                    <h1
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 2 Content
-                    </h1>
-
-                    <div
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <p>Slide 2 Description</p>
-                    </div>
-
-                    <div
-                      className="banner-btn"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <Link href="/contact">
-                        <a className="default-btn">Get Started</a>
-                      </Link>
-
-                      <Link href="/contact">
-                        <a className="default-btn active">Find An Agent</a>
-                      </Link>
-                    </div>
-                  </div>
+                  
                 </div>
 
                 <div className="col-lg-6 pr-0">
@@ -143,61 +59,19 @@ const MainBanner = () => {
                     data-aos-duration="1200"
                     data-aos-once="true"
                   >
-                    <img src="https://picsum.photos/id/25/5000/3333" alt="Image" />
                   </div>
                 </div>
               </div>            </div>
           </div>
 
-          <div className="banner-slide">
+          <div className="banner-slide slide-three">
             {/* Slide 3 */}
+            <button className="btn">Contact US</button>
+
             <div className="container-fluid">
               <div className="row align-items-center">
                 <div className="col-lg-6">
-                  <div className="banner-text">
-                    <span
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 3 Title
-                    </span>
-
-                    <h1
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      Slide 3 Content
-                    </h1>
-
-                    <div
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <p>Slide 3 Description</p>
-                    </div>
-
-                    <div
-                      className="banner-btn"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                      data-aos-duration="1200"
-                      data-aos-once="true"
-                    >
-                      <Link href="/contact">
-                        <a className="default-btn">Get Started</a>
-                      </Link>
-
-                      <Link href="/contact">
-                        <a className="default-btn active">Find An Agent</a>
-                      </Link>
-                    </div>
-                  </div>
+                 
                 </div>
 
                 <div className="col-lg-6 pr-0">
@@ -208,7 +82,6 @@ const MainBanner = () => {
                     data-aos-duration="1200"
                     data-aos-once="true"
                   >
-                    <img src="https://picsum.photos/id/25/5000/3333" alt="Image" />
                   </div>
                 </div>
               </div>
