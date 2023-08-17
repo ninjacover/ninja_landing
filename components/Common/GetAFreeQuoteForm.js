@@ -28,7 +28,6 @@ export default class GetAFreeQuoteForm extends Component {
         
         <div  style={{display:'flex'}}>
 <ContactForm/>
-      <img src="/images/NinjaContactUs.png" alt="logo" style={{width:'20%',marginRight:'50px'}}/>
 
       
         </div>
