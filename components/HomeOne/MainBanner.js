@@ -11,13 +11,12 @@ const MainBanner = () => {
     
   ];
   const containerStyles = {
-    width: "500px",
-    height: "280px",
+    
     margin: "0 auto",
   };
   return (
-    <div>
-      <div style={containerStyles}>
+    <div className="mainCon" >
+      <div className="childMain" style={containerStyles}>
         <ImageSlider slides={slides} />
         <div className="banner-text">
           

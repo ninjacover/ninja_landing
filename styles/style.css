@@ -243,6 +243,7 @@ Default Btn Area Style*/
   width: 100%;
   height: 50%;
   background-color: #000000;
+
   z-index: -1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -255,7 +256,9 @@ Default Btn Area Style*/
   right: 100%;
   width: 100%;
   height: 50%;
+
   background-color: #000000;
+ 
   z-index: -1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -264,7 +267,7 @@ Default Btn Area Style*/
 .default-btn.active {
   margin-left: 30px;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #262566;
 }
 
 .default-btn.btn-five {
@@ -277,6 +280,7 @@ Default Btn Area Style*/
 
 .default-btn.btn-five::after {
   background-color: #000000;
+
 }
 
 .default-btn.btn-six {
@@ -290,6 +294,7 @@ Default Btn Area Style*/
 .default-btn.btn-six::after {
   background-color: #000000;
 }
+
 
 .default-btn:hover {
   color: #ffffff;
@@ -803,7 +808,7 @@ Search Overlay CSS
 }
 
 .search-overlay .search-overlay-close:hover .search-overlay-close-line {
-  background: #F0702F;
+  background: #31abfc;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -896,7 +901,7 @@ Search Overlay CSS
   color: #ffffff;
   height: 50px;
   border-radius: 50%;
-  background-color: #F0702F;
+  background-color: #31abfc;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: none;
@@ -1316,6 +1321,10 @@ Choose Us Area Style
   color: #ffffff;
 }
 
+
+.single-choose:hover .choose-icon {
+  opacity: 0.3;
+}
 
 /*
 About Area Style
@@ -2370,7 +2379,15 @@ Main Banner Area Two
   border-radius: 50% 0 0  50%;
   position: relative;
 }
+.mainCon{
+height:660px;
 
+
+}
+.childMain{
+  width:100%;
+  height:100%;
+}
 /*
 Choose Us Area Two
 ======================================================*/
