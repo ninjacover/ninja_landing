@@ -11,25 +11,20 @@ const TopHeader = () => {
       }
     });
   }, []);
+
   return (
     <div className="top-header-area header-area fixed-top" style={{ backgroundColor: "black"}}>
-      <div className="container ">
+      <div className="container">
         <div className="row align-items-center">
           <div style={{ display: "flex", gap:'8px' }}>
             <img
               src="/images/Ninja-Vector.png"
-              style={{ width: "50px",hight:'50px', opacity: thePosition ? 100 : 0 }}
+              style={{ width: "50px", height: '50px', opacity: thePosition ? 100 : 0 }}
             />
             <div className="header-content-left ">
               <p style={{marginTop:'5px',color:"white"}}>Welcome To Ninga Cover !</p>
             </div>
             <div style={{ marginLeft: "auto" }}></div>
-          
-            <a style={{ marginTop:'7px',color:"whitesmoke"}} href="#">Comparance Insurance</a>
-            <div>
-            
-              <a style={{ marginTop:'7px', color:"whitesmoke"}} href="#">|   ChatBOT</a>
-            </div>
           </div>
         </div>
       </div>

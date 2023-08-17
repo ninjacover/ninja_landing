@@ -243,6 +243,7 @@ Default Btn Area Style*/
   width: 100%;
   height: 50%;
   background-color: #000000;
+
   z-index: -1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -255,7 +256,9 @@ Default Btn Area Style*/
   right: 100%;
   width: 100%;
   height: 50%;
+
   background-color: #000000;
+ 
   z-index: -1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -277,6 +280,7 @@ Default Btn Area Style*/
 
 .default-btn.btn-five::after {
   background-color: #000000;
+
 }
 
 .default-btn.btn-six {
@@ -289,7 +293,9 @@ Default Btn Area Style*/
 
 .default-btn.btn-six::after {
   background-color: #000000;
+=======
 }
+
 
 .default-btn:hover {
   color: #ffffff;
@@ -1316,6 +1322,10 @@ Choose Us Area Style
   color: #ffffff;
 }
 
+
+.single-choose:hover .choose-icon {
+  opacity: 0.3;
+}
 
 /*
 About Area Style

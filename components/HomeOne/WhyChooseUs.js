@@ -1,17 +1,16 @@
 import React from "react";
 import Link from "next/link";
 
-import {FaHandshakeSimple,FaScaleUnbalancedFlip } from 'react-icons/fa6';
-import{TbMessageChatbot} from 'react-icons/tb';
+import { FaHandshakeSimple, FaScaleUnbalancedFlip } from "react-icons/fa";
+import { TbMessageChatbot } from "react-icons/tb";
+
 const WhyChooseUs = () => {
   return (
     <>
       <div className="choose-us-area mt-50 pb-70">
         <div className="container">
           <div className="section-title">
-            <h2 style={{marginTop:'150px'}}>Beyound Insurance <br></br>
-              We are here for u</h2>
-            
+            <h2>Beyond Insurance</h2>
           </div>
 
           <div className="row">
@@ -23,9 +22,11 @@ const WhyChooseUs = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <span ><TbMessageChatbot/></span>
-                <h3>ChatBOT for Insurnce advice</h3>
-              
+                <span>
+                  <TbMessageChatbot />
+                </span>
+                <h3>ChatBOT for Insurance advice</h3>
+
                 <Link href="/insurance-details">
                   <a>
                     <i className="flaticon-right"></i>
@@ -44,9 +45,11 @@ const WhyChooseUs = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <span ><FaScaleUnbalancedFlip/></span>
+                <span>
+                  <FaScaleUnbalancedFlip />
+                </span>
                 <h3>Insurance comparison</h3>
-                
+
                 <Link href="/insurance-details">
                   <a>
                     <i className="flaticon-right"></i>
@@ -65,9 +68,11 @@ const WhyChooseUs = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <span ><FaHandshakeSimple/></span>
+                <span>
+                  <FaHandshakeSimple />
+                </span>
                 <h3>Broker to Broker</h3>
-              
+
                 <Link href="/insurance-details">
                   <a>
                     <i className="flaticon-right"></i>
