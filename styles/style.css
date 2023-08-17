@@ -264,7 +264,7 @@ Default Btn Area Style*/
 .default-btn.active {
   margin-left: 30px;
   color: #ffffff;
-  background-color: #262566;
+  background-color: #000000;
 }
 
 .default-btn.btn-five {
@@ -803,7 +803,7 @@ Search Overlay CSS
 }
 
 .search-overlay .search-overlay-close:hover .search-overlay-close-line {
-  background: #31abfc;
+  background: #F0702F;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -896,7 +896,7 @@ Search Overlay CSS
   color: #ffffff;
   height: 50px;
   border-radius: 50%;
-  background-color: #31abfc;
+  background-color: #F0702F;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: none;
