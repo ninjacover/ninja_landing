@@ -28,6 +28,7 @@ export default class GetAFreeQuoteForm extends Component {
       <div className="get-quat-area ptb-100">
         <div style={{ display: "flex" }}>
           <ContactForm />
+
         </div>
       </div>
     );
