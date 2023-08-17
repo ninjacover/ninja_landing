@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ContactForm from "../Contact/ContactForm";
-
 export default class GetAFreeQuoteForm extends Component {
   // Tab
 
@@ -22,13 +21,15 @@ export default class GetAFreeQuoteForm extends Component {
     document.getElementById(tabNmae).className += " fadeInUp animated";
     evt.currentTarget.className += "current";
   };
-
   render() {
     return (
+
       <div className="get-quat-area ptb-100">
         <div style={{ display: "flex" }}>
           <ContactForm />
 
+
+      
         </div>
       </div>
     );
