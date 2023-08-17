@@ -21,7 +21,7 @@ const TopHeader = () => {
               style={{ width: "50px",hight:'50px', opacity: thePosition ? 100 : 0 }}
             />
             <div className="header-content-left ">
-              <p style={{marginTop:'5px',color:"white"}}>Welcome To Ninga Cover !</p>
+              <p style={{marginTop:'8px',color:"white"}}>Welcome To Ninga Cover !</p>
             </div>
             <div style={{ marginLeft: "auto" }}></div>
           

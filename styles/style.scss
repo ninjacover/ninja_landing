@@ -2676,7 +2676,7 @@ Nav Style Four
 .nav-style-four {
 	.navbar-area {
 		.main-nav {
-			background-color: #ffffff !important;
+			background-color: transparent !important;
 		}
 		&.is-sticky {
 			.main-nav nav .navbar-nav .nav-item a {
@@ -5121,7 +5121,7 @@ Nice select Area Style*/
 	&.nev-style-five {
 		.navbar-area {
 			.main-nav {
-				background-color: $white-color !important;
+				background-color: transparent !important;
 				nav {
 					.navbar-nav {
 						.nav-item {

@@ -47,7 +47,7 @@ const Navbar = () => {
               <div className="container">
                 <Link href="/">
                   <a onClick={toggleNavbar} className="navbar-brand">
-                    <img src="/images/logo.png" alt="logo" style={{height:'110px',marginTop:'30px'}}/>
+                    <img src="/images/logo.png" alt="logo" style={{height:'110px',marginTop:'30px',width:'280px'}}/>
                   </a>
                 </Link>
 
@@ -93,8 +93,8 @@ const Navbar = () => {
                           onClick={(e) => e.preventDefault()}
                           className="nav-link"
                         >
-                          Insurance services{" "}
-                          <i className="bx bx-chevron-down"></i>
+                           services{" "}
+                          <i className="bx bx-chevron-down" ></i>
                         </a>
                       </Link>
 
@@ -166,9 +166,9 @@ const Navbar = () => {
                   </ul>
                 </div>
 
-                <div className="others-option" style={{marginTop:'50px'}}>
+                <div className="others-option" style={{marginTop:'50px',display:'flex',gap:'9px'}}>
                   <div className="option-item">
-                    <i
+                    <i style={{fontSize:'40px',  cursor:' pointer'}}
                       className="search-btn bx bx-search"
                       onClick={(e) => {
                         e.preventDefault();
@@ -185,7 +185,7 @@ const Navbar = () => {
                           toggleSidebarModal();
                         }}
                       >
-                        <i className="bx bx-grid-alt"></i>
+                        <i className="bx bx-grid-alt" style={{fontSize:'40px'}}></i>
                       </a>
                     </Link>
                   </div>
@@ -244,7 +244,7 @@ const Navbar = () => {
                 <h2 className="modal-title">
                   <Link href="/">
                     <a>
-                      <img src="/images/logo2.png" alt="Logo" />
+                      <img style={{width:'80%'}}src="/images/NinjaWhite.png" alt="Logo" />
                     </a>
                   </Link>
                 </h2>
@@ -267,10 +267,7 @@ const Navbar = () => {
                 <div className="sidebar-modal-widget">
                   <h3 className="title">About Us</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Commodi, asperiores doloribus eum laboriosam praesentium
-                    delectus unde magni aut perspiciatis cumque deserunt dolore
-                    voluptate, autem pariatur.
+                  At Ninja Cover, we're dedicated to simplifying insurance. Our platform is designed to empower you, the consumer, by providing straightforward and transparent insurance solutions. With us, you'll access comprehensive information, unbiased comparisons, and a seamless journey from quote to coverage
                   </p>
                 </div>
 

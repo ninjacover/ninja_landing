@@ -68,7 +68,7 @@ a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-decoration: none;
-  color: #31abfc;
+  color: #F0702F;
 }
 
 a:hover {
@@ -388,8 +388,6 @@ Header Area Style
 }
 
 /*
-Nav Area Style
-======================================================*/
 .navbar-area .main-nav {
   position: unset;
   background-color: transparent;
@@ -402,23 +400,25 @@ Nav Area Style
 .navbar-area .main-nav nav .navbar-nav .nav-item a {
   font-weight: 500;
   font-size: 15px;
-  color: #000000;
+  color: #262566;
   text-transform: capitalize;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-left: 0;
   margin: 0 10px;
+  position: relative;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a i {
   font-size: 15px;
   line-height: 0;
+  position: relative;
   top: 3px;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a::before {
   content: "";
-
+  position: absolute;
   bottom: -25px;
   right: 0;
   width: 0;
@@ -430,15 +430,15 @@ Nav Area Style
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #F0702F;
+  color: #31abfc;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a.active {
-  color: #ffffff;
+  color: #31abfc;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
-  background-color: #000000;
+  background-color: #262566;
   border: none;
   border-radius: 0;
   top: 80%;
@@ -459,6 +459,7 @@ Nav Area Style
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
+  float: right;
   top: 12px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -505,7 +506,19 @@ Nav Area Style
 }
 
 .navbar-area.is-sticky {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+  background-color: #262566;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   width: 100% !important;
 }
 
@@ -581,7 +594,7 @@ Nav Area Style
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-input:focus {
-  border-color: #F0702F;
+  border-color: #31abfc;
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-button {
@@ -589,7 +602,7 @@ Nav Area Style
   right: 0;
   top: 0;
   height: 50px;
-  background: #F0702F;
+  background: #31abfc;
   border: none;
   width: 50px;
   outline: 0;
@@ -616,7 +629,7 @@ Nav Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #F0702F;
+  background-color: #31abfc;
   border-radius: 50%;
 }
 
@@ -638,7 +651,7 @@ Nav Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #F0702F;
+  background-color: #31abfc;
   border-radius: 50%;
 }
 
@@ -657,7 +670,7 @@ Nav Area Style
 
 .navbar-area .others-option .sidebar-menu i {
   font-size: 40px;
-  color: #F0702F;
+  color: #31abfc;
   position: relative;
   top: -2px;
 }
@@ -684,7 +697,7 @@ Nav Area Style
   width: 28px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: #31abfc;
+  background: #F0702F;
   height: 2px;
   display: block;
 }
@@ -736,7 +749,18 @@ Nav Area Style
 Search Overlay CSS
 =================================================*/
 .search-overlay {
-  
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
 
@@ -752,21 +776,21 @@ Search Overlay CSS
 
 .search-overlay .search-overlay-layer:nth-child(1) {
   left: 0;
-  background-color: rgba(0, 0, 0, 0.57);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .search-overlay .search-overlay-layer:nth-child(2) {
   left: 0;
-  background-color: rgba(0, 0, 0, 0.638);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.3s ease-in-out 0.3s;
   transition: all 0.3s ease-in-out 0.3s;
 }
 
 .search-overlay .search-overlay-layer:nth-child(3) {
   left: 0;
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.9s ease-in-out 0.6s;
   transition: all 0.9s ease-in-out 0.6s;
 }
@@ -808,7 +832,7 @@ Search Overlay CSS
 }
 
 .search-overlay .search-overlay-close:hover .search-overlay-close-line {
-  background: #31abfc;
+  background: #F0702F;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -841,7 +865,7 @@ Search Overlay CSS
   height: 60px;
   border: none;
   border-radius: 30px;
-  color: #00000056;
+  color: #000000;
   padding: 3px 0 0 25px;
 }
 
@@ -853,28 +877,28 @@ Search Overlay CSS
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   letter-spacing: .5px;
-  color: #00000056;
+  color: #000000;
 }
 
 .search-overlay .search-overlay-form form .input-search:-ms-input-placeholder {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   letter-spacing: .5px;
-  color: #0000006f;
+  color: #000000;
 }
 
 .search-overlay .search-overlay-form form .input-search::-ms-input-placeholder {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   letter-spacing: .5px;
-  color: #00000057;
+  color: #000000;
 }
 
 .search-overlay .search-overlay-form form .input-search::placeholder {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   letter-spacing: .5px;
-  color: #00000051;
+  color: #000000;
 }
 
 .search-overlay .search-overlay-form form .input-search:focus::-webkit-input-placeholder {
@@ -901,7 +925,7 @@ Search Overlay CSS
   color: #ffffff;
   height: 50px;
   border-radius: 50%;
-  background-color: #31abfc;
+  background-color: #F0702F;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: none;
@@ -948,7 +972,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal .modal-dialog {
-
+  position: fixed;
   margin: auto;
   max-width: 400px;
   height: 100%;
@@ -978,7 +1002,7 @@ Sidebar Modal Area Style
   position: relative;
   z-index: 1;
   margin-bottom: 20px;
-  color: #262566;
+  color: #F0702F;
   border-bottom: 1px solid #eeeeee;
   padding-bottom: 5px;
 }
@@ -1013,7 +1037,7 @@ Sidebar Modal Area Style
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul li a {
   font-size: 14px;
-  color: #262566;
+  color: #000000;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -1029,7 +1053,7 @@ Sidebar Modal Area Style
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #262566;
+  color: #000000;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li span {
@@ -1047,7 +1071,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li a:hover {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li i {
@@ -1062,14 +1086,14 @@ Sidebar Modal Area Style
   font-size: 29px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background-color: #262566;
+  background-color: #F0702F;
   border-radius: 4px;
   font-size: 15px;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li:hover i {
   color: #ffffff;
-  background: #31abfc;
+  background: black;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li:last-child {
@@ -1093,7 +1117,7 @@ Sidebar Modal Area Style
   line-height: 30px;
   border-radius: 4px;
   color: #ffffff;
-  background-color: #262566;
+  background-color: black;
   font-size: 15px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1131,7 +1155,7 @@ Sidebar Modal Area Style
 .sidebar-modal .modal-header .close {
   height: 30px;
   width: 30px;
-  color: #31abfc;
+  color: white;
   margin: 0px;
   padding: 0px;
   cursor: pointer;
@@ -1146,7 +1170,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal-header .close:hover {
-  color: red;
+  color: #F0702F;
 }
 
 .sidebar-modal .modal-header .close i {
@@ -1154,7 +1178,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal-header h2 {
-  background-color: #262566;
+  background-color: #000000;
   -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
   padding: 30px 25px;
@@ -1163,6 +1187,7 @@ Sidebar Modal Area Style
 .sidebar-modal button:focus {
   outline: 0px;
 }
+
 
 /*
 Banner Area Style
@@ -1323,7 +1348,7 @@ Choose Us Area Style
 
 
 .single-choose:hover .choose-icon {
-  opacity: 0.3;
+  opacity: 0;
 }
 
 /*
@@ -2380,7 +2405,8 @@ Main Banner Area Two
   position: relative;
 }
 .mainCon{
-height:660px;
+height:790px;
+margin-top: 180px;
 
 
 }
@@ -2958,7 +2984,7 @@ HOME PAGE FOUR STYLE
 Nav Style Four
 ======================================================*/
 .nav-style-four .navbar-area .main-nav {
-  background-color: #ffffff !important;
+  background-color:transparent !important;
 }
 
 .nav-style-four .navbar-area.is-sticky .main-nav nav .navbar-nav .nav-item a {
@@ -2978,7 +3004,7 @@ Page Title Area Style
   padding-top: 240px;
   padding-bottom: 150px;
   text-align: center;
-  background-color: #31306b;
+  background-color: #F0702F;
   z-index: 1;
 }
 
@@ -5581,7 +5607,7 @@ Section Title Area Style*/
 .section-title span {
   font-size: 14px;
   font-weight: 700;
-  color: #31abfc;
+  color: #F0702F;
   display: block;
   margin-bottom: 15px;
   text-transform: capitalize;
@@ -5806,7 +5832,7 @@ Nice select Area Style*/
 
 /* Nav Style Five */
 .nav-area.nev-style-five .navbar-area .main-nav {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
 }
 
 .nav-area.nev-style-five .navbar-area .main-nav nav .navbar-nav .nav-item a {
@@ -5826,7 +5852,7 @@ Nice select Area Style*/
 }
 
 .nav-area.nev-style-five .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .nav-area.nev-style-five .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
@@ -5995,7 +6021,7 @@ Nice select Area Style*/
   left: 0;
   width: 20%;
   height: 2px;
-  background-color: #12b48b;
+  
 }
 
 .about-area.about-area-five .about-content span::after {
@@ -6718,9 +6744,7 @@ Nice select Area Style*/
 }
 
 /* About Us Area Six */
-.about-area-six {
-  background-color: #f9fbfe;
-}
+
 
 .about-content-six span {
   color: #12b48b;

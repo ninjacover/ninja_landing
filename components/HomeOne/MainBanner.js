@@ -11,8 +11,9 @@ const MainBanner = () => {
     
   ];
   const containerStyles = {
-    
+    position:'relative',
     margin: "0 auto",
+    display: 'inline-block',
   };
   return (
     <div className="mainCon" >
@@ -39,13 +40,14 @@ const MainBanner = () => {
             data-aos-duration="1200"
             data-aos-once="true"
           >
-            <Link href="/contact">
-              <a className="default-btn">Get Started</a>
+            <Link href="/contact" >
+              <a className="default-btn"style={{position: 'absolute',
+    top: '50%', 
+     
+    transform: 'translate( -40%,-455%)',}}>Get Started</a>
             </Link>
 
-            <Link href="/contact">
-              <a className="default-btn active">Find An Agent</a>
-            </Link>
+        
           </div>
         </div>
       </div>
