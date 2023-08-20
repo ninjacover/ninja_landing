@@ -1341,6 +1341,9 @@ Choose Us Area Style
 .single-choose:hover h3 {
   color: #ffffff;
 }
+.single-choose:hover h8 {
+  color: #d7cdcd;
+}
 
 .single-choose:hover p {
   color: #ffffff;
@@ -1355,7 +1358,6 @@ Choose Us Area Style
 About Area Style
 ======================================================*/
 .about-area {
-  background-color: #f8f9fa;
   height: 100%;
   overflow: hidden;
 }
@@ -5605,7 +5607,7 @@ Section Title Area Style*/
 }
 
 .section-title span {
-  font-size: 14px;
+  font-size: 57px;
   font-weight: 700;
   color: #F0702F;
   display: block;

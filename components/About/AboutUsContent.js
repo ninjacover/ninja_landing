@@ -4,10 +4,12 @@ const AboutUsContent = () => {
     return (
         <div className="about-area ptb-100">
 			<div className="container">
+				<div className='span section-title'>
+			<span className=''  style={{textAlign:'center',marginBottom:'90px',color:'#F0702F',backgroundColor:'transparent',fontSize:"57px"}}>About Us</span>
+			</div>
 				<div className="row align-items-center">
 					<div className="col-lg-6">
 						<div className="about-content">
-							<span>About Us</span>
 							<h2>why choose Ninja Cover?</h2>
 
 <p>At Ninja Cover, we're dedicated to simplifying insurance. Our platform is designed to empower you, the consumer, by providing straightforward and transparent insurance solutions. With us, you'll access comprehensive information, unbiased comparisons, and a seamless journey from quote to coverage. Our commitment to transparency and user-friendliness makes us your go-to destination for all your insurance needs.</p>
