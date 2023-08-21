@@ -1341,8 +1341,8 @@ Choose Us Area Style
 .single-choose:hover h3 {
   color: #ffffff;
 }
-.single-choose:hover h8 {
-  color: #d7cdcd;
+.single-choose:hover h {
+  color: #ffffff;
 }
 
 .single-choose:hover p {
