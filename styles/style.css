@@ -1583,6 +1583,28 @@ Services Area Style
   color: #ffffff;
 }
 
+
+
+.first-img{
+	width: 600px;
+	height: 600px;
+  background-image: url('../public/images/works1.png');
+
+}
+.second-img{
+	background-color: #12b48b;
+  width: 600px;
+  height: 600px;
+
+}
+.img-cont{
+	
+}
+.col-one{
+    background-image: url('../public/images/works1.png');
+
+}
+
 /*
 Quat Area Style
 ======================================================*/
@@ -5610,7 +5632,7 @@ Section Title Area Style*/
 }
 
 .section-title span {
-  font-size: 57px;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #F0702F;
   display: block;
