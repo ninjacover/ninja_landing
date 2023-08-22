@@ -16,10 +16,10 @@ const TopHeader = () => {
       <div className="container ">
         <div className="row align-items-center">
           <div style={{ display: "flex", gap:'8px' }}>
-            <img
+            {/* <img
               src="/images/Ninja-Vector.png"
-              style={{ width: "50px",hight:'50px', opacity: thePosition ? 100 : 0 }}
-            />
+              style={{ width: "20px",hight:'40px', opacity: thePosition ? 100 : 0 }}
+            /> */}
             <div className="header-content-left ">
               <p style={{marginTop:'8px',color:"white"}}>Welcome To Ninga Cover !</p>
             </div>
