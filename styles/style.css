@@ -1995,6 +1995,13 @@ Business Contact Area Style
   color: #31abfc;
 }
 
+
+.contact-img{
+  width: '100%';
+   height: '100%';
+   marginLeft: '100px';
+   marginTop: '-30px';
+}
 /*
 Blog Area Style
 ======================================================*/
@@ -4865,12 +4872,14 @@ Contact Area Style
   font-size: 30px;
 }
 
+
 .contact-area .contact-wrap {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
   padding: 40px;
   text-align: center;
+  margin-left: 70px;
 }
 
 .contact-area .contact-wrap .form-group {

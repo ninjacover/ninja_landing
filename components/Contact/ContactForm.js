@@ -52,8 +52,8 @@ const ContactForm = () => {
         <div className="contact-area ptb-100">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-4 text-right">
-                        <div className="contact-wrap"style={{ marginLeft: '70px' }}>
+                    <div className="col-lg-6 col-md-4 ">
+                        <div className="contact-wrap">
                             <div className="contact-form">
                                 <div className="section-title">
                                     <h2>Drop Us A Message For Any Query</h2>
@@ -137,11 +137,11 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-6 text-right">
+                    <div className="col-lg-6 contact-img">
                         <img
                             src="/images/NinjaContactUs.png"
                             alt="Ninja Contact Us"
-                            style={{ width: '100%', height: '100%',marginLeft: '100px',marginTop: '-30px'  }}
+                            
                         />
                     </div>
                 </div>

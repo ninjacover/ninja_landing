@@ -13,25 +13,25 @@ const ServicesStyleOne = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div
-                className="about-img"
+                className="service-img"
                 data-aos="fade-up"
                 data-aos-delay="500"
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <img src="../../public/images/works2.png" alt="Image" />
+                <img src="/images/works1.png" alt="Image" />
               </div>
             </div>
 
             <div className="col-lg-6">
               <div
-                className="about-img"
+                className="service-img"
                 data-aos="fade-up"
                 data-aos-delay="500"
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <img src="../../public/images/works1.png" alt="Image" />
+                <img src="/images/works2.png" alt="Image" />
               </div>
             </div>
           </div>
