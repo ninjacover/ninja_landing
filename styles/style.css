@@ -338,12 +338,12 @@ HOME PAGE ONE STYLE
 Header Area Style
 ======================================================*/
 .header-area .top-header-area {
-  padding: 15px 0;
+  padding: 4px 0;
   background-color: #ffffff;
 }
 
 .header-area .top-header-area .header-content-left p {
-  color: #262566;
+  color: #000001;
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 600;
@@ -357,7 +357,7 @@ Header Area Style
 .header-area .top-header-area .header-content-right li {
   display: inline-block;
   padding-right: 20px;
-  color: #262566;
+  color: #000000;
 }
 
 .header-area .top-header-area .header-content-right li:last-child {
@@ -365,7 +365,7 @@ Header Area Style
 }
 
 .header-area .top-header-area .header-content-right li a {
-  color: #262566;
+  color: #00000a;
   display: inline-block;
 }
 
@@ -373,7 +373,7 @@ Header Area Style
   color: #ffffff;
   margin-right: 5px;
   font-size: 15px;
-  background-color: #193e80;
+  background-color: #000000;
   width: 25px;
   height: 25px;
   line-height: 25px;
@@ -384,34 +384,36 @@ Header Area Style
 }
 
 .header-area .top-header-area .header-content-right li a:hover {
-  color: #31abfc;
+  color: #000509;
 }
 
-/*
+
 .navbar-area .main-nav {
   position: unset;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom:3px ;
+  
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a {
   font-weight: 500;
   font-size: 15px;
-  color: #262566;
+  color: #000000;
   text-transform: capitalize;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-left: 0;
-  margin: 0 10px;
+  margin: -20px 15px;
   position: relative;
+  
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a i {
   font-size: 15px;
-  line-height: 0;
+  line-height: 7px;
   position: relative;
   top: 3px;
 }
@@ -419,10 +421,10 @@ Header Area Style
 .navbar-area .main-nav nav .navbar-nav .nav-item a::before {
   content: "";
   position: absolute;
-  bottom: -25px;
+  bottom: -50px;
   right: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: #ffffff;
   opacity: 0;
   -webkit-transition: all 0.5s;
@@ -430,15 +432,15 @@ Header Area Style
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a.active {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
-  background-color: #262566;
+  background-color: #000000;
   border: none;
   border-radius: 0;
   top: 80%;
@@ -453,7 +455,7 @@ Header Area Style
   color: #ffffff;
   position: relative;
   padding: 10px 15px;
-  border-bottom: 1px dashed #5a5a5a;
+  border-bottom: 1px  #5a5a5a;
   margin-left: 0;
   margin-right: 0;
 }
@@ -466,12 +468,12 @@ Header Area Style
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover {
-  color: #262566;
+  color: #F0702F;
   background-color: #f3f3f3;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #262566;
+  color: #000000;
   background-color: #f3f3f3;
 }
 
@@ -511,8 +513,9 @@ Header Area Style
   left: 0;
   right: 0;
   margin: auto;
+  height: 99px;
   z-index: 999;
-  background-color: #262566;
+  background-color: #000000;
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
           box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
@@ -527,16 +530,16 @@ Header Area Style
 }
 
 .navbar-area.is-sticky .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .navbar-area.is-sticky .main-nav nav .navbar-nav .nav-item a.active {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .navbar-area .others-option {
   position: relative;
-  top: 4px;
+  top: -2px;
 }
 
 .navbar-area .others-option .subscribe {
@@ -584,7 +587,7 @@ Header Area Style
   height: 50px;
   line-height: initial;
   border: 1px solid #eeeeee;
-  color: #262566;
+  color: #000007;
   outline: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -594,7 +597,7 @@ Header Area Style
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-input:focus {
-  border-color: #31abfc;
+  border-color: #00060b;
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-button {
@@ -602,7 +605,7 @@ Header Area Style
   right: 0;
   top: 0;
   height: 50px;
-  background: #31abfc;
+  background: #F0702F;
   border: none;
   width: 50px;
   outline: 0;
@@ -613,7 +616,7 @@ Header Area Style
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-button:hover {
-  background-color: #262566;
+  background-color: #000000;
 }
 
 .navbar-area .others-option .option-item .search-btn {
@@ -629,7 +632,7 @@ Header Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #31abfc;
+  background-color: #F0702F;
   border-radius: 50%;
 }
 
@@ -651,7 +654,7 @@ Header Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #31abfc;
+  background-color: #F0702F;
   border-radius: 50%;
 }
 
@@ -670,7 +673,7 @@ Header Area Style
 
 .navbar-area .others-option .sidebar-menu i {
   font-size: 40px;
-  color: #31abfc;
+  color: #F0702F;
   position: relative;
   top: -2px;
 }
@@ -1014,7 +1017,7 @@ Sidebar Modal Area Style
   width: 70px;
   height: 2px;
   border-radius: 5px;
-  background: #31abfc;
+  background: #F0702F;
   content: '';
 }
 
@@ -1043,7 +1046,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul li a:hover {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget ul.contact-info li {
@@ -1124,7 +1127,7 @@ Sidebar Modal Area Style
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget .social-list li a i:hover {
-  background-color: #31abfc;
+  background-color: #F0702F;
 }
 
 .sidebar-modal .modal .modal-body .sidebar-modal-widget .social-list li:hover {
