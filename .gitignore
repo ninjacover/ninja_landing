@@ -65,6 +65,6 @@ out
 
 # dotenv environment variables file
 .env
-build
+.build
 
 .cache
