@@ -25,9 +25,8 @@ const Index = () => {
 
             <AboutUsContent />
 
-            <OurVision />
-
             <Services />
+
 
             <GetAFreeQuoteForm />
 

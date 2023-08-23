@@ -9,13 +9,13 @@ const OurVision = () => {
         <h2 style={{ marginTop: '10px' }}>Beyond Insurance <br />We are here for you</h2>
       </div>
 
-      <div className='img-cont'>
+      <div className=' col-lg-6'>
         <Container>
-          <Row style={{ margin: 0, padding: 0 }}>
-            <Col style={{ paddingRight: 0, paddingLeft: 0 }}>
+          <Row >
+            <Col >
               <img src="/images/works1.png" alt="logo" style={{ width: '100%' }} />
             </Col>
-            <Col style={{ paddingRight: 0, paddingLeft: 0 }}>
+            <Col>
               <img src="/images/works2.png" alt="logo" style={{ width: '100%' }} />
             </Col>
           </Row>
