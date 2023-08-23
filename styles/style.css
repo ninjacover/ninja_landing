@@ -1452,13 +1452,13 @@ About Area Style
 }
 
 /*
-Our Vision Area Style
+Our services Area Style
 ======================================================*/
-.our-vision-area {
+.our-service-area {
   position: relative;
 }
 
-.our-vision-area .vision-content span {
+.our-service-area .vision-content span {
   font-size: 14px;
   font-weight: 700;
   color: #31abfc;
@@ -1467,22 +1467,22 @@ Our Vision Area Style
   text-transform: capitalize;
 }
 
-.our-vision-area .vision-content h2 {
+.our-service-area.vision-content h2 {
   font-size: 40px;
   margin-bottom: 20px;
   position: relative;
   display: block;
 }
 
-.our-vision-area .vision-content .vision-list {
+.our-service-area .vision-content .vision-list {
   margin-top: 15px;
 }
 
-.our-vision-area .vision-content .vision-list ul {
+.our-service-area .vision-content .vision-list ul {
   overflow: hidden;
 }
 
-.our-vision-area .vision-content .vision-list ul li {
+.our-service-area .vision-content .vision-list ul li {
   color: #262566;
   font-size: 16px;
   font-weight: 600;
@@ -1495,7 +1495,7 @@ Our Vision Area Style
   padding-right: 15px;
 }
 
-.our-vision-area .vision-content .vision-list ul li i {
+.our-service-area .vision-content .vision-list ul li i {
   font-size: 25px;
   font-weight: normal;
   position: absolute;
@@ -1581,6 +1581,28 @@ Services Area Style
 
 .single-services:hover a {
   color: #ffffff;
+}
+
+
+
+.first-img{
+	width: 600px;
+	height: 600px;
+  background-image: url('../public/images/works1.png');
+
+}
+.second-img{
+	background-color: #12b48b;
+  width: 600px;
+  height: 600px;
+
+}
+.img-cont{
+	
+}
+.col-one{
+    background-image: url('../public/images/works1.png');
+
 }
 
 /*
@@ -5610,7 +5632,7 @@ Section Title Area Style*/
 }
 
 .section-title span {
-  font-size: 57px;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #F0702F;
   display: block;

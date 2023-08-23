@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-3 col-md-6">
                         <div className="footer-logo-social-container" style={{ marginTop: '-57px' }}>
-                            <img src="/images/NinjaWhite.png" alt="logo" style={{ width: '70%', height: '125px' }} />
+                            <img src="/images/NinjaWhite.png" alt="logo" style={{ width: '66%', height: '100%' }} />
 
                             <div className="single-widget" style={{ width: '200px' }}>
                                 <div className="social-text-box">

@@ -5,7 +5,9 @@ const AboutUsContent = () => {
         <div className="about-area ptb-100">
 			<div className="container">
 				<div className='span section-title'>
-			<span className=''  style={{textAlign:'center',marginBottom:'90px',color:'#F0702F',backgroundColor:'transparent',fontSize:"57px"}}>About Us</span>
+			<span className=''  style={{textAlign:'center',color:'#F0702F',backgroundColor:'transparent'}}>About Us</span>
+			<h2 style={{marginTop:'10px'}}>Beyond Insurance <br></br>
+              We are here for you</h2>
 			</div>
 				<div className="row align-items-center">
 					<div className="col-lg-6">

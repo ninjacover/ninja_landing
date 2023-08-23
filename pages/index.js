@@ -25,27 +25,24 @@ const Index = () => {
 
             <AboutUsContent />
 
-            <OurVision />
-
             <Services />
+
 
             <GetAFreeQuoteForm />
 
-            <FunFacts />
 
-            <div className="pt-100">
+            {/* <FunFacts />
+
+            
                 <AchievementContent />
-            </div>
+            
 
-            <ContactWithAgent />
+            <ContactWithAgent /> */}
 
-            <Testimonials />
 
-            <div className="pb-100">
-                <OffersArea />
-            </div>
+        
 
-            <BlogPost />
+        
             
             <Footer />
         </>
