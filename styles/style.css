@@ -232,7 +232,7 @@ Default Btn Area Style*/
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #F0702F;
+  background-color: #ffffff;
 }
 
 .default-btn::before {
