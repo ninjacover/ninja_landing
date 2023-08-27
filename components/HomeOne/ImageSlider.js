@@ -32,8 +32,8 @@ const leftArrowStyles = {
 };
 
 const sliderStyles = {
-  position: "relative",
-  height: "90%",
+  height: "100vh",
+  bottom:"60px"
 };
 
 const dotsContainerStyles = {
@@ -53,7 +53,7 @@ const ImageSlider = ({ slides }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
-    }, 3000);
+    }, 6000);
 
     return () => {
       clearInterval(interval);

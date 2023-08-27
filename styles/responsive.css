@@ -148,7 +148,7 @@ margin-left: 0px;
     margin-bottom: 15px;
   }
   .fixed-top {
-    position: unset;
+    position: absolute;
   }
   .header-area .top-header-area {
     background-color: #ffffff;
@@ -1818,9 +1818,9 @@ margin-left: 0px;
   }
   .navbar-area .others-option {
     position: absolute;
-    top:12px;
+    top: 7px;
     right: 70px;
-  }
+}
   .navbar-area .others-option .option-item {
     margin-right: 10px;
   }
@@ -1835,7 +1835,7 @@ margin-left: 0px;
     padding: 10px 10px;
   }
   .navbar-area .others-option .sidebar-menu i {
-    font-size: 34px;
+    font-size: 3em;
   }
 
   .row .col-lg-4{
