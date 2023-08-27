@@ -1814,7 +1814,7 @@ margin-left: 0px;
   }
   .navbar-area .others-option {
     position: absolute;
-    top: 2.2rem;
+    /* top: 2.2rem; */
     right: 70px;
   }
   .navbar-area .others-option .option-item {
@@ -1866,7 +1866,7 @@ margin-left: 2.2rem;
   }
 
   .navbar-area .others-option{
-    top: 2.2rem;
+    /* top: 2.2rem; */
   }
 }
 
