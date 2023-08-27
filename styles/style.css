@@ -1193,7 +1193,57 @@ Sidebar Modal Area Style
 /*
 Banner Area Style
 ======================================================*/
-.main-banner-area {
+
+/* MainBanner.css */
+.mainCon {
+  /* Add your styles here */
+}
+
+.childMain {
+  /* Add your styles here */
+}
+
+.banner-text {
+  /* Add your styles here */
+}
+
+.default-btn {
+  /* Add your styles here */
+}
+
+/* ImageSlider.css */
+.slider {
+  /* Add your styles here */
+  display: flex;
+}
+
+.slide {
+  /* Add your styles here */
+}
+
+.slide.active {
+  /* Add your styles here */
+}
+
+.slide-image {
+  /* Add your styles here */
+}
+
+.slide-button {
+  /* Add your styles here */
+}
+
+.prev-button,
+.next-button {
+  /* Add your styles here */
+}
+
+
+
+
+
+
+/* .main-banner-area {
   position: relative;
   background-color: rgb(255, 255, 255);
   padding-top: 225px;
@@ -1247,7 +1297,7 @@ Banner Area Style
   right: 0;
   top: 0;
   z-index: -1;
-}
+} */
 
 /*
 Choose Us Area Style

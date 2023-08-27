@@ -98,6 +98,10 @@ margin-left: 0px;
   }
 }
 @media only screen and (max-width: 767px) {
+
+  .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover{
+    width: 30%;
+  }
   .service-sidebar-area {
     padding-right: 0;
   }
@@ -1814,7 +1818,7 @@ margin-left: 0px;
   }
   .navbar-area .others-option {
     position: absolute;
-    /* top: 2.2rem; */
+    top:12px;
     right: 70px;
   }
   .navbar-area .others-option .option-item {
