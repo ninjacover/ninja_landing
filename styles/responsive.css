@@ -1,102 +1,3 @@
-
-
-@media only screen and (max-width: 575px) {
-  .row .col-lg-4{
-    margin-bottom: 1.5rem;
-
-  }
-
-  .our-service-area .container .row .col-lg-6 .service-img{
-
-    margin-bottom: 6.5rem;
-
-  }
-  .container{
-    width: 100%;
-
-  }
-.contact-area .contact-wrap{
-margin-left: 0px;
-
-}
-.contact-area .contact-img{
-  
-}
-  .our-vision-area .vision-content .vision-list ul li {
-    width: 100%;
-    padding-right: 0;
-  }
-  .about-area .about-content .about-list ul li {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .navbar-area .others-option{
-    top: 2.2rem;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .nav-area .others-option {
-    display: block;
-    position: absolute;
-    right: 65px;
-    top: 23px;
-  }
-  .nav-area .others-option .sidebar-menu i {
-    font-size: 28px;
-    top: -1px;
-    display: block;
-  }
-  .nav-area .others-option .subscribe .default-btn {
-    padding: 6px 10px;
-    display: block;
-  }
-  .nav-area .others-option .option-item {
-    top: -10px;
-  }
-  .coming-soon-area .coming-soon-content h1 {
-    font-size: 55px;
-  }
-  .coming-soon-area .coming-soon-content #timer div {
-    font-size: 45px;
-  }
-  .coming-soon-area .coming-soon-content #timer div::before {
-    font-size: 65px;
-    right: -49px;
-  }
-  .blog-details-area .blog-details-desc .article-content .entry-meta ul li {
-    display: inline-block;
-    font-size: 15px;
-    margin-right: 10px;
-  }
-  .header-area .top-header-area {
-    text-align: center;
-  }
-  .header-area .top-header-area .header-content-right li {
-    display: inline-block;
-    padding-right: 10px;
-  }
-  .single-blog .blog-content {
-    padding: 30px;
-  }
-  .single-client {
-    padding: 0 20px 20px 20px;
-  }
-  .portfolio-wraps .shorting-menu .filter {
-    margin-bottom: 0;
-  }
-  .single-choose {
-    padding: 19px;
-  }
-  .ml-30 {
-    margin-left: 30px !important;
-  }
-  .single-services {
-    padding: 15px;
-    text-align: center;
-  }
-}
 @media only screen and (max-width: 767px) {
   .service-sidebar-area {
     padding-right: 0;
@@ -977,6 +878,79 @@ margin-left: 0px;
   /* End Home demo 4,5,6 */
 }
 
+@media only screen and (max-width: 575px) {
+  .our-vision-area .vision-content .vision-list ul li {
+    width: 100%;
+    padding-right: 0;
+  }
+  .about-area .about-content .about-list ul li {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nav-area .others-option {
+    display: block;
+    position: absolute;
+    right: 65px;
+    top: 23px;
+  }
+  .nav-area .others-option .sidebar-menu i {
+    font-size: 28px;
+    top: -1px;
+    display: block;
+  }
+  .nav-area .others-option .subscribe .default-btn {
+    padding: 6px 10px;
+    display: block;
+  }
+  .nav-area .others-option .option-item {
+    top: -10px;
+  }
+  .coming-soon-area .coming-soon-content h1 {
+    font-size: 55px;
+  }
+  .coming-soon-area .coming-soon-content #timer div {
+    font-size: 45px;
+  }
+  .coming-soon-area .coming-soon-content #timer div::before {
+    font-size: 65px;
+    right: -49px;
+  }
+  .blog-details-area .blog-details-desc .article-content .entry-meta ul li {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .header-area .top-header-area {
+    text-align: center;
+  }
+  .header-area .top-header-area .header-content-right li {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .single-blog .blog-content {
+    padding: 30px;
+  }
+  .single-client {
+    padding: 0 20px 20px 20px;
+  }
+  .portfolio-wraps .shorting-menu .filter {
+    margin-bottom: 0;
+  }
+  .single-choose {
+    padding: 19px;
+  }
+  .ml-30 {
+    margin-left: 30px !important;
+  }
+  .single-services {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .service-sidebar-area {
     padding-right: 0;
@@ -1814,7 +1788,7 @@ margin-left: 0px;
   }
   .navbar-area .others-option {
     position: absolute;
-    top: 2.2rem;
+    top: 7px;
     right: 70px;
   }
   .navbar-area .others-option .option-item {
@@ -1832,40 +1806,6 @@ margin-left: 0px;
   }
   .navbar-area .others-option .sidebar-menu i {
     font-size: 34px;
-  }
-
-  .row .col-lg-4{
-    margin-bottom: 1.5rem;
-
-  }
-
-  .our-service-area .container .row .col-lg-6 .service-img{
-
-    margin-bottom: 6.5rem;
-
-  }
-  .container{
-    width: 100%;
-
-  }
-.contact-area .contact-wrap{
-margin-left: 2.2rem;
-
-}
-.contact-area .contact-img{
-  
-}
-  .our-vision-area .vision-content .vision-list ul li {
-    width: 100%;
-    padding-right: 0;
-  }
-  .about-area .about-content .about-list ul li {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .navbar-area .others-option{
-    top: 2.2rem;
   }
 }
 
