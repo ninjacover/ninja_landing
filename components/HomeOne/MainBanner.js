@@ -1,19 +1,20 @@
+// MainBanner.js
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./ImageSlider";
 
 const MainBanner = () => {
   const [slides, setSlides] = useState([
-    { url: "/images/ChatbotNinja.png", title: "chatbot" },
-    { url: "/images/2.png", title: "boat" },
-    { url: "/images/3.png", title: "forest" },
+    { url: "/images/ChatbotNinja.png", title: "chatbot", button: "Button 1" },
+    { url: "/images/2.png", title: "boat", button: "Button 2" },
+    { url: "/images/3.png", title: "forest", button: "Button 3" },
   ]);
 
   useEffect(() => {
     const newSlides = [
-      { url: "/images/ChatbotNinja.png", title: "chatbot" },
-      { url: "/images/banner/sec-slider-img-res.png", title: "boat" },
-      { url: "/images/banner/3rd-slider-img-res.png", title: "forest" },
+      { url: "/images/banner/first-slider-img-res.png", title: "chatbot", button: "Button 1" },
+      { url: "/images/banner/sec-slider-img-res.png", title: "boat", button: "Button 2" },
+      { url: "/images/banner/3rd-slider-img-res.png", title: "forest", button: "Button 3" },
     ];
 
     const mediaQuery = window.matchMedia("(max-width:780px)");
@@ -33,7 +34,6 @@ const MainBanner = () => {
       <div className="childMain" style={containerStyles}>
         <ImageSlider slides={slides} />
         <div className="banner-text">
-          {/* Add your banner text here */}
           <div
             data-aos="fade-up"
             data-aos-delay="400"
