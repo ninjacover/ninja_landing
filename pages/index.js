@@ -13,6 +13,7 @@ import Testimonials from '../components/Common/Testimonials';
 import OffersArea from '../components/Common/OffersArea';
 import BlogPost from '../components/Common/BlogPost';
 import Footer from '../components/_App/Footer';
+import ContactForm from './ContactForm';
 
 const Index = () => {
     return (
@@ -28,7 +29,7 @@ const Index = () => {
             <Services />
 
 
-            <GetAFreeQuoteForm />
+            <ContactForm />
 
 
             {/* <FunFacts />

@@ -4876,7 +4876,6 @@ Contact Area Style
           box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
   padding: 40px;
   text-align: center;
-  margin-left: 70px;
 }
 
 .contact-area .contact-wrap .form-group {
@@ -4917,7 +4916,7 @@ Contact Area Style
   color: #ffffff;
   font-weight: 600;
   margin-bottom: 15px;
-  background-color: #31abfc;
+  background-color: #F0702F;
   padding: 19px 20px;
   padding-left: 65px;
 }
