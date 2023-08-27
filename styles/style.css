@@ -220,7 +220,7 @@ textarea.form-control {
 Default Btn Area Style*/
 .default-btn {
   font-size: 16px;
-  color: #ffffff;
+  color: #000000;
   padding: 15px 30px;
   line-height: 1;
   -webkit-transition: all 0.5s;
@@ -232,7 +232,7 @@ Default Btn Area Style*/
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #F0702F;
+  background-color: #f7f7f7;
 }
 
 .default-btn::before {
@@ -242,7 +242,7 @@ Default Btn Area Style*/
   left: 100%;
   width: 100%;
   height: 50%;
-  background-color: #000000;
+  background-color: #F0702F;
 
   z-index: -1;
   -webkit-transition: all 0.5s;
@@ -257,7 +257,7 @@ Default Btn Area Style*/
   width: 100%;
   height: 50%;
 
-  background-color: #000000;
+  background-color: #F0702F;
  
   z-index: -1;
   -webkit-transition: all 0.5s;
@@ -386,7 +386,9 @@ Header Area Style
 .header-area .top-header-area .header-content-right li a:hover {
   color: #000509;
 }
-
+/*
+Nav Area Style
+======================================================*/
 
 .navbar-area .main-nav {
   position: unset;
@@ -394,8 +396,7 @@ Header Area Style
   -webkit-box-shadow: none;
           box-shadow: none;
   padding-top: 0;
-  padding-bottom:3px ;
-  
+  padding-bottom: 0;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a {
@@ -406,14 +407,13 @@ Header Area Style
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-left: 0;
-  margin: -20px 15px;
+  margin: 0 10px;
   position: relative;
-  
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a i {
   font-size: 15px;
-  line-height: 7px;
+  line-height: 0;
   position: relative;
   top: 3px;
 }
@@ -421,10 +421,10 @@ Header Area Style
 .navbar-area .main-nav nav .navbar-nav .nav-item a::before {
   content: "";
   position: absolute;
-  bottom: -50px;
+  bottom: -25px;
   right: 0;
   width: 0;
-  height: 3px;
+  height: 2px;
   background-color: #ffffff;
   opacity: 0;
   -webkit-transition: all 0.5s;
@@ -455,7 +455,7 @@ Header Area Style
   color: #ffffff;
   position: relative;
   padding: 10px 15px;
-  border-bottom: 1px  #5a5a5a;
+  border-bottom: 1px dashed #5a5a5a;
   margin-left: 0;
   margin-right: 0;
 }
@@ -473,7 +473,7 @@ Header Area Style
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #000000;
+  color: #F0702F;
   background-color: #f3f3f3;
 }
 
@@ -513,7 +513,6 @@ Header Area Style
   left: 0;
   right: 0;
   margin: auto;
-  height: 99px;
   z-index: 999;
   background-color: #000000;
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
@@ -539,7 +538,7 @@ Header Area Style
 
 .navbar-area .others-option {
   position: relative;
-  top: -2px;
+  top: 4px;
 }
 
 .navbar-area .others-option .subscribe {
@@ -587,7 +586,7 @@ Header Area Style
   height: 50px;
   line-height: initial;
   border: 1px solid #eeeeee;
-  color: #000007;
+  color: #F0702F;
   outline: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -597,7 +596,7 @@ Header Area Style
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-input:focus {
-  border-color: #00060b;
+  border-color: #F0702F;
 }
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-button {
@@ -605,7 +604,7 @@ Header Area Style
   right: 0;
   top: 0;
   height: 50px;
-  background: #F0702F;
+  background: #000000;
   border: none;
   width: 50px;
   outline: 0;
@@ -623,7 +622,7 @@ Header Area Style
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  color: #ffffff;
+  color: #000000;
   font-size: 20px;
   line-height: 1;
   text-align: center;
@@ -632,7 +631,7 @@ Header Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #F0702F;
+  background-color: #fffafa;
   border-radius: 50%;
 }
 
@@ -673,7 +672,7 @@ Header Area Style
 
 .navbar-area .others-option .sidebar-menu i {
   font-size: 40px;
-  color: #F0702F;
+  color: #ffffff;
   position: relative;
   top: -2px;
 }
@@ -1308,10 +1307,8 @@ Choose Us Area Style
   margin-top: 2px;
 }
 
-.navbar-brand img {
-  width:250px;
-  height:150px;
-}
+
+
 .single-choose .choose-icon {
   position: absolute;
   left: 0;
@@ -7110,3 +7107,6 @@ Nice select Area Style*/
 h2,h3{color:black;}
 /* End New CSS For Home 5, 6 */
 /*# sourceMappingURL=style.css.map */
+
+
+
