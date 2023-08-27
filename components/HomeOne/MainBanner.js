@@ -1,4 +1,3 @@
-// MainBanner.js
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./ImageSlider";
@@ -12,7 +11,7 @@ const MainBanner = () => {
 
   useEffect(() => {
     const newSlides = [
-      { url: "/images/banner/first-slider-img-res.png", title: "chatbot" },
+      { url: "/images/ChatbotNinja.png", title: "chatbot" },
       { url: "/images/banner/sec-slider-img-res.png", title: "boat" },
       { url: "/images/banner/3rd-slider-img-res.png", title: "forest" },
     ];
@@ -34,6 +33,7 @@ const MainBanner = () => {
       <div className="childMain" style={containerStyles}>
         <ImageSlider slides={slides} />
         <div className="banner-text">
+          {/* Add your banner text here */}
           <div
             data-aos="fade-up"
             data-aos-delay="400"
