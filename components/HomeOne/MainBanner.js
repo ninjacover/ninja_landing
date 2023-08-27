@@ -12,9 +12,9 @@ const MainBanner = () => {
 
   useEffect(() => {
     const newSlides = [
-      { url: "/images/1.2.png", title: "chatbot" },
-      { url: "/images/1.3.png", title: "boat" },
-      { url: "/images/1.1.png", title: "forest" },
+      { url: "/images/first-slider-img-res", title: "chatbot" },
+      { url: "/images/sec-slider-img-res", title: "boat" },
+      { url: "/images/3rd-slider-img-res", title: "forest" },
     ];
 
     const mediaQuery = window.matchMedia("(max-width:780px)");

@@ -1853,6 +1853,7 @@ margin-left: 2.2rem;
 
 }
 .contact-area .contact-img{
+  display: none;
   
 }
   .our-vision-area .vision-content .vision-list ul li {

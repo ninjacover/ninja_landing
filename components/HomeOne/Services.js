@@ -19,7 +19,7 @@ const ServicesStyleOne = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <img src="/images/works1.png" alt="Image" />
+                <img src="/images/10.png" alt="Image" />
               </div>
             </div>
 
@@ -31,7 +31,7 @@ const ServicesStyleOne = () => {
                 data-aos-duration="1200"
                 data-aos-once="true"
               >
-                <img src="/images/works2.png" alt="Image" />
+                <img src="/images/12.png" alt="Image" />
               </div>
             </div>
           </div>
