@@ -1,11 +1,12 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const slideStyles = {
   width: "100%",
   height: "100%",
-  borderRadius: "10px",
+  borderRadius: "0px",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  transition: "transform 0.5s ease-in-out, opacity 0.3s ease-in-out",
 };
 
 const rightArrowStyles = {
@@ -28,7 +29,6 @@ const leftArrowStyles = {
   color: "black",
   zIndex: 1,
   cursor: "pointer",
-
 };
 
 const sliderStyles = {
@@ -49,22 +49,35 @@ const dotStyle = {
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
+
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
-  const slideStylesWidthBackground = {
+
+  const slideStylesWithBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
+    opacity: 1,
   };
 
   return (
@@ -77,7 +90,7 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}></div>
+      <div style={slideStylesWithBackground}></div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div
