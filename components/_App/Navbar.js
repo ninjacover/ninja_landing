@@ -43,7 +43,7 @@ const Navbar = () => {
                             <div className="container">
                                 <Link href="/">
                                     <a onClick={toggleNavbar} className="navbar-brand">
-                                        <img src="/images/logo.png" alt="logo"  style={{ width: '170px', height: '90px',position: 'relative', top: '-13px'   }} />
+                                        <img src="/images/logo.png" alt="logo"  />
                                     </a>
                                 </Link>
 
