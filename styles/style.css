@@ -1609,7 +1609,7 @@ Quat Area Style
   padding: 50px;
   -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-  background-color: #151449;
+  background-color: #1f1c1c;
   overflow: hidden;
   position: relative;
 }
@@ -1660,11 +1660,11 @@ Quat Area Style
 }
 
 .get-quat-area .quat-form .tabs li:hover {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .get-quat-area .quat-form .tabs li.current {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .get-quat-area .quat-form p {
@@ -1677,7 +1677,7 @@ Quat Area Style
 }
 
 .get-quat-area .quat-form .ratings li a {
-  color: #31abfc;
+  color: #F0702F;
 }
 
 .get-quat-area .quat-form .ratings li a:hover {
