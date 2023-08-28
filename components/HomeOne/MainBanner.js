@@ -22,15 +22,10 @@ const MainBanner = () => {
     }
   }, []);
 
-  const containerStyles = {
-    position: "relative",
-    margin: "0 auto",
-    display: "inline-block",
-  };
 
   return (
     <div className="mainCon">
-      <div className="childMain" style={containerStyles}>
+      <div className="childMain">
         <ImageSlider slides={slides} />
       </div>
     </div>

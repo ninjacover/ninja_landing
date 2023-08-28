@@ -2436,6 +2436,10 @@ Main Banner Area Two
   position: relative;
 }
 
+/*
+Custom Banner styles
+======================================================*/
+
 .mainCon{
 height:100vh;
 margin-top: 0px;
@@ -2444,6 +2448,9 @@ margin-top: 0px;
 .childMain{
   width:100%;
   height:100%;
+  position: "relative";
+  margin: "0 auto";
+  display: "inline-block";
 }
 
 
