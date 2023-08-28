@@ -148,7 +148,7 @@ margin-left: 0px;
     margin-bottom: 15px;
   }
   .fixed-top {
-    position: unset;
+    position: absolute;
   }
   .header-area .top-header-area {
     background-color: #ffffff;
@@ -1790,6 +1790,7 @@ margin-left: 0px;
     font-size: 15px;
   }
   /* End Home demo 4,5,6 */
+
 }
 
 @media only screen and (min-width: 1700px) {
@@ -1818,24 +1819,25 @@ margin-left: 0px;
   }
   .navbar-area .others-option {
     position: absolute;
-    top:12px;
+    top: 7px;
     right: 70px;
-  }
+}
   .navbar-area .others-option .option-item {
-    margin-right: 10px;
+    right: 0;
+    top: -17px;
   }
   .navbar-area .others-option .option-item .search-btn {
-    font-size: 15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 1.9;
   }
   .navbar-area .others-option .subscribe .default-btn {
     font-size: 12px;
     padding: 10px 10px;
   }
   .navbar-area .others-option .sidebar-menu i {
-    font-size: 34px;
+    font-size: 3em;
   }
 
   .row .col-lg-4{

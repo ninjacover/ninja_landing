@@ -1,10 +1,12 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const slideStyles = {
   width: "100%",
   height: "100%",
+  borderRadius: "0px",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  transition: "transform 0.5s ease-in-out, opacity 0.3s ease-in-out",
 };
 
 const rightArrowStyles = {
@@ -30,8 +32,8 @@ const leftArrowStyles = {
 };
 
 const sliderStyles = {
-  position: "relative",
-  height: "90%",
+  height: "100vh",
+  bottom:"60px"
 };
 
 const dotsContainerStyles = {
@@ -48,6 +50,16 @@ const dotStyle = {
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 6000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -55,18 +67,17 @@ const ImageSlider = ({ slides }) => {
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
 
-  const slideStylesWidthBackground = {
+  const slideStylesWithBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
+    opacity: 1,
   };
 
   return (
@@ -79,11 +90,7 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}>
-        <div style={{ position: "absolute", bottom: "20px", left: "20px" }}>
-          <button>{slides[currentIndex].button}</button>
-        </div>
-      </div>
+      <div style={slideStylesWithBackground}></div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

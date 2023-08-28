@@ -396,6 +396,7 @@ Nav Area Style
           box-shadow: none;
   padding-top: 0;
   padding-bottom: 0;
+  background: transparent;
 }
 
 .navbar-area .main-nav nav .navbar-nav .nav-item a {
@@ -553,9 +554,9 @@ Nav Area Style
   color: #6e6e6e;
   display: inline-block;
   line-height: 1;
-  margin-right: 12px;
   position: relative;
   top: -13px;
+  right:15px;
 }
 
 .navbar-area .others-option .option-item .search-overlay {
@@ -630,7 +631,7 @@ Nav Area Style
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #fffafa;
+  background-color: ghostwhite;
   border-radius: 50%;
 }
 
@@ -683,13 +684,13 @@ Nav Area Style
 /* Navbar toggler */
 .navbar-toggler {
   border: none;
-  background: #eee !important;
+  background: white;
   padding: 10px;
   border-radius: 0;
 }
 
 .navbar-toggler:focus {
-  outline: 0 !important;
+  outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -2434,16 +2435,25 @@ Main Banner Area Two
   border-radius: 50% 0 0  50%;
   position: relative;
 }
+
+/*
+Custom Banner styles
+======================================================*/
+
 .mainCon{
-height:790px;
+height:100vh;
 margin-top: 0px;
-
-
 }
+
 .childMain{
   width:100%;
   height:100%;
+  position: "relative";
+  margin: "0 auto";
+  display: "inline-block";
 }
+
+
 /*
 Choose Us Area Two
 ======================================================*/
