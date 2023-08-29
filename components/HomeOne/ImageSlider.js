@@ -6,9 +6,9 @@ const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 6000);
+    // const interval = setInterval(() => {
+    //   goToNext();
+    // }, 6000);
 
     return () => {
       clearInterval(interval);
@@ -43,7 +43,8 @@ const ImageSlider = ({ slides }) => {
         className="slide"
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       >
-        <button className="default-btn">{slides[currentIndex].button}</button>
+<button className={`default-btn ${slides[currentIndex].buttonClass}`}>
+  {slides[currentIndex].button}</button>
       </div>
       <div className="dots-container">
         {slides.map((slide, slideIndex) => (
