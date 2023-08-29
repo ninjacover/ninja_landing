@@ -2463,6 +2463,7 @@ margin-top: 0px;
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  position: absolute;
   
 }
 
@@ -2505,8 +2506,10 @@ margin-top: 0px;
 }
 
 .slide-1-button{
-  margin-top: 31rem;
-  margin-left: 4.5rem;
+  margin-top: 26rem;
+    margin-left: 3.5rem;
+    position: relative;
+    display: flex;
   
   
 
@@ -2514,14 +2517,18 @@ margin-top: 0px;
 }
 
 .slide-2-button{
-  margin-top: 35rem;
-  margin-left: 40.7rem;
+  margin-top: 28.5rem;
+  margin-left: 32.7rem;
+  position: relative;
+    display: flex;
 
 }
 
 .slide-3-button{
-  margin-top: 17rem;
-margin-left: 14rem;
+  margin-top: 16rem;
+    margin-left: 11.4rem;
+    position: relative;
+    display: flex;
 }
 
 

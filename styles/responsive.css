@@ -107,6 +107,7 @@ margin-left: 0px;
     /* background-color: aqua;
     margin-top: 40rem;
 margin-left: 9rem; */
+margin: 175% 0rem 0 39%;
   }
   
 }
@@ -257,6 +258,7 @@ margin-left: 9rem; */
     /* background-color: red;
     margin-top: 45rem;
     margin-left: 10rem; */
+    margin: 175% 0rem 0 39%;
   }
 
 
@@ -1362,6 +1364,14 @@ margin-left: 9rem; */
     height: 500px;
     border-radius: 0;
   }
+
+.slide-1-button ,.slide-2-button, .slide-3-button{
+
+  margin: 119% 0rem 0 46%;
+}
+
+
+
   .about-area .about-img-3 {
     margin-top: 20px;
     float: unset;
@@ -1909,4 +1919,11 @@ margin-left: 2.2rem;
     max-width: 635px;
   }
 }
+@media only screen and (max-width: 357) {
+  .slide-1-button,.slide-2-button,.slide-3-button{
+    margin: 141% 0rem 0 39%;
+  }
+  
+}
+
 /*# sourceMappingURL=responsive.css.map */
