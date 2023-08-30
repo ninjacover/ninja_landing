@@ -1911,13 +1911,18 @@ margin-left: 2.2rem;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .main-banner-area .banner-text {
     max-width: 635px;
   }
   .main-banner-area-two .banner-text {
     max-width: 635px;
   }
+
+  .slide-1-button,.slide-2-button,.slide-3-button{
+    margin: 141% 0rem 0 39%;
+  }
+
 }
 @media only screen and (max-width: 357) {
   .slide-1-button,.slide-2-button,.slide-3-button{
