@@ -26,6 +26,8 @@ const Index = () => {
 
             <AboutUsContent />
 
+            <GetAFreeQuoteForm />
+
             <Services />
 
 
