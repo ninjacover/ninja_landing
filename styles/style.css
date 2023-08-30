@@ -2522,10 +2522,12 @@ margin-top: 0px;
 }
 
 .slide-3-button{
-  margin-top: 16rem;
-  margin-left: 11.4rem;
-  position: relative;
-  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  background-color: #F0702F;
+  color: white;
+
 }
 
 

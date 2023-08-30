@@ -103,11 +103,12 @@ margin-left: 0px;
   }
   
   .slide-1-button,.slide-2-button, .slide-3-button{
-    /* 576  767 */
-    /* background-color: aqua;
-    margin-top: 40rem;
-margin-left: 9rem; */
-margin: 175% 0rem 0 39%;
+    position: absolute;
+    top: -30%;
+    left: 3%;
+    background-color: #F0702F;
+    color: white;
+
   }
   
 }
@@ -255,7 +256,7 @@ margin: 175% 0rem 0 39%;
 
   .slide-1-button,.slide-2-button, .slide-3-button{
     position: absolute;
-    top: 80%;
+    top: 84%;
     left: 40%;
     background-color: #F0702F;
     color: white;
@@ -1367,8 +1368,11 @@ margin: 175% 0rem 0 39%;
 
 .slide-1-button ,.slide-2-button, .slide-3-button{
 
-  margin: 119% 0rem 0 46%;
-}
+  position: absolute;
+  top: 87%;
+  left: 43%;
+  background-color: #F0702F;
+  color: white;}
 
 
 
@@ -1906,11 +1910,22 @@ margin-left: 2.2rem;
     padding-right: 0;
   }
 
-  .navbar-area .others-option{
-    /* top: 2.2rem; */
-  }
+  
 }
 
+@media only screen and (min-width: 1024px) {
+  .slide-1-button{
+    position: absolute;
+    top: 67%;
+    left: 3%;
+    background-color: #F0702F;
+    color: white;
+  }
+  .slide-3-button{
+    left: 14%;
 
+  }
+  
+}
 
 /*# sourceMappingURL=responsive.css.map */
