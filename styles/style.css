@@ -1614,6 +1614,10 @@ Quat Area Style
   background-color: #1f1c1c;
   overflow: hidden;
   position: relative;
+  background-color: #ffffff;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    text-align: center;
 }
 
 .get-quat-area .quat-form .default-btn {
@@ -1633,7 +1637,7 @@ Quat Area Style
 
 .get-quat-area .quat-form ul li {
   display: inline-block;
-  color: #ffffff;
+  color: #000000;
 }
 
 .get-quat-area .quat-form ul li a {
@@ -1652,7 +1656,7 @@ Quat Area Style
   margin-left: 0 !important;
   padding-right: 40px;
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   font-weight: 600;
 }
