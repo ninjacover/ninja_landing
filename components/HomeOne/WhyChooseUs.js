@@ -6,7 +6,7 @@ import{TbMessageChatbot} from 'react-icons/tb';
 const WhyChooseUs = () => {
   return (
     <>
-      <div className="choose-us-area mt-50 pb-70">
+      <div className="choose-us-area mt-50 pb-70 ">
         <div className="container">
           <div className="section-title">
             <span className="about-area .about-content span">Services</span>

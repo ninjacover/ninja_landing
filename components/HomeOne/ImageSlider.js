@@ -1,51 +1,6 @@
+
+// ImageSlider.js
 import React, { useState, useEffect } from "react";
-
-const slideStyles = {
-  width: "100%",
-  height: "100%",
-  borderRadius: "0px",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  transition: "transform 0.5s ease-in-out, opacity 0.3s ease-in-out",
-};
-
-const rightArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "32px",
-  fontSize: "45px",
-  color: "#000",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const leftArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "2px",
-  fontSize: "45px",
-  color: "black",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const sliderStyles = {
-  height: "100vh",
-  bottom:"60px"
-};
-
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
-
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-};
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,27 +29,27 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const slideStylesWithBackground = {
-    ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
-    opacity: 1,
-  };
-
   return (
-    <div style={sliderStyles}>
+    <div className="slider">
       <div>
-        <div onClick={goToPrevious} style={leftArrowStyles}>
+        <div className="left-arrow" onClick={goToPrevious}>
           ❰
         </div>
-        <div onClick={goToNext} style={rightArrowStyles}>
+        <div className="right-arrow" onClick={goToNext}>
           ❱
         </div>
       </div>
-      <div style={slideStylesWithBackground}></div>
-      <div style={dotsContainerStyles}>
+      <div
+        className="slide"
+        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+      >
+<button className={`default-btn ${slides[currentIndex].buttonClass}`}>
+  {slides[currentIndex].button}</button>
+      </div>
+      <div className="dots-container">
         {slides.map((slide, slideIndex) => (
           <div
-            style={dotStyle}
+            className="dot"
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
           >
