@@ -24,6 +24,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaHospital className="icon" />
         {row.inPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -39,6 +40,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaHospital className="icon" />
         {row.outPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -54,6 +56,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaUserShield className="icon" />
         {row.chronicPreExistingDisease ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -69,6 +72,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaCapsules className="icon" />
         {row.medication ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -84,6 +88,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaTooth className="icon" />
         {row.dental ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -99,6 +104,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaEye className="icon" />
         {row.optical ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
@@ -114,6 +120,7 @@ const columns = [
     sortable: true,
     cell: row => (
       <div className="icon-text">
+        <FaBabyCarriage className="icon" />
         {row.maternity ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
       </div>
     ),
