@@ -6,9 +6,9 @@ const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 6000);
+    // const interval = setInterval(() => {
+    //   goToNext();
+    // }, 6000);
 
     return () => {
       clearInterval(interval);
