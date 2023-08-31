@@ -3140,7 +3140,7 @@ Page Title Area Style
   left: 0;
   width: 50%;
   height: 100%;
-  background-color: #050b2a;
+  background-color: #f4f4f4;
   z-index: -1;
   -webkit-animation: 5s fadeInLeft both;
           animation: 5s fadeInLeft both;
@@ -3153,7 +3153,7 @@ Page Title Area Style
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: #050b2a;
+  background-color: #f4f4f4;
   -webkit-animation: 5s fadeInRight both;
           animation: 5s fadeInRight both;
   z-index: -1;
@@ -3161,7 +3161,7 @@ Page Title Area Style
 
 .page-title-area .page-title-content h2 {
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #000000;
   font-size: 40px;
   font-weight: 700;
 }
@@ -3180,7 +3180,7 @@ Page Title Area Style
   font-weight: 500;
   padding-right: 10px;
   padding-left: 10px;
-  color: #ffffff;
+  color: #020000;
 }
 
 .page-title-area .page-title-content ul li::before {
@@ -3199,11 +3199,11 @@ Page Title Area Style
 }
 
 .page-title-area .page-title-content ul li a {
-  color: #ffffff;
+  color: #000000;
 }
 
 .page-title-area .page-title-content ul li a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
 /*
@@ -7200,6 +7200,60 @@ Nice select Area Style*/
 h2,h3{color:black;}
 /* End New CSS For Home 5, 6 */
 /*# sourceMappingURL=style.css.map */
+/* insurance table css: */
 
+.table-container {
+  margin: 20px auto;
+  max-width: 100%; 
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+/* Header icons */
+.header-icon {
+  font-size: 24px; 
+}
+
+.header-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.header-icon-text {
+  margin-top: 5px;
+}
+
+/* Icons and text in cells */
+.icon-row {
+  font-size: 50px; 
+  vertical-align: middle; 
+  padding: 5px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tick and cross icons */
+.tick-icon,
+.cross-icon {
+  font-size: 15px;
+  vertical-align: middle; 
+  margin-left: -12px; 
+  margin-bottom: -20px;
+}
+
+.tick-icon {
+  color: green;
+}
+
+.cross-icon {
+  color: red;
+}
 
 
