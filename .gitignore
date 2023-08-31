@@ -16,9 +16,6 @@ build/**
 Thumbs.db
 .DS_Store
 
-# Editor directories and files
-.*/
-
 # Log files
 npm-debug.log
 yarn-error.log
