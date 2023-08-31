@@ -7116,71 +7116,59 @@ h2,h3{color:black;}
 /* End New CSS For Home 5, 6 */
 /*# sourceMappingURL=style.css.map */
 /* insurance table css: */
-/* Add this CSS in a separate file or within a style block in your component */
 
-/* Styling for the entire table container */
-.dataTableContainer {
-  padding: 20px;
-}
-
-/* Styling for the table itself */
-.rd-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.rd-thead {
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #ccc;
-}
-
-.rd-th {
-  padding: 10px 15px;
-  font-weight: bold;
-}
-
-.rd-tr {
-  border-bottom: 1px solid #ddd;
-}
-
-.rd-td {
-  padding: 10px 15px;
-}
-
-/* Styling for filter input */
-.rd-input {
-  padding: 6px;
+.table-container {
+  margin: 20px auto;
+  max-width: 100%; 
   border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Styling for pagination */
-.rd-pagination {
-  margin-top: 10px;
-  text-align: center;
-}
-
-/* Styling for select and download buttons */
-.action-buttons button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.action-buttons button:hover {
-  background-color: #0056b3;
-}
-
-/* Highlight row on hover */
-.rd-tr:hover {
-  background-color: #f5f5f5;
+  padding: 10px;
 }
 
 
+/* Header icons */
+.header-icon {
+  font-size: 24px; 
+}
+
+.header-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.header-icon-text {
+  margin-top: 5px;
+}
+
+/* Icons and text in cells */
+.icon-row {
+  font-size: 50px; 
+  vertical-align: middle; 
+  padding: 5px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tick and cross icons */
+.tick-icon,
+.cross-icon {
+  font-size: 15px;
+  vertical-align: middle; 
+  margin-left: -12px; 
+  margin-bottom: -20px;
+}
+
+.tick-icon {
+  color: green;
+}
+
+.cross-icon {
+  color: red;
+}
 
 

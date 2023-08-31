@@ -1,148 +1,112 @@
 import React from 'react';
-import { FaMoneyBill, FaUserMd, FaHospital, FaUserShield, FaCheck, FaTimes, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaDownload } from 'react-icons/fa';
+import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield, FaCheck, FaTimes, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaDownload, FaPills } from 'react-icons/fa';
 import DataTable from 'react-data-table-component';
+import { GiCapsule } from 'react-icons/gi';
+
+
 
 const columns = [
-  {
-    name: <div><FaMoneyBill /><br />Plan</div>,
-    selector: 'plan',
-    sortable: true,
-  },
-  {
-    name: <div><FaUserMd /><br />Group Premium</div>,
-    selector: 'groupPremium',
-    sortable: true,
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaHospital className="icon" />
-        <div className="icon-text">In-Patient</div>
-      </div>
-    ),
-    selector: 'inPatient',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaHospital className="icon" />
-        {row.inPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaHospital className="icon" />
-        <div className="icon-text">Out-Patient</div>
-      </div>
-    ),
-    selector: 'outPatient',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaHospital className="icon" />
-        {row.outPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaUserShield className="icon" />
-        <div className="icon-text">Chronic & Pre-existing</div>
-      </div>
-    ),
-    selector: 'chronicPreExistingDisease',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaUserShield className="icon" />
-        {row.chronicPreExistingDisease ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaCapsules className="icon" />
-        <div className="icon-text">Medication</div>
-      </div>
-    ),
-    selector: 'medication',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaCapsules className="icon" />
-        {row.medication ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaTooth className="icon" />
-        <div className="icon-text">Dental</div>
-      </div>
-    ),
-    selector: 'dental',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaTooth className="icon" />
-        {row.dental ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaEye className="icon" />
-        <div className="icon-text">Optical</div>
-      </div>
-    ),
-    selector: 'optical',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaEye className="icon" />
-        {row.optical ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaBabyCarriage className="icon" />
-        <div className="icon-text">Maternity</div>
-      </div>
-    ),
-    selector: 'maternity',
-    sortable: true,
-    cell: row => (
-      <div className="icon-text">
-        <FaBabyCarriage className="icon" />
-        {row.maternity ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
-      </div>
-    ),
-  },
-  {
-    name: (
-      <div className="icon-container">
-        <FaDownload className="icon" />
-        <div className="icon-text">Actions</div>
-      </div>
-    ),
-    cell: row => (
-      <div className="icon action-buttons-container">
-        <button className="icon button" onClick={() => handleSelect(row)}>Select</button>
-        <button className="icon button" onClick={() => handleDownload(row)}>Download</button>
-      </div>
-    ),
-    ignoreRowClick: true,
-    allowOverflow: true,
-    button: true,
-  },
-];
+    {
+      name: 'Plan',
+      selector: 'plan',
+      sortable: true,
+    },
+    {
+      name: 'Group Premium',
+      selector: 'groupPremium',
+      sortable: true,
+    },
+    {
+      name: 'In-Patient',
+      selector: 'inPatient',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaHospital className="icon-row" />
+          {row.inPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Out-Patient',
+      selector: 'outPatient',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaUserMd className="icon-row" />
+          {row.outPatient ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Chronic & Pre-existing',
+      selector: 'chronicPreExistingDisease',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaPills className="icon-row" />
+          {row.chronicPreExistingDisease ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Medication',
+      selector: 'medication',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaCapsules className="icon-row" />
+          {row.medication ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Dental',
+      selector: 'dental',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaTooth className="icon-row" />
+          {row.dental ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Optical',
+      selector: 'optical',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaEye className="icon-row" />
+          {row.optical ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Maternity',
+      selector: 'maternity',
+      sortable: true,
+      cell: row => (
+        <div className="icon-text">
+          <FaBabyCarriage className="icon-row" />
+          {row.maternity ? <FaCheck className="tick-icon" /> : <FaTimes className="cross-icon" />}
+        </div>
+      ),
+    },
+    {
+      name: 'Actions',
+      cell: row => (
+        <div className="icon action-buttons-container">
+          <button className="icon button" onClick={() => handleSelect(row)}>Select</button>
+          <button className="icon button" onClick={() => handleDownload(row)}>Download</button>
+        </div>
+      ),
+      ignoreRowClick: true,
+      allowOverflow: true,
+      button: true,
+    },
+  ];
+  
 
 const data = [
   {
@@ -188,6 +152,7 @@ const InsuranceTable = () => {
   };
 
   return (
+    <div className="table-container">
     <DataTable
       columns={columns.map(col => ({
         ...col,
@@ -201,6 +166,7 @@ const InsuranceTable = () => {
       pagination={data.length > 10}
       highlightOnHover
     />
+    </div>
   );
 };
 
