@@ -1,9 +1,9 @@
 import React from 'react';
 import NavbarTwo from '../components/_App/NavbarTwo';
 import PageBanner from '../components/Common/PageBanner';
-import PortfolioSidebar from '../components/Portfolio/PortfolioSidebar';
+// import PortfolioSidebar from '../components/Portfolio/PortfolioSidebar';
 import Footer from '../components/_App/Footer';
-import QuestionForm from '../components/Portfolio/QuestionForm';
+// import QuestionForm from '../components/Portfolio/QuestionForm';
 
 const PortfolioDetails = () => {
     return (
@@ -22,7 +22,7 @@ const PortfolioDetails = () => {
                     <div className="row">
                         <div className="col-lg-4">
                             {/* Portfolio Sidebar */}
-                            <PortfolioSidebar />
+                            {/* <PortfolioSidebar /> */}
                         </div>
 
                         <div className="col-lg-8">
@@ -80,7 +80,7 @@ const PortfolioDetails = () => {
                                 </div>
 
                                 {/* Question Form */}
-                                <QuestionForm /> 
+                                {/* <QuestionForm />  */}
                             </div>
                         </div>
                     </div>
