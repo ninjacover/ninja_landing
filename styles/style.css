@@ -7203,12 +7203,16 @@ h2,h3{color:black;}
 /* insurance table css: */
 
 .table-container {
-  margin: 20px auto;
+  margin-left: 110px; /* Adjust as needed for the left margin */
+  margin-right: 110px; /* Adjust as needed for the right margin */
   max-width: 100%; 
   border: 1px solid #ccc;
   padding: 10px;
+  
 }
-
+.rdt_TableRow {
+  margin-bottom: 10px; /* Adjust the margin value as needed */
+}
 
 /* Header icons */
 .header-icon {
@@ -7231,6 +7235,7 @@ h2,h3{color:black;}
   font-size: 50px; 
   vertical-align: middle; 
   padding: 5px;
+  color: gray;
 }
 
 .icon-text {
@@ -7254,6 +7259,45 @@ h2,h3{color:black;}
 
 .cross-icon {
   color: red;
+}
+
+
+.table-container .rdt_TableRow {
+  border: 1px solid #ccc; /* Add a border around each row */
+  margin-bottom: 10px; /* Optional: Add margin between rows */
+  padding: 10px; /* Optional: Add padding to the rows */
+  background-color: #f7f7f7
+}
+.select-button {
+ margin-left: 15px;
+ font-size: 16px; /* Adjust the font size to increase the button size */
+ padding: 10px 20px; /* Adjust the padding to increase the button size */
+ white-space: nowrap; 
+ background-color: #F0702F;
+ /* Add any additional styles you need for the "Select" button */
+}
+/* Add these styles to your CSS */
+.group-premium-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-text {
+  font-size: 25px; /* Adjust the font size as needed */
+  /* font-weight: bold; */
+  margin-right: 31px;
+  white-space: nowrap; 
+}
+
+.small-text {
+  font-size: 12px; /* Adjust the font size as needed */
+}
+.details-container.grey {
+  background-color: #f2f2f2; /* Change this to your desired grey color */
+}
+.details-container:nth-child(odd) {
+  background-color: #f2f2f2; /* Change this to your desired grey color */
 }
 
 

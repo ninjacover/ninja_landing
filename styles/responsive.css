@@ -1007,6 +1007,40 @@ margin-left: 0px;
     font-size: 14px;
   }
   /* End Home demo 4,5,6 */
+  /* table responsive: */
+  .table-container {
+    margin-left: 20px !important; /* Override the original margin */
+    margin-right: 20px !important; /* Override the original margin */
+  }
+
+  /* Adjust the padding and font size for smaller screens */
+  .table-container {
+    padding: 5px !important; /* Override the original padding */
+  }
+
+  /* Adjust other styles for smaller screens if needed */
+  .big-text {
+    font-size: 18px !important; /* Override the original font size */
+  }
+
+  .small-text {
+    font-size: 10px !important; /* Override the original font size */
+  }
+
+  .icon-row {
+    font-size: 30px !important; /* Override the original font size */
+  }
+
+  .tick-icon,
+  .cross-icon {
+    font-size: 12px !important; /* Override the original font size */
+  }
+
+  .select-button {
+    font-size: 14px !important;
+    padding: 8px 16px !important; /* Override the original padding */
+  }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1802,48 +1836,7 @@ margin-left: 0px;
     margin: 0px auto 0;
   }
   /* Home demo 4,5,6 */
-  .navbar-area .others-option .subscribe .default-btn {
-    font-size: 14px;
-  }
-  .nev-style-five .navbar-area .others-option {
-    top: 3px;
-  }
-  .nev-style-five .navbar-area .others-option .option-item {
-    top: -15px;
-  }
-  .nev-style-five .navbar-area .others-option .sidebar-menu {
-    margin-left: 0;
-  }
-  .nev-style-five .navbar-area .others-option .sidebar-menu i {
-    display: block;
-    font-size: 40px;
-  }
-  .get-quat-list-tab {
-    padding: 30px;
-  }
-  .get-quat-list-tab li {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
-  .single-counter p {
-    font-size: 15px;
-  }
-  /* End Home demo 4,5,6 */
-
-}
-
-@media only screen and (min-width: 1700px) {
-  .main-banner-area {
-    padding-top: 300px;
-    padding-bottom: 300px;
-  }
-  .our-vision-area .vision-shape img {
-    width: 800px;
-  }
-  .main-banner-area-two .banner-text {
-    padding-top: 350px;
-    padding-bottom: 250px;
-  }
+ 
 }
 
 @media only screen and (max-width: 400px) {
