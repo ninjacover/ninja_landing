@@ -269,20 +269,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
 
   
     const renderDetails = (rowData) => {
-      if (!rowData) return null;
+      if (rowData) {
+        
+        console.log("not found")
+      }
+      ;
    
     
+    
       return (
+        
 
         <div className="details-container">
-          <p>Accompanying Family Members: {rowData.accompanyingFamily}</p>
-          <p>Physiotherapy: {rowData.physiotherapy}</p>
-          <p>Dental Note: {rowData.dentalNote}</p>
-          <p>Optical Note: {rowData.opticalNote}</p>
-          <p>Maternity Waiting Period: {rowData.maternityWaitingPeriod}</p>
-          <p>New Born Baby Coverage: {rowData.newBornBabyCoverage}</p>
-          <p>Maternity Note: {rowData.maternityNote}</p>
-          <p>Group Life Insurance Coverage: {rowData.groupLifeInsuranceCoverage}</p>
+          <p>Accompanying Family Members: {` ${data[0].accompanyingFamily}`}</p>
+          <p>Dental Note: {` ${data[0].dental}`}</p>
+          <p>Optical Note: {` ${data[0].optical}`}</p>
+          <p>Maternity Waiting Period: {` ${data[0].maternity}`}</p>
+          <p>New Born Baby Coverage:{` ${data[0].newBornBabyCoverage}`}</p>
+          <p>Maternity Note: {` ${data[0].maternity}`}</p>
+          <p>Group Life Insurance Coverage: {` ${data[0].groupLifeInsuranceCoverage}`}</p>
           {/* Render other details as needed */}
         </div>
       );
