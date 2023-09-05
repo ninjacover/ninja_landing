@@ -2,8 +2,7 @@ import React from 'react';
 import NavbarTwo from '../components/_App/NavbarTwo';
 import PageBanner from '../components/Common/PageBanner';
 import AchievementContent from '../components/About/AchievementContent';
-import GetAFreeQuoteFormStyleTwo from '../components/Common/GetAFreeQuoteFormStyleTwo';
-import ContactWithAgent from '../components/Common/ContactWithAgent';
+import Quotation_invoice from "../pages/insurance_modules/group_medical/quotation_invoice"
 import Footer from '../components/_App/Footer';
 
 const InsuranceDetails = () => {
@@ -22,9 +21,7 @@ const InsuranceDetails = () => {
                 <AchievementContent />
             </div>
 
-            <GetAFreeQuoteFormStyleTwo />
-            
-            <ContactWithAgent />
+<Quotation_invoice/>          
 
             <Footer />
         </>

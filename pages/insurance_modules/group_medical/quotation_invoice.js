@@ -1,0 +1,48 @@
+import React from 'react'
+
+const quotation_invoice = () => {
+    return (
+        <div>
+            <h1>OMNIA, THANKS FOR REGISTERING! THIS IS YOUR QUOTE</h1>
+            <div className='invoice-container'>
+
+
+            </div>
+            <div class="any-contact-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <div class="contact-text">
+                                <h3>Have you any question? Ask Us anything, we’d love to answer!
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="contact-call">
+                                <h3><i class="flaticon-call"></i>+824-456-876-521</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 style={{ textAlign: 'center' }}>Need an advice</h1>
+
+            <div class="business-contact-area-five ptb-100">
+                <div class="container">
+                    <div class="business-contact-bg">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="business-contact">
+                                    <p>Call Us Today</p><a class="one" href="tel:+82546-564-234">+82546-564-234</a>
+                                    <a href="tel:+82546-564-235"> +82546-564-235</a>
+                                    <span>OR</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="business-content-email"><p p>Sign Up For Emails</p><div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Your Email"/><button class="default-btn">Send</button></div></div></div></div></div></div></div>
+        </div>
+    )
+}
+
+export default quotation_invoice
