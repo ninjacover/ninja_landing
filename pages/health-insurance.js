@@ -9,6 +9,7 @@ import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 import Navbar from '../components/_App/Navbar';
 import InsuranceTable from '../components/_App/InsuranceTable';
+import SpecsBar from '../components/_App/SpecsBar';
 const HealthInsurance = () => {
     return (
         <>
@@ -21,6 +22,7 @@ const HealthInsurance = () => {
                 homePageText="Home" 
                 activePageText="Health Insurance" 
             /> 
+            <SpecsBar/>
 
                 {/* <div className="choose-us-area-three pt-100 pb-70">
                     <div className="container">

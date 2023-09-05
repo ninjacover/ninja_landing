@@ -30,6 +30,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
           <div className="group-premium-cell">
             <div className="big-text">{row.groupPremium}</div>
             <div className="small-text">Avg/Person: 24,960</div>
+            
           </div>
         ),
         
@@ -39,12 +40,16 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'inPatient',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaHospital className="icon-row" />
-            {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-          
+          <div >   
+          <div className= "icon-text"> 
+          <FaHospital className="icon-row" />
+          {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
-          
+          <div>
+            discount:5000
+          </div>
+        </div>
+        
         ),
       },
       {
@@ -52,9 +57,14 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'outPatient',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaUserMd className="icon-row" />
-            {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaUserMd className="icon-row" />
+              {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
@@ -63,9 +73,14 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'chronicPreExistingDisease',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaPills className="icon-row" />
-            {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaPills className="icon-row" />
+              {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
@@ -74,9 +89,14 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'medication',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaCapsules className="icon-row" />
-            {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaCapsules className="icon-row" />
+              {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
@@ -85,9 +105,14 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'dental',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaTooth className="icon-row" />
-            {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaTooth className="icon-row" />
+              {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
@@ -96,9 +121,14 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'optical',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaEye className="icon-row" />
-            {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaEye className="icon-row" />
+              {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
@@ -107,12 +137,18 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         selector: 'maternity',
         sortable: true,
         cell: row => (
-          <div className="icon-text">
-            <FaBabyCarriage className="icon-row" />
-            {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          <div>   
+            <div className="icon-text"> 
+              <FaBabyCarriage className="icon-row" />
+              {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+            </div>
+            <div>
+              discount: 5000 {/* Replace with the appropriate discount value */}
+            </div>
           </div>
         ),
       },
+      
       {
         name: 'Actions',
         cell: row => (

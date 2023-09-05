@@ -3126,8 +3126,8 @@ Page Title Area Style
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding-top: 240px;
-  padding-bottom: 150px;
+  padding-top: 80px;
+  padding-bottom: 70px;
   text-align: center;
   background-color: #F0702F;
   z-index: 1;
@@ -7239,7 +7239,7 @@ h2,h3{color:black;}
 .icon-text {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* Adjust the gap between the icons and text */
 }
 
 /* Tick and cross icons */
@@ -7264,7 +7264,8 @@ h2,h3{color:black;}
   border: 1px solid #ccc; /* Add a border around each row */
   margin-bottom: 10px; /* Optional: Add margin between rows */
   padding: 10px; /* Optional: Add padding to the rows */
-  background-color: #f7f7f7
+  background-color: #f7f7f7;
+  
 }
 .select-button {
  margin-left: 15px;
@@ -7314,4 +7315,29 @@ h2,h3{color:black;}
     top: 6rem;
     left: 19rem;
     margin-bottom: 13rem;
+}
+
+/* ===============insurance specs======================== */
+.insurance-specs-bar {
+  display: flex; /* Use flexbox to display items in a row */
+  justify-content: center;  
+  align-items: center; /* Center vertically within the container */
+
+}
+
+.insurance-spec {
+  display: flex; /* Display icon and status in a row */
+  align-items: center; /* Center vertically within each spec */
+  margin-right: 10px; /* Add some spacing between specs (adjust as needed) */
+}
+
+.icon {
+  margin-right: 5px; /* Add some spacing between icon and status (adjust as needed) */
+}
+
+.status {
+  font-size: 15px;
+  vertical-align: middle; 
+  margin-right: 10px; 
+  margin-top: 50px;
 }
