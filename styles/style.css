@@ -7230,7 +7230,7 @@ h2,h3{color:black;}
 
 /* Icons and text in cells */
 .icon-row {
-  font-size: 50px; 
+  font-size: 40px; 
   vertical-align: middle; 
   padding: 5px;
   color: gray;
@@ -7277,26 +7277,43 @@ h2,h3{color:black;}
 }
 /* Add these styles to your CSS */
 .group-premium-cell {
-  display: flex;
+
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 .big-text {
-  font-size: 25px; /* Adjust the font size as needed */
-  /* font-weight: bold; */
-  margin-right: 31px;
+  font-size: 25px;
+ 
+  
   white-space: nowrap; 
+}
+.group-premium-header{
+  margin-left: 15px;
+}
+.plan-header{
+  margin-left: 9px;
 }
 
 .small-text {
-  font-size: 12px; /* Adjust the font size as needed */
+  font-size: 12px; 
 }
 .details-container.grey {
-  background-color: #f2f2f2; /* Change this to your desired grey color */
+  background-color: #f2f2f2; 
 }
 .details-container:nth-child(odd) {
-  background-color: #f2f2f2; /* Change this to your desired grey color */
+  background-color: #f2f2f2; 
+}
+.sPapY{
+
+  right: 0; 
+}
+.plan-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  margin-right: 30px;
 }
 
 
@@ -7320,7 +7337,7 @@ h2,h3{color:black;}
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
   display: flex; /* Use flexbox to display items in a row */
-  justify-content: center;  
+  justify-content: flex-end;  
   align-items: center; /* Center vertically within the container */
 
 }
@@ -7328,7 +7345,8 @@ h2,h3{color:black;}
 .insurance-spec {
   display: flex; /* Display icon and status in a row */
   align-items: center; /* Center vertically within each spec */
-  margin-right: 10px; /* Add some spacing between specs (adjust as needed) */
+  margin-right: 120px; /* Add some spacing between specs (adjust as needed) */
+  padding-bottom: 30px;
 }
 
 .icon {

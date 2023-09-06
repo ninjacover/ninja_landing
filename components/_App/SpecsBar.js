@@ -13,63 +13,61 @@ import {
 
 const SpecsBar = () => {
   return (
-    
     <div className="insurance-specs-bar">
-          
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaHospital />
-        </div>
-        <div className="status">
-          <FaCheckCircle />
+          <span className="status">
+            <FaCheckCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaUserMd />
-        </div>
-        <div className="status">
-          <FaTimesCircle />
+          <span className="status">
+            <FaTimesCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaPills />
-        </div>
-        <div className="status">
-          <FaCheckCircle />
+          <span className="status">
+            <FaCheckCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaCapsules />
-        </div>
-        <div className="status">
-          <FaCheckCircle />
+          <span className="status">
+            <FaCheckCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaTooth />
-        </div>
-        <div className="status">
-          <FaTimesCircle />
+          <span className="status">
+            <FaTimesCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaEye />
-        </div>
-        <div className="status">
-          <FaCheckCircle />
+          <span className="status">
+            <FaCheckCircle />
+          </span>
         </div>
       </div>
       <div className="insurance-spec">
-        <div className="icon-row ">
+        <div className="icon-row">
           <FaBabyCarriage />
-        </div>
-        <div className="status">
-          <FaTimesCircle />
+          <span className="status">
+            <FaTimesCircle />
+          </span>
         </div>
       </div>
     </div>

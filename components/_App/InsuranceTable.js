@@ -1,31 +1,36 @@
-import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaDownload, FaPills } from 'react-icons/fa';
+import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage,FaPills } from 'react-icons/fa';
   import DataTable from 'react-data-table-component';
 
   import React, { useState } from 'react';
 
   const InsuranceTable = () => {
     const [selectedRow, setSelectedRow] = useState(null);
-    const [oddRowBackground, setOddRowBackground] = useState(false);
+    // const [oddRowBackground, setOddRowBackground] = useState(false);
     
   
-    const handleDetailsClick = row => {
-      setSelectedRow(row === selectedRow ? null : row);
-    };
-    const toggleOddRowBackground = () => {
-      setOddRowBackground(!oddRowBackground);
-    };
+    // const handleDetailsClick = row => {
+    //   setSelectedRow(row === selectedRow ? null : row);
+    // };
+    // const toggleOddRowBackground = () => {
+    //   setOddRowBackground(!oddRowBackground);
+    // };
 
   const columns = [
-      {
-        name: 'Plan',
+
+    {
+        
+        name: <div className='plan-header'>Plan</div>,
         selector: 'plan',
         sortable: true,
-        
+        allowOverflow: true,
+        width: '100px'
+   
       },
       {
-        name: <div>Group Premium</div>,
+        name: <div className='group-premium-header'>Group Premium</div>,
         selector: 'groupPremium',
         sortable: true,
+        
         cell: row => (
           <div className="group-premium-cell">
             <div className="big-text">{row.groupPremium}</div>
@@ -46,7 +51,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
           {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div>
-            discount:5000
+          {row.inPatient ? `Amount covered:${row.inPatientCoverage}$` : 'Not Covered'}
           </div>
         </div>
         
@@ -63,7 +68,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.outPatient ? `Amount covered:${row.outPatientCoverage}$` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -79,7 +84,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.chronicPreExistingDisease ? `Covered` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -95,7 +100,8 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.medication ? `Amount covered:${row.medicationCoverage}$` : 'Not Covered'}
+
             </div>
           </div>
         ),
@@ -111,7 +117,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.dental ? `Amount covered:${row.dentalCoverage}$` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -127,7 +133,7 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.optical ? `Amount covered:${row.opticalCoverage}$` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -143,7 +149,8 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
               {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
             <div>
-              discount: 5000 {/* Replace with the appropriate discount value */}
+            {row.maternity ? `Amount covered:${row.maternityCoverage}$` : 'Not Covered'}
+
             </div>
           </div>
         ),
@@ -162,20 +169,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         button: true,
       },
     ];
-   
-  
 
     const data = [
       {
         plan: 'Plan A',
         groupPremium: '$24000',
         inPatient: true,
+        inPatientCoverage: 350,
         outPatient: false,
+        outPatientCoverage: "Not Covered",
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 200,
         medication: true,
+        medicationCoverage: 150,
         dental: false,
+        dentalCoverage: "Not Covered",
         optical: false,
+        opticalCoverage: "Not Covered",
         maternity: false,
+        maternityCoverage: "Not Covered",
         accompanyingFamily: 'Not Covered',
         physiotherapy: '10 Sessions',
         dentalNote: 'Not Covered',
@@ -183,18 +195,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: 'Not Covered',
         newBornBabyCoverage: 'Not Covered',
         maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: '25,000 EGP',
+        groupLifeInsuranceCoverage: 25000,
       },
       {
         plan: 'Plan B',
         groupPremium: '$29000',
         inPatient: true,
+        inPatientCoverage: 250,
         outPatient: true,
+        outPatientCoverage: 180,
         chronicPreExistingDisease: false,
+        chronicPreExistingDiseaseCoverage: "Not Covered",
         medication: true,
+        medicationCoverage: 200,
         dental: false,
+        dentalCoverage: "Not Covered",
         optical: true,
+        opticalCoverage: 280,
         maternity: true,
+        maternityCoverage: 220,
         accompanyingFamily: 'Covered',
         physiotherapy: '12 Sessions',
         dentalNote: 'Covered for Basic Procedures',
@@ -202,18 +221,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: '6 months waiting period',
         newBornBabyCoverage: 'Covered',
         maternityNote: 'Covered with conditions',
-        groupLifeInsuranceCoverage: '30,000 EGP',
+        groupLifeInsuranceCoverage: 30000,
       },
       {
         plan: 'Plan C',
         groupPremium: '$30000',
         inPatient: false,
+        inPatientCoverage: "Not Covered",
         outPatient: true,
+        outPatientCoverage: 220,
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 200,
         medication: true,
+        medicationCoverage: 150,
         dental: true,
+        dentalCoverage: 280,
         optical: false,
+        opticalCoverage: "Not Covered",
         maternity: false,
+        maternityCoverage: "Not Covered",
         accompanyingFamily: 'Not Covered',
         physiotherapy: '8 Sessions',
         dentalNote: 'Not Covered',
@@ -221,18 +247,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: 'Not Covered',
         newBornBabyCoverage: 'Not Covered',
         maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: '20,000 EGP',
+        groupLifeInsuranceCoverage: 20000,
       },
       {
         plan: 'Plan D',
         groupPremium: '$45000',
         inPatient: true,
+        inPatientCoverage: 300,
         outPatient: true,
+        outPatientCoverage: 250,
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 200,
         medication: true,
+        medicationCoverage: 220,
         dental: true,
+        dentalCoverage: 280,
         optical: true,
+        opticalCoverage: 300,
         maternity: true,
+        maternityCoverage: 250,
         accompanyingFamily: 'Covered',
         physiotherapy: '15 Sessions',
         dentalNote: 'Covered for Major Procedures',
@@ -240,18 +273,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: '3 months waiting period',
         newBornBabyCoverage: 'Covered',
         maternityNote: 'Covered without conditions',
-        groupLifeInsuranceCoverage: '35,000 EGP',
+        groupLifeInsuranceCoverage: 35000,
       },
       {
         plan: 'Plan E',
         groupPremium: '$50000',
         inPatient: true,
+        inPatientCoverage: 280,
         outPatient: true,
+        outPatientCoverage: 220,
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 180,
         medication: true,
+        medicationCoverage: 200,
         dental: false,
+        dentalCoverage: "Not Covered",
         optical: true,
+        opticalCoverage: 250,
         maternity: false,
+        maternityCoverage: "Not Covered",
         accompanyingFamily: 'Not Covered',
         physiotherapy: '10 Sessions',
         dentalNote: 'Not Covered',
@@ -259,18 +299,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: 'Not Covered',
         newBornBabyCoverage: 'Not Covered',
         maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: '40,000 EGP',
+        groupLifeInsuranceCoverage: 40000,
       },
       {
         plan: 'Plan F',
         groupPremium: '$52000',
         inPatient: true,
+        inPatientCoverage: 300,
         outPatient: true,
+        outPatientCoverage: 220,
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 150,
         medication: true,
+        medicationCoverage: 180,
         dental: false,
+        dentalCoverage: "Not Covered",
         optical: false,
+        opticalCoverage: "Not Covered",
         maternity: false,
+        maternityCoverage: "Not Covered",
         accompanyingFamily: 'Covered',
         physiotherapy: '20 Sessions',
         dentalNote: 'Not Covered',
@@ -278,18 +325,25 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: 'Not Covered',
         newBornBabyCoverage: 'Not Covered',
         maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: '45,000 EGP',
+        groupLifeInsuranceCoverage: 45000,
       },
       {
         plan: 'Plan G',
         groupPremium: '$100000',
         inPatient: true,
+        inPatientCoverage: 350,
         outPatient: true,
+        outPatientCoverage: 280,
         chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: 220,
         medication: true,
+        medicationCoverage: 250,
         dental: true,
+        dentalCoverage: 300,
         optical: true,
+        opticalCoverage: 220,
         maternity: true,
+        maternityCoverage: 280,
         accompanyingFamily: 'Covered',
         physiotherapy: '25 Sessions',
         dentalNote: 'Covered for All Procedures',
@@ -297,9 +351,15 @@ import { FaUserMd, FaBriefcaseMedical, FaHospital, FaUserShield,FaCheckCircle, F
         maternityWaitingPeriod: '3 months waiting period',
         newBornBabyCoverage: 'Covered',
         maternityNote: 'Covered with conditions',
-        groupLifeInsuranceCoverage: '50,000 EGP',
+        groupLifeInsuranceCoverage: 50000,
       },
     ];
+    
+
+      
+  
+      
+    
     
     
 
