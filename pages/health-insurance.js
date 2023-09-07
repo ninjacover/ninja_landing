@@ -17,10 +17,10 @@ const HealthInsurance = () => {
             
 
             <PageBanner 
-                pageTitle="Health Insurance" 
+                pageTitle="Insurance SME" 
                 homePageUrl="/" 
                 homePageText="Home" 
-                activePageText="Health Insurance" 
+                activePageText="Insurance SME" 
             /> 
             <SpecsBar/>
 

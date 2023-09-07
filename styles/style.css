@@ -7231,9 +7231,14 @@ h2,h3{color:black;}
 /* Icons and text in cells */
 .icon-row {
   font-size: 40px; 
-  vertical-align: middle; 
+
   padding: 5px;
   color: gray;
+  margin-left: px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  white-space: nowrap; /* Keep the text on one line */
 }
 
 .icon-text {
@@ -7247,7 +7252,7 @@ h2,h3{color:black;}
 .cross-icon {
   font-size: 15px;
   vertical-align: middle; 
-  margin-left: -12px; 
+  margin-left: -15px; 
   margin-bottom: -20px;
 }
 
@@ -7285,26 +7290,30 @@ h2,h3{color:black;}
 
 .big-text {
   font-size: 25px;
- 
-  
-  white-space: nowrap; 
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  white-space: nowrap; /* Keep the text on one line */
 }
 .group-premium-header{
-  margin-left: 15px;
+  margin-left: 25px;
+  margin-top: 2px;
 }
 .plan-header{
   margin-left: 9px;
 }
 
 .small-text {
-  font-size: 12px; 
+  font-size: 10px; 
+  white-space: nowrap;
+  vertical-align: middle; 
 }
-.details-container.grey {
+/* .details-container.grey {
   background-color: #f2f2f2; 
-}
-.details-container:nth-child(odd) {
+} */
+/* .details-container:nth-child(odd) {
   background-color: #f2f2f2; 
-}
+} */
 .sPapY{
 
   right: 0; 
@@ -7314,6 +7323,9 @@ h2,h3{color:black;}
   overflow: hidden;
   /* text-overflow: ellipsis; */
   margin-right: 30px;
+}
+.details-label{
+  font-weight: bold;
 }
 
 
@@ -7340,8 +7352,8 @@ h2,h3{color:black;}
   flex-wrap: wrap; /* Allows items to wrap to the next row if the container is too narrow */
   justify-content: space-between; 
   align-items: center; /* Centers items vertically */
-  margin-left: 80px; /* Add left margin */
-  margin-right: 80px; /* Add right margin */
+  margin-left: 150px; /* Add left margin */
+  margin-right: 150px; /* Add right margin */
   padding-bottom: 30px;
 
 }
@@ -7358,12 +7370,16 @@ h2,h3{color:black;}
 
 }
 
-.status {
-
-  font-size: 15px;
-  margin-top: 30px;
-}
-
 .specs-text {
   font-size: 14px; /* Adjust font size as needed */
+}
+.status-true{
+  font-size: 15px;
+  margin-top: 30px;
+  color: green;
+}
+.status-false{
+  font-size: 15px;
+  margin-top: 30px;
+  color: red;
 }

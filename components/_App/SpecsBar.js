@@ -17,7 +17,7 @@ const SpecsBar = () => {
       <div className="insurance-spec">
         <div className="icon-row">
           <FaHospital />
-          <div className="status">
+          <div className="status-true">
             <FaCheckCircle />
           </div>
         </div>
@@ -28,7 +28,7 @@ const SpecsBar = () => {
       <div className="insurance-spec">
         <div className="icon-row">
           <FaUserMd />
-          <span className="status">
+          <span className="status-false">
             <FaTimesCircle />
           </span>
         </div>
@@ -39,18 +39,18 @@ const SpecsBar = () => {
       <div className="insurance-spec">
         <div className="icon-row">
           <FaPills />
-          <span className="status">
+          <span className="status-true">
             <FaCheckCircle />
           </span>
         </div>
         <div className='specs-text'>
-          Chronic
+          Diseases
         </div>
       </div>
       <div className="insurance-spec">
         <div className="icon-row">
           <FaCapsules />
-          <span className="status">
+          <span className="status-false">
             <FaCheckCircle />
           </span>
         </div>
@@ -61,8 +61,19 @@ const SpecsBar = () => {
       <div className="insurance-spec">
         <div className="icon-row">
           <FaTooth />
-          <span className="status">
+          <span className="status-false">
             <FaTimesCircle />
+          </span>
+        </div>
+        <div className='specs-text'>
+          Dental
+        </div>
+      </div>
+      <div className="insurance-spec">
+        <div className="icon-row">
+          <FaEye />
+          <span className="status-true">
+            <FaCheckCircle />
           </span>
         </div>
         <div className='specs-text'>
@@ -71,24 +82,13 @@ const SpecsBar = () => {
       </div>
       <div className="insurance-spec">
         <div className="icon-row">
-          <FaEye />
-          <span className="status">
-            <FaCheckCircle />
-          </span>
-        </div>
-        <div className='specs-text'>
-          Maternity
-        </div>
-      </div>
-      <div className="insurance-spec">
-        <div className="icon-row">
           <FaBabyCarriage />
-          <span className="status">
+          <span className="status-false">
             <FaTimesCircle />
           </span>
         </div>
         <div className='specs-text'>
-          Pediatrics
+          Maternity
         </div>
       </div>
     </div>
