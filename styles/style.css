@@ -7336,26 +7336,34 @@ h2,h3{color:black;}
 
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
-  display: flex; /* Use flexbox to display items in a row */
-  justify-content: flex-end;  
-  align-items: center; /* Center vertically within the container */
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row if the container is too narrow */
+  justify-content: space-between; 
+  align-items: center; /* Centers items vertically */
+  margin-left: 80px; /* Add left margin */
+  margin-right: 80px; /* Add right margin */
+  padding-bottom: 30px;
 
 }
 
 .insurance-spec {
-  display: flex; /* Display icon and status in a row */
-  align-items: center; /* Center vertically within each spec */
-  margin-right: 120px; /* Add some spacing between specs (adjust as needed) */
-  padding-bottom: 30px;
+  text-align: center; /* Centers text within the div */
+  margin: 7px; /* Add some spacing between items */
 }
 
-.icon {
-  margin-right: 5px; /* Add some spacing between icon and status (adjust as needed) */
+.icon-row {
+  display: flex; /* Display icon and status horizontally */
+  align-items: center; /* Centers icon and status vertically */
+  margin-bottom: 5px; /* Add some spacing between icon and text */
+
 }
 
 .status {
+
   font-size: 15px;
-  vertical-align: middle; 
-  margin-right: 10px; 
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.specs-text {
+  font-size: 14px; /* Adjust font size as needed */
 }

@@ -17,9 +17,12 @@ const SpecsBar = () => {
       <div className="insurance-spec">
         <div className="icon-row">
           <FaHospital />
-          <span className="status">
+          <div className="status">
             <FaCheckCircle />
-          </span>
+          </div>
+        </div>
+        <div className='specs-text'>
+          In Patient
         </div>
       </div>
       <div className="insurance-spec">
@@ -29,6 +32,9 @@ const SpecsBar = () => {
             <FaTimesCircle />
           </span>
         </div>
+        <span className='specs-text'>
+          Out Patient
+        </span>
       </div>
       <div className="insurance-spec">
         <div className="icon-row">
@@ -36,6 +42,9 @@ const SpecsBar = () => {
           <span className="status">
             <FaCheckCircle />
           </span>
+        </div>
+        <div className='specs-text'>
+          Chronic
         </div>
       </div>
       <div className="insurance-spec">
@@ -45,6 +54,9 @@ const SpecsBar = () => {
             <FaCheckCircle />
           </span>
         </div>
+        <div className='specs-text'>
+          Dental
+        </div>
       </div>
       <div className="insurance-spec">
         <div className="icon-row">
@@ -52,6 +64,9 @@ const SpecsBar = () => {
           <span className="status">
             <FaTimesCircle />
           </span>
+        </div>
+        <div className='specs-text'>
+          Optical
         </div>
       </div>
       <div className="insurance-spec">
@@ -61,6 +76,9 @@ const SpecsBar = () => {
             <FaCheckCircle />
           </span>
         </div>
+        <div className='specs-text'>
+          Maternity
+        </div>
       </div>
       <div className="insurance-spec">
         <div className="icon-row">
@@ -68,6 +86,9 @@ const SpecsBar = () => {
           <span className="status">
             <FaTimesCircle />
           </span>
+        </div>
+        <div className='specs-text'>
+          Pediatrics
         </div>
       </div>
     </div>
