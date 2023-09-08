@@ -7383,3 +7383,64 @@ h2,h3{color:black;}
   margin-top: 30px;
   color: red;
 }
+
+/* ===============insurance card======================== */
+/* InsuranceCard.css */
+ .insurance-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  max-width: 700px; 
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .plan-name {
+  font-weight: bold;
+}
+
+.group-premium {
+  margin-left: 10px;
+}
+
+.select-button-responsive {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon-scroll-left,
+.icon-scroll-right {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icon-scroll-left {
+  margin-right: 10px;
+}
+
+.icon-scroll-right {
+  margin-left: 10px;
+}
+
+/* .icon-row {
+  font-size: 24px;
+  margin: 5px;
+} */
+
+/* .small-text {
+  font-size: 14px;
+  margin-top: 10px;
+}  */

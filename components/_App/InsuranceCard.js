@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SwiperCore, { Navigation } from 'swiper/core';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   FaUserMd,
   FaHospital,
@@ -11,8 +13,10 @@ import {
   FaPills,
 } from 'react-icons/fa';
 
+SwiperCore.use([Navigation]);
+
 const InsuranceCard = ({ data }) => {
-  const [currentIconIndex, setCurrentIconIndex] = useState(0);
+  const [swiper, setSwiper] = useState(null);
 
   const icons = [
     <FaHospital className="icon-row" />,
@@ -25,25 +29,46 @@ const InsuranceCard = ({ data }) => {
   ];
 
   const handleSwipe = (direction) => {
-    if (direction === 'left' && currentIconIndex > 0) {
-      setCurrentIconIndex(currentIconIndex - 1);
-    } else if (direction === 'right' && currentIconIndex < icons.length - 1) {
-      setCurrentIconIndex(currentIconIndex + 1);
+    if (swiper) {
+      if (direction === 'left') {
+        swiper.slidePrev();
+      } else if (direction === 'right') {
+        swiper.slideNext();
+      }
     }
   };
 
   return (
     <div className="insurance-card">
-      <div className="plan-header">Plan: {data.plan}</div>
-      <div className="group-premium-header">Premium: {data.groupPremium}</div>
-      <div className="icon-container">
-        <div className="icon-wrapper" onClick={() => handleSwipe('left')}>
-          <span className="arrow-left">&lt;</span>
+      <div className="card-header">
+        <div className="plan-info">
+          <div className="plan-name">{data.plan}</div>
+          <div className="group-premium">{data.groupPremium}</div>
         </div>
-        <div className="icon">{icons[currentIconIndex]}</div>
-        <div className="icon-wrapper" onClick={() => handleSwipe('right')}>
-          <span className="arrow-right">&gt;</span>
+        <button className="select-button-responsive">Select</button>
+      </div>
+      <div className="swiper-container">
+        <Swiper
+          onSwiper={(swiper) => setSwiper(swiper)}
+          slidesPerView={3} // Number of icons to show at a time
+          spaceBetween={10} // Space between icons
+          navigation={{
+            nextEl: '.icon-scroll-right',
+            prevEl: '.icon-scroll-left',
+          }}
+        >
+          {icons.map((icon, index) => (
+            <SwiperSlide key={index} className="icon">
+              {icon}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* <div className="icon-scroll-left" onClick={() => handleSwipe('left')}>
+          &lt;
         </div>
+        <div className="icon-scroll-right" onClick={() => handleSwipe('right')}>
+          &gt;
+        </div> */}
       </div>
       <div className="small-text">
         {data.inPatient ? `In-Patient Coverage: ${data.inPatientCoverage}` : 'In-Patient: Not Covered'}

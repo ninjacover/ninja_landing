@@ -31,8 +31,9 @@
         "Router": "^2.1.0",
         "sass": "^1.44.0",
         "slick-carousel": "^1.8.1",
+        "styled-components": "^6.0.7",
         "sweetalert2": "^11.2.1",
         "sweetalert2-react-content": "^4.2.0",
-        "swiper": "^8.3.2"
+        "swiper": "^8.4.7"
     }
 }
