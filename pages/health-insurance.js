@@ -75,13 +75,13 @@ const HealthInsurance = () => {
 
             <AboutUsContent />
 
-            <OurVision />
+            {/* <OurVision /> */}
             
-            <GetAFreeQuoteFormStyleTwo />
+            {/* <GetAFreeQuoteFormStyleTwo />
 
             <div className="ptb-100">
                 <OffersArea />
-            </div>
+            </div> */}
 
             <Footer />
         </>

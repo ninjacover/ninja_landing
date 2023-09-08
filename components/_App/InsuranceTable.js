@@ -1,19 +1,36 @@
 import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage,FaPills } from 'react-icons/fa';
   import DataTable from 'react-data-table-component';
+  import InsuranceCard from './InsuranceCard';
 
-  import React, { useState } from 'react';
+  import React, { useState, useEffect } from 'react';
 
-  const InsuranceTable = () => {
-    const [selectedRow, setSelectedRow] = useState(null);
-    // const [oddRowBackground, setOddRowBackground] = useState(false);
-    
   
-    // const handleDetailsClick = row => {
-    //   setSelectedRow(row === selectedRow ? null : row);
-    // };
-    // const toggleOddRowBackground = () => {
-    //   setOddRowBackground(!oddRowBackground);
-    // };
+  const InsuranceTable = () => {
+    const [windowWidth, setWindowWidth] = useState(null);
+  
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    useEffect(() => {
+      const addResizeListener = () => {
+        if (typeof window !== 'undefined') {
+          window.addEventListener('resize', handleResize);
+          setWindowWidth(window.innerWidth);
+        }
+      };
+  
+      const removeResizeListener = () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
+  
+      addResizeListener();
+  
+      return removeResizeListener;
+    }, []);
+    const isMobile = windowWidth !== null && windowWidth <= 768; // Adjust the breakpoint as needed
 
   const columns = [
 
@@ -392,7 +409,15 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
 
   
 
-  
+    if (isMobile) {
+      return (
+        <div className="insurance-card-container">
+          {data.map((entry, index) => (
+            <InsuranceCard key={index} data={entry} />
+          ))}
+        </div>
+      );
+    }
   return (
     <div className="table-container table-container-sm">
       <DataTable
@@ -403,14 +428,14 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
         expandableRows // Enable row expansion
         expandableRowsComponent={renderDetails} // Use renderDetails function as the component
         expandOnRowClicked={false} // Disable row expansion on row click
-        expandableRowExpanded={selectedRow !== null} // Expand the selected row
+       // Expand the selected row
       />
-
+{/* 
       {selectedRow && (
         <div className="selected-row-details">
           {renderDetails(selectedRow)}
         </div>
-      )}
+      )} */}
     </div>
   );
 };
