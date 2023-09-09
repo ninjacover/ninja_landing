@@ -12,7 +12,7 @@ const AboutUsContent = () => {
 				<div className="row align-items-center">
 					<div className="col-lg-6">
 						<div className="about-content">
-							<h2>why choose Ninja Cover?</h2>
+							<h2>Why Ninja Cover?</h2>
 
 <p>At Ninja Cover, we're dedicated to simplifying insurance. Our platform is designed to empower you, the consumer, by providing straightforward and transparent insurance solutions. With us, you'll access comprehensive information, unbiased comparisons, and a seamless journey from quote to coverage. Our commitment to transparency and user-friendliness makes us your go-to destination for all your insurance needs.</p>
 
@@ -55,7 +55,7 @@ const AboutUsContent = () => {
 							data-aos-duration="1200"
 							data-aos-once="true"
 						>
-							<img src="/images/about-img.png" alt="Image" />
+							<img src="/images/Ninja-Vector.png" alt="Image" />
 						</div>
 					</div>
 				</div>

@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     return(
         <>
             <Head>
-                <title>Flexa - Insurance & Banking Finance Company React Template</title>
+                <title>Ninja Cover - Simplifying Insurance and Expert Life Advice</title>
                 <meta 
                     name="viewport" 
                     content="width=device-width, initial-scale=1, shrink-to-fit=no" 

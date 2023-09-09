@@ -1,21 +1,41 @@
 import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage,FaPills } from 'react-icons/fa';
   import DataTable from 'react-data-table-component';
+  import InsuranceCard from './InsuranceCard';
 
-  import React, { useState } from 'react';
+  import React, { useState, useEffect } from 'react';
 
+  
   const InsuranceTable = () => {
     const [selectedRow, setSelectedRow] = useState(null);
 
     
     // const [oddRowBackground, setOddRowBackground] = useState(false);
     
+
   
-    // const handleDetailsClick = row => {
-    //   setSelectedRow(row === selectedRow ? null : row);
-    // };
-    // const toggleOddRowBackground = () => {
-    //   setOddRowBackground(!oddRowBackground);
-    // };
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    useEffect(() => {
+      const addResizeListener = () => {
+        if (typeof window !== 'undefined') {
+          window.addEventListener('resize', handleResize);
+          setWindowWidth(window.innerWidth);
+        }
+      };
+  
+      const removeResizeListener = () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
+  
+      addResizeListener();
+  
+      return removeResizeListener;
+    }, []);
+    const isMobile = windowWidth !== null && windowWidth <= 768; // Adjust the breakpoint as needed
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const openPopup = () => {
@@ -40,7 +60,7 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
    
       },
       {
-        name: <div className='group-premium-header'>Group Premium</div>,
+        name: <div className='group-premium-header'>Premium</div>,
         selector: 'groupPremium',
         sortable: true,
         
@@ -63,8 +83,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
           <FaHospital className="icon-row" />
           {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
-          <div>
-          {row.inPatient ? `Amount covered:${row.inPatientCoverage}$` : 'Not Covered'}
+          <div className="small-text" >
+          {row.inPatient ? `${row.inPatientCoverage}` : 'Not Covered'}
           </div>
         </div>
         
@@ -80,14 +100,14 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaUserMd className="icon-row" />
               {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
-            {row.outPatient ? `Amount covered:${row.outPatientCoverage}$` : 'Not Covered'}
+            <div className="small-text">
+            {row.outPatient ? `${row.outPatientCoverage} EGP` : 'Not Covered'}
             </div>
           </div>
         ),
       },
       {
-        name: <div>Chronic & Pre-existing</div>,
+        name: 'Diseases',
         selector: 'chronicPreExistingDisease',
         sortable: true,
         cell: row => (
@@ -96,7 +116,7 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaPills className="icon-row" />
               {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
+            <div className="small-text">
             {row.chronicPreExistingDisease ? `Covered` : 'Not Covered'}
             </div>
           </div>
@@ -112,8 +132,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaCapsules className="icon-row" />
               {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
-            {row.medication ? `Amount covered:${row.medicationCoverage}$` : 'Not Covered'}
+            <div className="small-text">
+            {row.medication ? `${row.medicationCoverage} EGP` : 'Not Covered'}
 
             </div>
           </div>
@@ -129,8 +149,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaTooth className="icon-row" />
               {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
-            {row.dental ? `Amount covered:${row.dentalCoverage}$` : 'Not Covered'}
+            <div className='small-text'>
+            {row.dental ? `${row.dentalCoverage} EGP` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -145,8 +165,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaEye className="icon-row" />
               {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
-            {row.optical ? `Amount covered:${row.opticalCoverage}$` : 'Not Covered'}
+            <div className="small-text">
+            {row.optical ? `${row.opticalCoverage} EGP` : 'Not Covered'}
             </div>
           </div>
         ),
@@ -161,8 +181,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
               <FaBabyCarriage className="icon-row" />
               {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
             </div>
-            <div>
-            {row.maternity ? `Amount covered:${row.maternityCoverage}$` : 'Not Covered'}
+            <div className='small-text'>
+            {row.maternity ? `${row.maternityCoverage} EGP` : 'Not Covered'}
 
             </div>
           </div>
@@ -186,15 +206,15 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
     const data = [
       {
         plan: 'Plan A',
-        groupPremium: '$24000',
+        groupPremium: '24,000',
         inPatient: true,
-        inPatientCoverage: 350,
+        inPatientCoverage: '3,500 EGP',
         outPatient: false,
         outPatientCoverage: "Not Covered",
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 200,
+        chronicPreExistingDiseaseCoverage: '2,000',
         medication: true,
-        medicationCoverage: 150,
+        medicationCoverage: '15,000',
         dental: false,
         dentalCoverage: "Not Covered",
         optical: false,
@@ -212,21 +232,21 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan B',
-        groupPremium: '$29000',
+        groupPremium: '29,000',
         inPatient: true,
-        inPatientCoverage: 250,
+        inPatientCoverage: '2,500 EGP',
         outPatient: true,
-        outPatientCoverage: 180,
+        outPatientCoverage: '10,800',
         chronicPreExistingDisease: false,
         chronicPreExistingDiseaseCoverage: "Not Covered",
         medication: true,
-        medicationCoverage: 200,
+        medicationCoverage: '2,000',
         dental: false,
         dentalCoverage: "Not Covered",
         optical: true,
-        opticalCoverage: 280,
+        opticalCoverage: '2,800',
         maternity: true,
-        maternityCoverage: 220,
+        maternityCoverage: '2,200',
         accompanyingFamily: 'Covered',
         physiotherapy: '12 Sessions',
         dentalNote: 'Covered for Basic Procedures',
@@ -238,17 +258,17 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan C',
-        groupPremium: '$30000',
-        inPatient: false,
-        inPatientCoverage: "Not Covered",
+        groupPremium: '30,000',
+        inPatient: true,
+        inPatientCoverage: '10,000 EGP',
         outPatient: true,
-        outPatientCoverage: 220,
+        outPatientCoverage: '20,220',
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 200,
+        chronicPreExistingDiseaseCoverage: '2,000',
         medication: true,
-        medicationCoverage: 150,
+        medicationCoverage: '1,500',
         dental: true,
-        dentalCoverage: 280,
+        dentalCoverage: '2,800',
         optical: false,
         opticalCoverage: "Not Covered",
         maternity: false,
@@ -264,21 +284,21 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan D',
-        groupPremium: '$45000',
+        groupPremium: '45,000',
         inPatient: true,
-        inPatientCoverage: 300,
+        inPatientCoverage: '3,000 EGP',
         outPatient: true,
-        outPatientCoverage: 250,
+        outPatientCoverage: '20,500',
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 200,
+        chronicPreExistingDiseaseCoverage: '2,000',
         medication: true,
-        medicationCoverage: 220,
+        medicationCoverage: '2,200',
         dental: true,
-        dentalCoverage: 280,
+        dentalCoverage: '2,800',
         optical: true,
-        opticalCoverage: 300,
+        opticalCoverage: '3,000',
         maternity: true,
-        maternityCoverage: 250,
+        maternityCoverage: '2,500',
         accompanyingFamily: 'Covered',
         physiotherapy: '15 Sessions',
         dentalNote: 'Covered for Major Procedures',
@@ -290,19 +310,19 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan E',
-        groupPremium: '$50000',
+        groupPremium: '50,000',
         inPatient: true,
-        inPatientCoverage: 280,
+        inPatientCoverage: '2,800 EGP',
         outPatient: true,
-        outPatientCoverage: 220,
+        outPatientCoverage: '21,200',
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 180,
+        chronicPreExistingDiseaseCoverage: '1,800',
         medication: true,
-        medicationCoverage: 200,
+        medicationCoverage: '2,000',
         dental: false,
         dentalCoverage: "Not Covered",
         optical: true,
-        opticalCoverage: 250,
+        opticalCoverage: '2,500',
         maternity: false,
         maternityCoverage: "Not Covered",
         accompanyingFamily: 'Not Covered',
@@ -316,15 +336,15 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan F',
-        groupPremium: '$52000',
+        groupPremium: '52,000',
         inPatient: true,
-        inPatientCoverage: 300,
+        inPatientCoverage: '3,000 EGP' ,
         outPatient: true,
-        outPatientCoverage: 220,
+        outPatientCoverage: '22,200',
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 150,
+        chronicPreExistingDiseaseCoverage: '1,500',
         medication: true,
-        medicationCoverage: 180,
+        medicationCoverage: '1,880',
         dental: false,
         dentalCoverage: "Not Covered",
         optical: false,
@@ -342,21 +362,21 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       },
       {
         plan: 'Plan G',
-        groupPremium: '$100000',
+        groupPremium: '100,000',
         inPatient: true,
-        inPatientCoverage: 350,
+        inPatientCoverage: '35,000 EGP',
         outPatient: true,
-        outPatientCoverage: 280,
+        outPatientCoverage: '22,800',
         chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: 220,
+        chronicPreExistingDiseaseCoverage: '2,220',
         medication: true,
-        medicationCoverage: 250,
+        medicationCoverage: '2,500',
         dental: true,
-        dentalCoverage: 300,
+        dentalCoverage: '3,000',
         optical: true,
-        opticalCoverage: 220,
+        opticalCoverage: '2,200',
         maternity: true,
-        maternityCoverage: 280,
+        maternityCoverage: '2,800',
         accompanyingFamily: 'Covered',
         physiotherapy: '25 Sessions',
         dentalNote: 'Covered for All Procedures',
@@ -390,21 +410,30 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
         
 
         <div className="details-container">
-          <p>Accompanying Family Members: {` ${data[0].accompanyingFamily}`}</p>
-          <p>Dental Note: {` ${data[0].dental}`}</p>
-          <p>Optical Note: {` ${data[0].optical}`}</p>
-          <p>Maternity Waiting Period: {` ${data[0].maternity}`}</p>
-          <p>New Born Baby Coverage:{` ${data[0].newBornBabyCoverage}`}</p>
-          <p>Maternity Note: {` ${data[0].maternity}`}</p>
-          <p>Group Life Insurance Coverage: {` ${data[0].groupLifeInsuranceCoverage}`}</p>
-          {/* Render other details as needed */}
-        </div>
+        <p><span className="details-label">Accompanying Family Members:</span> {data[0].accompanyingFamily}</p>
+        <p><span className="details-label">Dental Note:</span> {data[0].dentalNote}</p>
+        <p><span className="details-label">Optical Note:</span> {data[0].opticalNote}</p>
+        <p><span className="details-label">Maternity Waiting Period:</span> {data[0].maternityWaitingPeriod}</p>
+        <p><span className="details-label">New Born Baby Coverage:</span> {data[0].newBornBabyCoverage}</p>
+        <p><span className="details-label">Maternity Note:</span> {data[0].maternityNote}</p>
+        <p><span className="details-label">Group Life Insurance Coverage:</span> {data[0].groupLifeInsuranceCoverage}</p>
+        {/* Render other details as needed */}
+      </div>
+      
       );
     };
 
   
 
-  
+    if (isMobile) {
+      return (
+        <div className="insurance-card-container">
+          {data.map((entry, index) => (
+            <InsuranceCard key={index} data={entry} />
+          ))}
+        </div>
+      );
+    }
   return (
     <div className="table-container table-container-sm">
       <DataTable
@@ -415,14 +444,14 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
         expandableRows // Enable row expansion
         expandableRowsComponent={renderDetails} // Use renderDetails function as the component
         expandOnRowClicked={false} // Disable row expansion on row click
-        expandableRowExpanded={selectedRow !== null} // Expand the selected row
+       // Expand the selected row
       />
-
+{/* 
       {selectedRow && (
         <div className="selected-row-details">
           {renderDetails(selectedRow)}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

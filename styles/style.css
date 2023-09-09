@@ -7232,9 +7232,12 @@ h2,h3{color:black;}
 /* Icons and text in cells */
 .icon-row {
   font-size: 40px; 
-  vertical-align: middle; 
   padding: 5px;
   color: gray;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  white-space: nowrap; /* Keep the text on one line */
 }
 
 .icon-text {
@@ -7248,7 +7251,7 @@ h2,h3{color:black;}
 .cross-icon {
   font-size: 15px;
   vertical-align: middle; 
-  margin-left: -12px; 
+  margin-left: -15px; 
   margin-bottom: -20px;
 }
 
@@ -7286,26 +7289,25 @@ h2,h3{color:black;}
 
 .big-text {
   font-size: 25px;
- 
-  
-  white-space: nowrap; 
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  white-space: nowrap; /* Keep the text on one line */
 }
 .group-premium-header{
-  margin-left: 15px;
+  margin-left: 25px;
+  margin-top: 2px;
 }
 .plan-header{
   margin-left: 9px;
 }
 
 .small-text {
-  font-size: 12px; 
+  font-size: 10px; 
+  white-space: nowrap;
+  vertical-align: middle; 
 }
-.details-container.grey {
-  background-color: #f2f2f2; 
-}
-.details-container:nth-child(odd) {
-  background-color: #f2f2f2; 
-}
+
 .sPapY{
 
   right: 0; 
@@ -7316,34 +7318,150 @@ h2,h3{color:black;}
   /* text-overflow: ellipsis; */
   margin-right: 30px;
 }
+.details-label{
+  font-weight: bold;
+}
 
 
 
 
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
-  display: flex; /* Use flexbox to display items in a row */
-  justify-content: flex-end;  
-  align-items: center; /* Center vertically within the container */
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row if the container is too narrow */
+  justify-content: space-between; 
+  align-items: center; /* Centers items vertically */
+  margin-left: 150px; /* Add left margin */
+  margin-right: 150px; /* Add right margin */
+  padding-bottom: 30px;
 
 }
 
 .insurance-spec {
-  display: flex; /* Display icon and status in a row */
-  align-items: center; /* Center vertically within each spec */
-  margin-right: 120px; /* Add some spacing between specs (adjust as needed) */
-  padding-bottom: 30px;
+  text-align: center; /* Centers text within the div */
+  margin: 7px; /* Add some spacing between items */
 }
 
-.icon {
-  margin-right: 5px; /* Add some spacing between icon and status (adjust as needed) */
+.icon-row {
+  display: flex; /* Display icon and status horizontally */
+  align-items: center; /* Centers icon and status vertically */
+  margin-bottom: 5px; /* Add some spacing between icon and text */
+
 }
 
-.status {
+.specs-text {
+  font-size: 14px; /* Adjust font size as needed */
+}
+.status-true{
   font-size: 15px;
-  vertical-align: middle; 
-  margin-right: 10px; 
-  margin-top: 50px;
+  margin-top: 30px;
+  color: green;
+}
+.status-false{
+  font-size: 15px;
+  margin-top: 30px;
+  color: red;
+}
+
+/* ===============insurance card======================== */
+/* InsuranceCard.css */
+ .insurance-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px;
+  max-width: 700px; 
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.select-button-responsive {
+  background-color: #F07021;
+  color: white;
+  border: none;
+  padding: 1px 15px;
+  cursor: pointer;
+}
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon-scroll-left,
+.icon-scroll-right {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icon-scroll-left {
+  margin-right: 10px;
+}
+
+.icon-scroll-right {
+  margin-left: 10px;
+}
+.icon{
+  font-size: 50px; 
+  padding: 5px;
+  color: gray;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  white-space: nowrap; 
+  opacity: 0; /* Initially set the opacity to 0 */
+  transform: translateX(-20px); /* Initially move icons down */
+  animation: fadeInScroll 1s ease-in-out 0.5s forwards,
+  scrollIcons 4s linear infinite;}
+
+ 
+@keyframes fadeInScroll {
+  to {
+    opacity: 1; /* At the end of the animation, set opacity to 1 */
+    transform: translateX(0); /* Move icons back to their original position */
+  }
+}
+@keyframes fingerAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes scrollIcons {
+  0% {
+    transform: translateX(-20px); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(20px); /* Move icons off-screen to the right */
+  }
+}
+
+
+
+.icon-scroll-hint {
+  font-size: 24px;
+  color: gray;
+  margin-top: 10px;
+  animation: fingerAnimation 1s linear infinite;
 }
 
 

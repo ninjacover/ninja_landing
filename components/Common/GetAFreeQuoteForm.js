@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
+import Tab1 from "./quotation-form/Tab1"; 
+import Tab2 from "./quotation-form/Tab2"; 
+import Tab3 from "./quotation-form/Tab3";
+import Tab4 from "./quotation-form/Tab4";
+
 
 export default class GetAFreeQuoteForm extends Component {
     // Tab
@@ -39,7 +44,7 @@ export default class GetAFreeQuoteForm extends Component {
                                 data-aos-duration="1200"
                                 data-aos-once="true"
                             >
-                                <img src="/images/get-quat-img.png" alt="Image" />
+                                <img src="/images/Ninja-Compare.png" alt="Image" />
                             </div>
                         </div>
 
@@ -51,217 +56,33 @@ export default class GetAFreeQuoteForm extends Component {
                                             className="current"
                                             onClick={(e) => this.openTabSection(e, 'tab1')}
                                         >
-                                            <div className="dot"></div> Car
+                                            <div className="dot"></div> Individual Motor
                                         </li>
                                         <li
                                             onClick={(e) => this.openTabSection(e, 'tab2')}
                                         >
-                                            <div className="dot"></div> Home
+                                            <div className="dot"></div> Group Motor
                                         </li>
                                         <li
                                             onClick={(e) => this.openTabSection(e, 'tab3')}
                                         >
-                                            <div className="dot"></div> Life
+                                            <div className="dot"></div> Individual Medical
                                         </li>
                                         <li
                                             onClick={(e) => this.openTabSection(e, 'tab4')}
                                         >
-                                            <div className="dot"></div> Health
+                                            <div className="dot"></div> Group Medical
                                         </li>
                                     </ul>
 
                                     <div className="tab_content">
-                                        <div id="tab1" className="tabs_item">
-                                            <p>Start with your zip code to compare car insurance</p>
-                                            
-                                            <div className="form">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Name" placeholder="Your Name" />
-                                                </div>
+                                        <Tab1 />
 
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control" id="Email" placeholder="Your Email" />
-                                                </div>
+                                        <Tab2 />
 
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Number" placeholder="Your Number" />
-                                                </div>
+                                        <Tab3 />
 
-                                                <div className="form-group">
-                                                    <div className="select-box">
-                                                        <i className="flaticon-avatar"></i>
-
-                                                        <select className="form-select">
-                                                            <option value="5">Property Type</option>
-                                                            <option value="1">Home Property</option>
-                                                            <option value="2">Health Insurance</option>
-                                                            <option value="0">Car Insurance</option>
-                                                            <option value="3">Life Insurance</option>
-                                                            <option value="4">Home Insurance</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <button type="submit" className="default-btn">
-                                                    Start Saving Today
-                                                </button>
-
-                                                <ul className="ratings">
-                                                    <li>45 Ratings</li>
-
-                                                    <li className="right">
-                                                        Already Member? 
-                                                        <Link href="/sign-in">
-                                                            <a>SIGN IN</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        
-                                        <div id="tab2" className="tabs_item">
-                                            <p>Start with your zip code to compare home insurance</p>
-        
-                                            <div className="form">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Name2" placeholder="Your Name" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control" id="Email2" placeholder="Your Email" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Number2" placeholder="Your Number" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <div className="select-box">
-                                                        <i className="flaticon-avatar"></i>
-
-                                                        <select className="form-select">
-                                                            <option value="5">Home Property</option>
-                                                            <option value="1">Property Type </option>
-                                                            <option value="2">Health Insurance</option>
-                                                            <option value="0">Car Insurance</option>
-                                                            <option value="3">Life Insurance</option>
-                                                            <option value="4">Home Insurance</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <button type="submit" className="default-btn">
-                                                    Start Saving Today
-                                                </button>
-
-                                                <ul className="ratings">
-                                                    <li>45 Ratings</li>
-
-                                                    <li className="right">
-                                                        Already Member? 
-                                                        <Link href="/sign-in">
-                                                            <a>SIGN IN</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    
-                                        <div id="tab3" className="tabs_item">
-                                            <p>Start with your zip code to compare life insurance</p>
-        
-                                            <div className="form">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Name3" placeholder="Your Name" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control" id="Email3" placeholder="Your Email" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Number3" placeholder="Your Number" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <div className="select-box">
-                                                        <i className="flaticon-avatar"></i>
-
-                                                        <select className="form-select">
-                                                            <option value="5">Life Insurance</option>
-                                                            <option value="1">Home Property</option>
-                                                            <option value="2">Health Insurance</option>
-                                                            <option value="0">Car Insurance</option>
-                                                            <option value="3">Property Type</option>
-                                                            <option value="4">Home Insurance</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <button type="submit" className="default-btn">
-                                                    Start Saving Today
-                                                </button>
-
-                                                <ul className="ratings">
-                                                    <li>45 Ratings</li>
-
-                                                    <li className="right">
-                                                        Already Member? 
-                                                        <Link href="/sign-in">
-                                                            <a>SIGN IN</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab4" className="tabs_item">
-                                            <p>Start with your zip code to compare health insurance</p>
-        
-                                            <div className="form">
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Name4" placeholder="Your Name" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control" id="Email4" placeholder="Your Email" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="Number4" placeholder="Your Number" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <div className="select-box">
-                                                        <i className="flaticon-avatar"></i>
-
-                                                        <select className="form-select">
-                                                            <option value="5">Property Health</option>
-                                                            <option value="1">Home Property</option>
-                                                            <option value="2">Health Insurance</option>
-                                                            <option value="0">Car Insurance</option>
-                                                            <option value="3">Life Insurance</option>
-                                                            <option value="4">Home Insurance</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <button type="submit" className="default-btn">
-                                                    Start Saving Today
-                                                </button>
-
-                                                <ul className="ratings">
-                                                    <li>45 Ratings</li>
-
-                                                    <li className="right">
-                                                        Already Member? 
-                                                        <Link href="/sign-in">
-                                                            <a>SIGN IN</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        <Tab4 />
                                     </div>
                                 </div>
                             </div>
