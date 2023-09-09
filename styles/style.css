@@ -7231,10 +7231,8 @@ h2,h3{color:black;}
 /* Icons and text in cells */
 .icon-row {
   font-size: 40px; 
-
   padding: 5px;
   color: gray;
-  margin-left: px;
   display: flex;
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */
@@ -7308,12 +7306,7 @@ h2,h3{color:black;}
   white-space: nowrap;
   vertical-align: middle; 
 }
-/* .details-container.grey {
-  background-color: #f2f2f2; 
-} */
-/* .details-container:nth-child(odd) {
-  background-color: #f2f2f2; 
-} */
+
 .sPapY{
 
   right: 0; 
@@ -7389,29 +7382,29 @@ h2,h3{color:black;}
  .insurance-card {
   border: 1px solid #ddd;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   max-width: 700px; 
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
-.card-header {
+.row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
- .plan-name {
-  font-weight: bold;
+.cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
 }
 
-.group-premium {
-  margin-left: 10px;
-}
 
 .select-button-responsive {
-  background-color: #007bff;
+  background-color: #F07021;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 1px 15px;
   cursor: pointer;
 }
 
@@ -7434,13 +7427,53 @@ h2,h3{color:black;}
 .icon-scroll-right {
   margin-left: 10px;
 }
+.icon{
+  font-size: 50px; 
+  padding: 5px;
+  color: gray;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  white-space: nowrap; 
+  opacity: 0; /* Initially set the opacity to 0 */
+  transform: translateX(-20px); /* Initially move icons down */
+  animation: fadeInScroll 1s ease-in-out 0.5s forwards,
+  scrollIcons 4s linear infinite;}
 
-/* .icon-row {
+ 
+@keyframes fadeInScroll {
+  to {
+    opacity: 1; /* At the end of the animation, set opacity to 1 */
+    transform: translateX(0); /* Move icons back to their original position */
+  }
+}
+@keyframes fingerAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes scrollIcons {
+  0% {
+    transform: translateX(-20px); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(20px); /* Move icons off-screen to the right */
+  }
+}
+
+
+
+.icon-scroll-hint {
   font-size: 24px;
-  margin: 5px;
-} */
-
-/* .small-text {
-  font-size: 14px;
+  color: gray;
   margin-top: 10px;
-}  */
+  animation: fingerAnimation 1s linear infinite;
+}

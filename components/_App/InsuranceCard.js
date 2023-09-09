@@ -40,14 +40,19 @@ const InsuranceCard = ({ data }) => {
 
   return (
     <div className="insurance-card">
-      <div className="card-header">
-        <div className="plan-info">
-          <div className="plan-name">{data.plan}</div>
-          <div className="group-premium">{data.groupPremium}</div>
+      <div className="row">
+        <div className="cell">
+          <div className="plan-header"> {data.plan}</div>
         </div>
-        <button className="select-button-responsive">Select</button>
+        <div className="cell">
+          <div className=""> {data.groupPremium}</div>
+        </div>
+        <div className="cell">
+          <button className="select-button-responsive">Select</button>
+        </div>
       </div>
       <div className="swiper-container">
+      <div className="icon-scroll-hint">&#x1F449; Scroll</div>
         <Swiper
           onSwiper={(swiper) => setSwiper(swiper)}
           slidesPerView={3} // Number of icons to show at a time
