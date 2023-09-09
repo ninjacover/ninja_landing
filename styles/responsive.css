@@ -1939,8 +1939,17 @@ margin-left: 2.2rem;
   }
 @media (max-width: 400px) {
   .invoice-container {
-    left: 0;
+    /* left: 1.5rem; */
     overflow: hidden;
     max-width: 22rem;  }
 
+  }
+
+  /* *************************** */
+
+  .test{
+    display: flex;
+    background-color: #F0702F;
+    height: 600px;
+    width: 700px;
   }

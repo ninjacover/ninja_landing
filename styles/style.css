@@ -2796,12 +2796,12 @@ Testimonial Wrap Two Style
 Any Contact Area Style
 ======================================================*/
 .any-contact-area .row {
-  background-color: #262566;
+  background-color: var(--bs-orange);
   border-radius: 10px;
   margin-left: 5px;
   margin-right: 5px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
 }
 
 .any-contact-area .contact-text {
@@ -2810,11 +2810,12 @@ Any Contact Area Style
 
 .any-contact-area .contact-text h3 {
   color: #ffffff;
-  margin: 0;
+  margin: 16px;
 }
 
 .any-contact-area .contact-call {
   padding: 30px;
+  
 }
 
 .any-contact-area .contact-call h3 {
@@ -7357,13 +7358,13 @@ h2,h3{color:black;}
   background-color: var(--bs-white);
   box-shadow: 0px 0px 14px 13px var(--bs-gray-100);
   position: relative;
-  left: 23rem;
+  /* left: 13rem; */
   margin-bottom: 13rem;
   padding: 2rem;
   max-width: 800px;
 }
 .invoic-table{
-  right: -1rem;
+  /* right: -1rem; */
   position: relative;
 }
 .check-icon{
@@ -7385,7 +7386,23 @@ table table tr td{
   border-bottom: 1px solid var(--bs-gray-300);
 }
 
+.dw-icon{
+  display: flex;
+    position: relative;
+    top: 2.7rem;
+    color: var(--bs-body-bg);
+    font-size: 3rem;
+    right: 5rem;
+}
 
+.section-title{
+  margin: 3rem 0rem;
+  text-align: center;
+  margin: 3rem 17rem;
+color: var(--bs-gray-800);
+  
+
+}
 
 
 /* *********** */

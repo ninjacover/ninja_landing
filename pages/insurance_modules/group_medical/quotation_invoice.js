@@ -1,12 +1,14 @@
 import React from 'react'
 import InvoicTable from './InsuranceInvoicTable'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 const quotation_invoice = () => {
     return (
         <div>
             <p className='contact-title'>OMNIA, THANKS FOR REGISTERING! THIS IS YOUR QUOTE</p>
-            <div className='invoice-container'>
+            <div className='invoice-container container'>
 
-<InvoicTable/>
+              <InvoicTable/>
             </div>
             <div class="any-contact-area">
                 <div class="container">
@@ -19,13 +21,16 @@ const quotation_invoice = () => {
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="contact-call">
-                                <h3><i class="flaticon-call"></i>+824-456-876-521</h3>
+                                <h3>      
+                                Libano-Suisse SME<br/><a>Download Now</a>
+                                <FontAwesomeIcon icon={faDownload} size="lg" className="fas fa-lg" />
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <h1 style={{ textAlign: 'center' }}>Need an advice</h1>
+            <h1 className='section-title' >Need an advice</h1>
 
             <div class="business-contact-area-five ptb-100">
                 <div class="container">
