@@ -1041,6 +1041,10 @@ margin-left: 0px;
     padding: 8px 16px !important; /* Override the original padding */
   }
 
+
+
+
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1708,6 +1712,8 @@ margin-left: 0px;
   .about-content-six {
     margin-bottom: 30px;
   }
+
+
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1922,3 +1928,19 @@ margin-left: 2.2rem;
 }
 
 /*# sourceMappingURL=responsive.css.map */
+
+@media (max-width: 768px) {
+  /* Adjust the margin for the invoice container */
+  .invoice-container {
+    left: 0;
+    overflow: hidden;
+    max-width: fit-content;  }
+
+  }
+@media (max-width: 400px) {
+  .invoice-container {
+    left: 0;
+    overflow: hidden;
+    max-width: 22rem;  }
+
+  }

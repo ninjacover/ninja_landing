@@ -1,12 +1,12 @@
 import React from 'react'
-
+import InvoicTable from './InsuranceInvoicTable'
 const quotation_invoice = () => {
     return (
         <div>
-            <h1>OMNIA, THANKS FOR REGISTERING! THIS IS YOUR QUOTE</h1>
+            <p className='contact-title'>OMNIA, THANKS FOR REGISTERING! THIS IS YOUR QUOTE</p>
             <div className='invoice-container'>
 
-
+<InvoicTable/>
             </div>
             <div class="any-contact-area">
                 <div class="container">
@@ -34,7 +34,7 @@ const quotation_invoice = () => {
                             <div class="col-lg-6 col-md-6">
                                 <div class="business-contact">
                                     <p>Call Us Today</p><a class="one" href="tel:+82546-564-234">+82546-564-234</a>
-                                    <a href="tel:+82546-564-235"> +82546-564-235</a>
+                                    
                                     <span>OR</span>
                                     </div>
                                     </div>

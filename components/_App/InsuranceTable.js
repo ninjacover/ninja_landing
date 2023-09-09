@@ -5,6 +5,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
 
   const InsuranceTable = () => {
     const [selectedRow, setSelectedRow] = useState(null);
+
+    
     // const [oddRowBackground, setOddRowBackground] = useState(false);
     
   
@@ -14,6 +16,17 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
     // const toggleOddRowBackground = () => {
     //   setOddRowBackground(!oddRowBackground);
     // };
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const openPopup = () => {
+      setIsPopupOpen(true);
+    };
+    
+    const closePopup = () => {
+      setIsPopupOpen(false);
+    };
+    
+
 
   const columns = [
 
@@ -159,15 +172,15 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       {
         name: 'Actions',
         cell: row => (
-          <div className="action-buttons-container">
-            {/* <button className="details-button"  onClick={() => handleDetailsClick(row)}>Details</button> */}
-            <button className="select-button" onClick={() => handleDownload(row)}>Select</button>
+          <div className="action-buttons-container" onClick={openPopup}>
+            <button className="select-button" onClick={openPopup}>Select</button>
           </div>
         ),
         ignoreRowClick: true,
         allowOverflow: true,
         button: true,
       },
+      
     ];
 
     const data = [
