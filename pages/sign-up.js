@@ -3,11 +3,13 @@ import NavbarTwo from '../components/_App/NavbarTwo';
 import PageBanner from '../components/Common/PageBanner';
 import Footer from '../components/_App/Footer';
 import Link from 'next/link';
+import Navbar from '../components/_App/Navbar';
+
 
 const SignUp = () => {
     return (
         <>
-            <NavbarTwo />
+            <Navbar />
             
             <PageBanner 
                 pageTitle="Sign Up" 
