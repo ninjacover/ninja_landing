@@ -2796,12 +2796,12 @@ Testimonial Wrap Two Style
 Any Contact Area Style
 ======================================================*/
 .any-contact-area .row {
-  background-color: #262566;
+  background-color: var(--bs-orange);
   border-radius: 10px;
   margin-left: 5px;
   margin-right: 5px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
 }
 
 .any-contact-area .contact-text {
@@ -2810,11 +2810,12 @@ Any Contact Area Style
 
 .any-contact-area .contact-text h3 {
   color: #ffffff;
-  margin: 0;
+  margin: 16px;
 }
 
 .any-contact-area .contact-call {
   padding: 30px;
+  
 }
 
 .any-contact-area .contact-call h3 {
@@ -7326,22 +7327,7 @@ h2,h3{color:black;}
 }
 
 
-/* ===============invoice Area======================== */
-.invoice-container{
 
-
-  height: 50rem;
-    width: 37rem;
-    background-color: var(--bs-white);
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 0px 14px 13px var(--bs-gray-100);
-    align-items: center;
-    position: relative;
-    top: 6rem;
-    left: 19rem;
-    margin-bottom: 13rem;
-}
 
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
@@ -7522,3 +7508,139 @@ h2,h3{color:black;}
   
   
 }
+
+
+
+/* ===============invoice Area======================== */
+.contact-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+.invoice-container{
+  background-color: var(--bs-white);
+  box-shadow: 0px 0px 14px 13px var(--bs-gray-100);
+  position: relative;
+  /* left: 13rem; */
+  margin-bottom: 13rem;
+  padding: 2rem;
+  max-width: 800px;
+}
+.invoic-table{
+  /* right: -1rem; */
+  position: relative;
+}
+.check-icon{
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: #12bb1a;
+  border-radius: 16px;
+  font-size: .9rem;
+  display: flex;
+  left: 94%;
+  position: relative;
+  top: 2rem;
+}
+.invoice-container table tr:first-child{
+  margin-bottom: 2rem;
+}
+table table tr td{
+  border-bottom: 1px solid var(--bs-gray-300);
+}
+
+.dw-icon{
+  display: flex;
+    position: relative;
+    top: 2.7rem;
+    color: var(--bs-body-bg);
+    font-size: 3rem;
+    right: 5rem;
+}
+
+.section-title{
+  margin: 3rem 0rem;
+  text-align: center;
+  margin: 3rem 17rem;
+color: var(--bs-gray-800);
+  
+
+}
+
+
+/* *********** */
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  
+
+  /* Center the table within the container */
+  table {
+    margin: 0 auto;
+  }
+
+  /* Increase padding for better readability on smaller screens */
+  table tr td {
+    padding: 1rem;
+  }
+
+  /* Center-align text in table cells */
+  table tr td {
+    text-align: center;
+  }
+
+  /* Reduce the font size for smaller screens */
+  .contact-title {
+    font-size: 24px;
+  }
+
+  /* Adjust the width of the logo image */
+  .table-img-logo {
+    width: 100px;
+    
+  }
+}
+
+/* Additional responsive styles for even smaller screens */
+@media (max-width: 480px) {
+  /* Further reduce padding for very small screens */
+  table tr td {
+    padding: 0.5rem;
+  }
+
+  /* Reduce font size for very small screens */
+  .contact-title {
+    font-size: 20px;
+  }
+}
+/* ================invoice-table=============================== */
+
+
+
+
+
+
+
+.information .td-left {
+  width: 30%;
+  text-align: left;
+  padding-left: 10px; /* Adjust this value for spacing */
+}
+
+.information .td-right {
+  width: 70%;
+  text-align: right;
+  padding-right: 10px; /* Adjust this value for spacing */
+}
+.top .td-right {
+  width: 70%;
+  text-align: right;
+  padding-right: 10px; /* Adjust this value for spacing */
+}
+.table-img-logo {
+  width: 13rem;
+  margin-bottom: 29px;
+}
+
+

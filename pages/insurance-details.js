@@ -4,11 +4,12 @@ import PageBanner from '../components/Common/PageBanner';
 import AchievementContent from '../components/About/AchievementContent';
 import Quotation_invoice from "../pages/insurance_modules/group_medical/quotation_invoice"
 import Footer from '../components/_App/Footer';
+import Navbar from '../components/_App/Navbar';
 
 const InsuranceDetails = () => {
     return (
         <>
-            <NavbarTwo />
+            <Navbar />
 
             <PageBanner 
                 pageTitle="Insurance Details" 
