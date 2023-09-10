@@ -30,7 +30,7 @@ const quotation_invoice = () => {
                     </div>
                 </div>
             </div>
-            <h1 className='section-title' >Need an advice</h1>
+            <h1 className='section-title-custom' >Need an advice</h1>
 
             <div class="business-contact-area-five ptb-100">
                 <div class="container">
