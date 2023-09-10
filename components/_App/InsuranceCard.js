@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import SwiperCore, { Navigation } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -15,17 +15,31 @@ import {
 
 SwiperCore.use([Navigation]);
 
+
 const InsuranceCard = ({ data }) => {
   const [swiper, setSwiper] = useState(null);
+  const [showScrollHint, setShowScrollHint] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false); // State to track expansion
+
+
+  useEffect(() => {
+    // Hide the scroll hint after 1 second
+    const timeoutId = setTimeout(() => {
+      setShowScrollHint(false);
+    }, 1000);
+  
+    // Clear the timeout when the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const icons = [
-    <FaHospital className="icon-row" />,
-    <FaUserMd className="icon-row" />,
-    <FaPills className="icon-row" />,
-    <FaCapsules className="icon-row" />,
-    <FaTooth className="icon-row" />,
-    <FaEye className="icon-row" />,
-    <FaBabyCarriage className="icon-row" />,
+    <FaHospital className="card-icon" />,
+    <FaUserMd className="card-icon" />,
+    <FaPills className="card-icon" />,
+    <FaCapsules className="card-icon" />,
+    <FaTooth className="card-icon" />,
+    <FaEye className="card-icon" />,
+    <FaBabyCarriage className="card-icon" />,
   ];
 
   const handleSwipe = (direction) => {
@@ -37,22 +51,27 @@ const InsuranceCard = ({ data }) => {
       }
     }
   };
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
+    <div className={`insurance-card-container ${isExpanded ? 'expanded' : ''}`}>
+
     <div className="insurance-card">
-      <div className="row">
+    <div className="row">
         <div className="cell">
           <div className="plan-header"> {data.plan}</div>
         </div>
         <div className="cell">
-          <div className=""> {data.groupPremium}</div>
+          <div className=""> {data.groupPremium} EGP</div>
         </div>
         <div className="cell">
           <button className="select-button-responsive">Select</button>
         </div>
       </div>
       <div className="swiper-container">
-      <div className="icon-scroll-hint">&#x1F449; Scroll</div>
+      {/* <div className={`show-scroll-hint ${showScrollHint ? 'show-scroll-hint' : ''}`}>&#x1F449; Scroll</div> */}
         <Swiper
           onSwiper={(swiper) => setSwiper(swiper)}
           slidesPerView={3} // Number of icons to show at a time
@@ -68,20 +87,28 @@ const InsuranceCard = ({ data }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className="icon-scroll-left" onClick={() => handleSwipe('left')}>
-          &lt;
+      </div>
+      <div className={`expand-link`} onClick={toggleExpansion}>
+      {isExpanded ? 'Less Details' : 'More Details'}
+
+        {isExpanded && (
+        <div className="extra-details">
+        <p className="details-p"><span className="details-label">Accompanying Family Members:</span> {data.accompanyingFamily}</p>
+        <p className="details-p"><span className="details-label">Dental Note:</span> {data.dentalNote}</p>
+        <p className="details-p"><span className="details-label">Optical Note:</span> {data.opticalNote}</p>
+        <p className="details-p"><span className="details-label">Maternity Waiting Period:</span> {data.maternityWaitingPeriod}</p>
+        <p className="details-p"><span className="details-label">New Born Baby Coverage:</span> {data.newBornBabyCoverage}</p>
+        <p className="details-p"><span className="details-label">Maternity Note:</span> {data.maternityNote}</p>
+        <p className="details-p"><span className="details-label">Group Life Insurance Coverage:</span> {data.groupLifeInsuranceCoverage}</p>
+
         </div>
-        <div className="icon-scroll-right" onClick={() => handleSwipe('right')}>
-          &gt;
-        </div> */}
+      )}
+
       </div>
-      <div className="small-text">
-        {data.inPatient ? `In-Patient Coverage: ${data.inPatientCoverage}` : 'In-Patient: Not Covered'}
-      </div>
-      <div className="small-text">
-        {data.outPatient ? `Out-Patient Coverage: ${data.outPatientCoverage}` : 'Out-Patient: Not Covered'}
-      </div>
-      {/* Add more data fields as needed */}
+
+      
+
+    </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FaHospital,
   FaUserMd,
@@ -12,6 +12,58 @@ import {
 } from 'react-icons/fa';
 
 const SpecsBar = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Check if the screen width is less than a certain breakpoint (e.g., 768px)
+        const handleResize = () => {
+          setIsMobile(window.innerWidth < 768);
+        };
+    
+        // Attach the event listener for window resize
+        window.addEventListener('resize', handleResize);
+    
+        // Initial check on component mount
+        handleResize();
+    
+        // Cleanup the event listener on component unmount
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
+      if (isMobile) {
+        // Render the simplified mobile view
+        return (
+            <div className="insurance-specs-mobile">
+              <div className="mobile-row">
+                <div className="mobile-spec">
+                <FaCheckCircle className='check' /> In Patient 
+                </div>
+                <div className="mobile-spec">
+                <FaTimesCircle className='cross' /> Out Patient 
+                </div>
+              </div>
+              <div className="mobile-row">
+                <div className="mobile-spec">
+                <FaCheckCircle className='check' /> Diseases 
+                </div>
+                <div className="mobile-spec">
+                <FaTimesCircle className='cross' /> Dental 
+                </div>
+              </div>
+              <div className="mobile-row">
+                <div className="mobile-spec">
+                <FaCheckCircle className='check'/> Optical 
+                </div>
+                <div className="mobile-spec">
+                <FaTimesCircle className='cross' /> Maternity 
+                </div>
+              </div>
+            </div>
+          );
+      }
+
   return (
     <div className="insurance-specs-bar">
       <div className="insurance-spec">

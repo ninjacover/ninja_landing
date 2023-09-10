@@ -7319,6 +7319,10 @@ h2,h3{color:black;}
 }
 .details-label{
   font-weight: bold;
+  color: black;
+}
+.details-p{
+  color: black;
 }
 
 
@@ -7377,6 +7381,32 @@ h2,h3{color:black;}
   color: red;
 }
 
+/* .mobile-spec {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+.insurance-specs-mobile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0.4, 0.4, 0.4); 
+
+}
+
+.cross {
+  color: red; }
+.check{
+  color: green;
+}
+
 /* ===============insurance card======================== */
 /* InsuranceCard.css */
  .insurance-card {
@@ -7427,7 +7457,7 @@ h2,h3{color:black;}
 .icon-scroll-right {
   margin-left: 10px;
 }
-.icon{
+.card-icon{
   font-size: 50px; 
   padding: 5px;
   color: gray;
@@ -7435,10 +7465,10 @@ h2,h3{color:black;}
   justify-content: center; 
   align-items: center; 
   white-space: nowrap; 
-  opacity: 0; /* Initially set the opacity to 0 */
-  transform: translateX(-20px); /* Initially move icons down */
+  opacity: 0; 
+  transform: translateX(-20px); /* Initially moves icons  */
   animation: fadeInScroll 1s ease-in-out 0.5s forwards,
-  scrollIcons 4s linear infinite;}
+  scrollIcons 25s linear infinite ;}
 
  
 @keyframes fadeInScroll {
@@ -7462,10 +7492,10 @@ h2,h3{color:black;}
 
 @keyframes scrollIcons {
   0% {
-    transform: translateX(-20px); /* Start off-screen to the left */
+    transform: translateX(20px); /* Start off-screen to the left */
   }
   100% {
-    transform: translateX(20px); /* Move icons off-screen to the right */
+    transform: translateX(-500px); /* Move icons off-screen to the right */
   }
 }
 
@@ -7476,4 +7506,19 @@ h2,h3{color:black;}
   color: gray;
   margin-top: 10px;
   animation: fingerAnimation 1s linear infinite;
+  
+}
+
+.hide-scroll-hint {
+  display: none;
+}
+
+
+.expand-link {
+  text-align: center; 
+  color: #42a5f5; 
+  cursor: pointer;
+  margin-top: 10px; 
+  
+  
 }

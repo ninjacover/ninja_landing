@@ -4,6 +4,8 @@ import {
   faPlusCircle,
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import dynamic from 'next/dynamic'
+
 
 const Tab2 = () => {
   const [fields, setFields] = useState([
