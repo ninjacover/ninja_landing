@@ -41,6 +41,7 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const openPopup = () => {
       setIsPopupOpen(true);
+      console.log(setIsPopupOpen);
     };
     
     const closePopup = () => {
@@ -193,8 +194,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       {
         name: 'Actions',
         cell: row => (
-          <div className="action-buttons-container" onClick={openPopup}>
-            <button className="select-button" onClick={openPopup}>Select</button>
+          <div className="action-buttons-container" >
+<button className="select-button" onClick={openPopup.bind(this)}>Select</button>
           </div>
         ),
         ignoreRowClick: true,
