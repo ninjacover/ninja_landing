@@ -8,7 +8,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
   const InsuranceTable = () => {
     const [selectedRow, setSelectedRow] = useState(null);
 
-    
+    const [windowWidth, setWindowWidth] = useState(null);
+
     // const [oddRowBackground, setOddRowBackground] = useState(false);
     
 
