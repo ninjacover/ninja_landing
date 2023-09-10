@@ -394,10 +394,6 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       
   
       
-    
-    
-    
-
   
     const renderDetails = (rowData) => {
       if (rowData) {
@@ -411,6 +407,9 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
       return (
         
 
+       
+
+
         <div className="details-container">
         <p><span className="details-label">Accompanying Family Members:</span> {data[0].accompanyingFamily}</p>
         <p><span className="details-label">Dental Note:</span> {data[0].dentalNote}</p>
@@ -420,6 +419,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
         <p><span className="details-label">Maternity Note:</span> {data[0].maternityNote}</p>
         <p><span className="details-label">Group Life Insurance Coverage:</span> {data[0].groupLifeInsuranceCoverage}</p>
         {/* Render other details as needed */}
+
+        
       </div>
       
       );
@@ -454,6 +455,22 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
           {renderDetails(selectedRow)}
         </div>
       )} */}
+
+
+
+{isPopupOpen && (
+          <div className="popup">
+            <div className="popup-content">
+              {/* Your form content goes here */}
+              <h2>Popup Form</h2>
+              <form>
+                {/* Form fields */}
+              </form>
+              <button onClick={closePopup}>Close</button>
+            </div>
+          </div>
+        )}
+
     </div>
   );
 };
