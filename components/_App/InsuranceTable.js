@@ -229,8 +229,8 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
         opticalNote: 'Not Covered',
         maternityWaitingPeriod: 'Not Covered',
         newBornBabyCoverage: 'Not Covered',
-        maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: 25000,
+        maternityNote: 'Intensive baby care limit 1K Caesarean limit 5K Natural birth limit 4K Legal miscarriage limit 3K',
+     groupLifeInsuranceCoverage: 25000,
       },
       {
         plan: 'Plan B',

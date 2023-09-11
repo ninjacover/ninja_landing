@@ -70,23 +70,108 @@ const InsuranceCard = ({ data }) => {
           <button className="select-button-responsive">Select</button>
         </div>
       </div>
-      <div className="swiper-container">
-      {/* <div className={`show-scroll-hint ${showScrollHint ? 'show-scroll-hint' : ''}`}>&#x1F449; Scroll</div> */}
-        <Swiper
-          onSwiper={(swiper) => setSwiper(swiper)}
-          slidesPerView={3} // Number of icons to show at a time
-          spaceBetween={10} // Space between icons
-          navigation={{
-            nextEl: '.icon-scroll-right',
-            prevEl: '.icon-scroll-left',
-          }}
-        >
-          {icons.map((icon, index) => (
-            <SwiperSlide key={index} className="icon">
-              {icon}
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      
+      
+      <div >
+    
+          
+      <SwiperSlide div>
+
+    <div className="card-sectors">
+    
+    {/* Sector for In Patient */}
+    <div className="sector">
+      <div className="sector-header">In Patient</div>
+      <div className="sector-icons">
+        <FaHospital />
+        {data.inPatient ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.inPatient ? `${data.inPatientCoverage}` : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for Out Patient */}
+    
+    <div className="sector">
+      <div className="sector-header">Out Patient</div>
+      <div className="sector-icons">
+        <FaUserMd />
+        {data.outPatient ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.outPatient ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for Diseases */}
+   
+    <div className="sector">
+      <div className="sector-header">Diseases</div>
+      <div className="sector-icons">
+        <FaPills />
+        {data.chronicPreExistingDisease ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.chronicPreExistingDisease ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for Medication */}
+
+    <div className="sector">
+      <div className="sector-header">Medication</div>
+      <div className="sector-icons">
+        <FaCapsules />
+        {data.medication ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.medication ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for dental */}
+
+    <div className="sector">
+      <div className="sector-header">Dental</div>
+      <div className="sector-icons">
+        <FaTooth />
+        {data.dental ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.dental ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for Optical */}
+
+    <div className="sector">
+      <div className="sector-header">Optical</div>
+      <div className="sector-icons">
+        <FaEye />
+        {data.optical ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.optical ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+
+    {/* Sector for Maternity */}
+
+    <div className="sector">
+      <div className="sector-header">Maternity</div>
+      <div className="sector-icons">
+        <FaBabyCarriage />
+        {data.maternity ? <FaCheckCircle /> : <FaTimesCircle />}
+      </div>
+      <div className="sector-footer">
+        {data.maternity ? 'Covered' : 'Not Covered'}
+      </div>
+    </div>
+  </div>
+</SwiperSlide>
+
+
       </div>
       <div className={`expand-link`} onClick={toggleExpansion}>
       {isExpanded ? 'Less Details' : 'More Details'}

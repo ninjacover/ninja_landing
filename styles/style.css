@@ -7423,81 +7423,36 @@ h2,h3{color:black;}
   padding: 1px 15px;
   cursor: pointer;
 }
-
-.swiper-container {
+.card-sectors {
   display: flex;
-  align-items: center;
-  overflow: hidden;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%; /* Set the width to 100% of the container */
 }
-
-.icon-scroll-left,
-.icon-scroll-right {
-  font-size: 24px;
-  cursor: pointer;
+.card-sectors::-webkit-scrollbar {
+  display: none;
 }
-
-.icon-scroll-left {
-  margin-right: 10px;
-}
-
-.icon-scroll-right {
-  margin-left: 10px;
-}
-.card-icon{
-  font-size: 50px; 
-  padding: 5px;
-  color: gray;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  white-space: nowrap; 
-  opacity: 0; 
-  transform: translateX(-20px); /* Initially moves icons  */
-  animation: fadeInScroll 1s ease-in-out 0.5s forwards,
-  scrollIcons 25s linear infinite ;}
-
- 
-@keyframes fadeInScroll {
-  to {
-    opacity: 1; /* At the end of the animation, set opacity to 1 */
-    transform: translateX(0); /* Move icons back to their original position */
-  }
-}
-@keyframes fingerAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes scrollIcons {
-  0% {
-    transform: translateX(20px); /* Start off-screen to the left */
-  }
-  100% {
-    transform: translateX(-500px); /* Move icons off-screen to the right */
-  }
-}
-
-
-
-.icon-scroll-hint {
-  font-size: 24px;
-  color: gray;
-  margin-top: 10px;
-  animation: fingerAnimation 1s linear infinite;
+.sector {
+  flex: 0 0 auto; /* Prevent sectors from growing or shrinking */
+  padding:30px;
   
 }
 
-.hide-scroll-hint {
-  display: none;
-}
+
+
+
+
+
+
+ 
+
+
+  
+
+
+
+
+
+
 
 
 .expand-link {
@@ -7505,8 +7460,6 @@ h2,h3{color:black;}
   color: #42a5f5; 
   cursor: pointer;
   margin-top: 10px; 
-  
-  
 }
 
 
