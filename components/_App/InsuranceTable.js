@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+ import UserInfo from './UserInfo';
 
 
 
@@ -194,6 +195,7 @@ const InsuranceTable = () => {
       ),
     },
 
+
     {
       name: 'Actions',
       cell: row => (
@@ -208,192 +210,200 @@ const InsuranceTable = () => {
 
   ];
 
-  const data = [
-    {
-      plan: 'Plan A',
-      groupPremium: '24,000',
-      inPatient: true,
-      inPatientCoverage: '3,500 EGP',
-      outPatient: false,
-      outPatientCoverage: "Not Covered",
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '2,000',
-      medication: true,
-      medicationCoverage: '15,000',
-      dental: false,
-      dentalCoverage: "Not Covered",
-      optical: false,
-      opticalCoverage: "Not Covered",
-      maternity: false,
-      maternityCoverage: "Not Covered",
-      accompanyingFamily: 'Not Covered',
-      physiotherapy: '10 Sessions',
-      dentalNote: 'Not Covered',
-      opticalNote: 'Not Covered',
-      maternityWaitingPeriod: 'Not Covered',
-      newBornBabyCoverage: 'Not Covered',
-      maternityNote: 'Not Covered',
-      groupLifeInsuranceCoverage: 25000,
-    },
-    {
-      plan: 'Plan B',
-      groupPremium: '29,000',
-      inPatient: true,
-      inPatientCoverage: '2,500 EGP',
-      outPatient: true,
-      outPatientCoverage: '10,800',
-      chronicPreExistingDisease: false,
-      chronicPreExistingDiseaseCoverage: "Not Covered",
-      medication: true,
-      medicationCoverage: '2,000',
-      dental: false,
-      dentalCoverage: "Not Covered",
-      optical: true,
-      opticalCoverage: '2,800',
-      maternity: true,
-      maternityCoverage: '2,200',
-      accompanyingFamily: 'Covered',
-      physiotherapy: '12 Sessions',
-      dentalNote: 'Covered for Basic Procedures',
-      opticalNote: 'Covered for Eye Exams',
-      maternityWaitingPeriod: '6 months waiting period',
-      newBornBabyCoverage: 'Covered',
-      maternityNote: 'Covered with conditions',
-      groupLifeInsuranceCoverage: 30000,
-    },
-    {
-      plan: 'Plan C',
-      groupPremium: '30,000',
-      inPatient: true,
-      inPatientCoverage: '10,000 EGP',
-      outPatient: true,
-      outPatientCoverage: '20,220',
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '2,000',
-      medication: true,
-      medicationCoverage: '1,500',
-      dental: true,
-      dentalCoverage: '2,800',
-      optical: false,
-      opticalCoverage: "Not Covered",
-      maternity: false,
-      maternityCoverage: "Not Covered",
-      accompanyingFamily: 'Not Covered',
-      physiotherapy: '8 Sessions',
-      dentalNote: 'Not Covered',
-      opticalNote: 'Not Covered',
-      maternityWaitingPeriod: 'Not Covered',
-      newBornBabyCoverage: 'Not Covered',
-      maternityNote: 'Not Covered',
-      groupLifeInsuranceCoverage: 20000,
-    },
-    {
-      plan: 'Plan D',
-      groupPremium: '45,000',
-      inPatient: true,
-      inPatientCoverage: '3,000 EGP',
-      outPatient: true,
-      outPatientCoverage: '20,500',
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '2,000',
-      medication: true,
-      medicationCoverage: '2,200',
-      dental: true,
-      dentalCoverage: '2,800',
-      optical: true,
-      opticalCoverage: '3,000',
-      maternity: true,
-      maternityCoverage: '2,500',
-      accompanyingFamily: 'Covered',
-      physiotherapy: '15 Sessions',
-      dentalNote: 'Covered for Major Procedures',
-      opticalNote: 'Covered for Glasses and Lenses',
-      maternityWaitingPeriod: '3 months waiting period',
-      newBornBabyCoverage: 'Covered',
-      maternityNote: 'Covered without conditions',
-      groupLifeInsuranceCoverage: 35000,
-    },
-    {
-      plan: 'Plan E',
-      groupPremium: '50,000',
-      inPatient: true,
-      inPatientCoverage: '2,800 EGP',
-      outPatient: true,
-      outPatientCoverage: '21,200',
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '1,800',
-      medication: true,
-      medicationCoverage: '2,000',
-      dental: false,
-      dentalCoverage: "Not Covered",
-      optical: true,
-      opticalCoverage: '2,500',
-      maternity: false,
-      maternityCoverage: "Not Covered",
-      accompanyingFamily: 'Not Covered',
-      physiotherapy: '10 Sessions',
-      dentalNote: 'Not Covered',
-      opticalNote: 'Covered for Eye Exams',
-      maternityWaitingPeriod: 'Not Covered',
-      newBornBabyCoverage: 'Not Covered',
-      maternityNote: 'Not Covered',
-      groupLifeInsuranceCoverage: 40000,
-    },
-    {
-      plan: 'Plan F',
-      groupPremium: '52,000',
-      inPatient: true,
-      inPatientCoverage: '3,000 EGP',
-      outPatient: true,
-      outPatientCoverage: '22,200',
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '1,500',
-      medication: true,
-      medicationCoverage: '1,880',
-      dental: false,
-      dentalCoverage: "Not Covered",
-      optical: false,
-      opticalCoverage: "Not Covered",
-      maternity: false,
-      maternityCoverage: "Not Covered",
-      accompanyingFamily: 'Covered',
-      physiotherapy: '20 Sessions',
-      dentalNote: 'Not Covered',
-      opticalNote: 'Not Covered',
-      maternityWaitingPeriod: 'Not Covered',
-      newBornBabyCoverage: 'Not Covered',
-      maternityNote: 'Not Covered',
-      groupLifeInsuranceCoverage: 45000,
-    },
-    {
-      plan: 'Plan G',
-      groupPremium: '100,000',
-      inPatient: true,
-      inPatientCoverage: '35,000 EGP',
-      outPatient: true,
-      outPatientCoverage: '22,800',
-      chronicPreExistingDisease: true,
-      chronicPreExistingDiseaseCoverage: '2,220',
-      medication: true,
-      medicationCoverage: '2,500',
-      dental: true,
-      dentalCoverage: '3,000',
-      optical: true,
-      opticalCoverage: '2,200',
-      maternity: true,
-      maternityCoverage: '2,800',
-      accompanyingFamily: 'Covered',
-      physiotherapy: '25 Sessions',
-      dentalNote: 'Covered for All Procedures',
-      opticalNote: 'Covered for Glasses and Lenses',
-      maternityWaitingPeriod: '3 months waiting period',
-      newBornBabyCoverage: 'Covered',
-      maternityNote: 'Covered with conditions',
-      groupLifeInsuranceCoverage: 50000,
-    },
-  ];
+ 
 
-
+    const data = [
+      {
+        plan: 'Plan A',
+        groupPremium: '24,000',
+        inPatient: true,
+        inPatientCoverage: '3,500 EGP',
+        outPatient: false,
+        outPatientCoverage: "Not Covered",
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '2,000',
+        medication: true,
+        medicationCoverage: '15,000',
+        dental: false,
+        dentalCoverage: "Not Covered",
+        optical: false,
+        opticalCoverage: "Not Covered",
+        maternity: false,
+        maternityCoverage: "Not Covered",
+        accompanyingFamily: 'Not Covered',
+        physiotherapy: '10 Sessions',
+        dentalNote: 'Not Covered',
+        opticalNote: 'Not Covered',
+        maternityWaitingPeriod: 'Not Covered',
+        newBornBabyCoverage: 'Not Covered',
+        maternityNote: 'Intensive baby care limit 1K Caesarean limit 5K Natural birth limit 4K Legal miscarriage limit 3K',
+     groupLifeInsuranceCoverage: 25000,
+      },
+      {
+        plan: 'Plan B',
+        groupPremium: '29,000',
+        inPatient: true,
+        inPatientCoverage: '2,500 EGP',
+        outPatient: true,
+        outPatientCoverage: '10,800',
+        chronicPreExistingDisease: false,
+        chronicPreExistingDiseaseCoverage: "Not Covered",
+        medication: true,
+        medicationCoverage: '2,000',
+        dental: false,
+        dentalCoverage: "Not Covered",
+        optical: true,
+        opticalCoverage: '2,800',
+        maternity: true,
+        maternityCoverage: '2,200',
+        accompanyingFamily: 'Covered',
+        physiotherapy: '12 Sessions',
+        dentalNote: 'Covered for Basic Procedures',
+        opticalNote: 'Covered for Eye Exams',
+        maternityWaitingPeriod: '6 months waiting period',
+        newBornBabyCoverage: 'Covered',
+        maternityNote: 'Covered with conditions',
+        groupLifeInsuranceCoverage: 30000,
+      },
+      {
+        plan: 'Plan C',
+        groupPremium: '30,000',
+        inPatient: true,
+        inPatientCoverage: '10,000 EGP',
+        outPatient: true,
+        outPatientCoverage: '20,220',
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '2,000',
+        medication: true,
+        medicationCoverage: '1,500',
+        dental: true,
+        dentalCoverage: '2,800',
+        optical: false,
+        opticalCoverage: "Not Covered",
+        maternity: false,
+        maternityCoverage: "Not Covered",
+        accompanyingFamily: 'Not Covered',
+        physiotherapy: '8 Sessions',
+        dentalNote: 'Not Covered',
+        opticalNote: 'Not Covered',
+        maternityWaitingPeriod: 'Not Covered',
+        newBornBabyCoverage: 'Not Covered',
+        maternityNote: 'Not Covered',
+        groupLifeInsuranceCoverage: 20000,
+      },
+      {
+        plan: 'Plan D',
+        groupPremium: '45,000',
+        inPatient: true,
+        inPatientCoverage: '3,000 EGP',
+        outPatient: true,
+        outPatientCoverage: '20,500',
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '2,000',
+        medication: true,
+        medicationCoverage: '2,200',
+        dental: true,
+        dentalCoverage: '2,800',
+        optical: true,
+        opticalCoverage: '3,000',
+        maternity: true,
+        maternityCoverage: '2,500',
+        accompanyingFamily: 'Covered',
+        physiotherapy: '15 Sessions',
+        dentalNote: 'Covered for Major Procedures',
+        opticalNote: 'Covered for Glasses and Lenses',
+        maternityWaitingPeriod: '3 months waiting period',
+        newBornBabyCoverage: 'Covered',
+        maternityNote: 'Covered without conditions',
+        groupLifeInsuranceCoverage: 35000,
+      },
+      {
+        plan: 'Plan E',
+        groupPremium: '50,000',
+        inPatient: true,
+        inPatientCoverage: '2,800 EGP',
+        outPatient: true,
+        outPatientCoverage: '21,200',
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '1,800',
+        medication: true,
+        medicationCoverage: '2,000',
+        dental: false,
+        dentalCoverage: "Not Covered",
+        optical: true,
+        opticalCoverage: '2,500',
+        maternity: false,
+        maternityCoverage: "Not Covered",
+        accompanyingFamily: 'Not Covered',
+        physiotherapy: '10 Sessions',
+        dentalNote: 'Not Covered',
+        opticalNote: 'Covered for Eye Exams',
+        maternityWaitingPeriod: 'Not Covered',
+        newBornBabyCoverage: 'Not Covered',
+        maternityNote: 'Not Covered',
+        groupLifeInsuranceCoverage: 40000,
+      },
+      {
+        plan: 'Plan F',
+        groupPremium: '52,000',
+        inPatient: true,
+        inPatientCoverage: '3,000 EGP' ,
+        outPatient: true,
+        outPatientCoverage: '22,200',
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '1,500',
+        medication: true,
+        medicationCoverage: '1,880',
+        dental: false,
+        dentalCoverage: "Not Covered",
+        optical: false,
+        opticalCoverage: "Not Covered",
+        maternity: false,
+        maternityCoverage: "Not Covered",
+        accompanyingFamily: 'Covered',
+        physiotherapy: '20 Sessions',
+        dentalNote: 'Not Covered',
+        opticalNote: 'Not Covered',
+        maternityWaitingPeriod: 'Not Covered',
+        newBornBabyCoverage: 'Not Covered',
+        maternityNote: 'Not Covered',
+        groupLifeInsuranceCoverage: 45000,
+      },
+      {
+        plan: 'Plan G',
+        groupPremium: '100,000',
+        inPatient: true,
+        inPatientCoverage: '35,000 EGP',
+        outPatient: true,
+        outPatientCoverage: '22,800',
+        chronicPreExistingDisease: true,
+        chronicPreExistingDiseaseCoverage: '2,220',
+        medication: true,
+        medicationCoverage: '2,500',
+        dental: true,
+        dentalCoverage: '3,000',
+        optical: true,
+        opticalCoverage: '2,200',
+        maternity: true,
+        maternityCoverage: '2,800',
+        accompanyingFamily: 'Covered',
+        physiotherapy: '25 Sessions',
+        dentalNote: 'Covered for All Procedures',
+        opticalNote: 'Covered for Glasses and Lenses',
+        maternityWaitingPeriod: '3 months waiting period',
+        newBornBabyCoverage: 'Covered',
+        maternityNote: 'Covered with conditions',
+        groupLifeInsuranceCoverage: 50000,
+      },
+    ];
+    const dummyUser = {
+      name: 'John Doe',
+      averageAge: 32,
+      company: 'ABC Insurance',
+      employees: 100,
+    };
+    
+   
 
 
 
@@ -430,31 +440,31 @@ const InsuranceTable = () => {
   };
 
 
-
-  if (isMobile) {
-    return (
-      <div className="insurance-card-container">
-        {data.map((entry, index) => (
-          <InsuranceCard key={index} data={entry} />
-        ))}
-      </div>
-    );
-  }
+    if (isMobile) {
+      return (
+        <div className="insurance-card-container">
+         <UserInfo dummyUser/>
+          {data.map((entry, index) => (
+            <InsuranceCard key={index} data={entry} />
+          ))}
+        </div>
+      );
+    }
   return (
     <div>
-
-      <div className="table-container table-container-sm">
-        <DataTable
-          columns={columns}
-          data={data}
-          noHeader
-          highlightOnHover
-          expandableRows // Enable row expansion
-          expandableRowsComponent={renderDetails} // Use renderDetails function as the component
-          expandOnRowClicked={false} // Disable row expansion on row click
-        // Expand the selected row
-        />
-        {/* 
+    <div className="table-container table-container-sm">
+      
+      <DataTable
+        columns={columns}
+        data={data}
+        noHeader
+        highlightOnHover
+        expandableRows // Enable row expansion
+        expandableRowsComponent={renderDetails} // Use renderDetails function as the component
+        expandOnRowClicked={false} // Disable row expansion on row click
+       // Expand the selected row
+      />
+{/* 
       {selectedRow && (
         <div className="selected-row-details">
           {renderDetails(selectedRow)}
@@ -543,6 +553,10 @@ const InsuranceTable = () => {
           </div>
         </div>
       )}
+
+
+
+      
     </div>
   );
 };
