@@ -4,8 +4,6 @@ import {
   faPlusCircle,
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import dynamic from 'next/dynamic'
-
 
 const Tab2 = () => {
   const [fields, setFields] = useState([
@@ -13,32 +11,28 @@ const Tab2 = () => {
       id: 1,
       placeholder: "Car Make",
       required: true,
+      inputType: "select", // New property to determine input type
+      options: ["Option 1", "Option 2", "Option 3"], // Dropdown options
     },
     {
       id: 2,
       placeholder: "Car Model",
       required: true,
+      inputType: "select", // New property to determine input type
+      options: ["Option A", "Option B", "Option C"], // Dropdown options
     },
     {
       id: 3,
       placeholder: "Car Year",
       required: true,
+      inputType: "select", // New property to determine input type
+      options: ["2023", "2022", "2021", "2020"], // Dropdown options
     },
     {
       id: 4,
       placeholder: "Car Market Value",
       required: true,
       disabled: true,
-    },
-    {
-      id: 5,
-      placeholder: "Plans",
-      required: true,
-    },
-    {
-      id: 6,
-      placeholder: "Promo Code",
-      required: false,
     },
   ]);
 
@@ -49,16 +43,22 @@ const Tab2 = () => {
         id: newId,
         placeholder: "Car Make",
         required: true,
+        inputType: "select",
+        options: ["Option 1", "Option 2", "Option 3"],
       },
       {
         id: newId + 1,
         placeholder: "Car Model",
         required: true,
+        inputType: "select",
+        options: ["Option A", "Option B", "Option C"],
       },
       {
         id: newId + 2,
         placeholder: "Car Year",
         required: true,
+        inputType: "select",
+        options: ["2023", "2022", "2021", "2020"],
       },
       {
         id: newId + 3,
@@ -71,7 +71,7 @@ const Tab2 = () => {
   };
 
   const removeField = () => {
-    if (fields.length > 6) {
+    if (fields.length > 4) {
       const updatedFields = [...fields];
       updatedFields.splice(updatedFields.length - 4, 4); // Remove last 4 fields
       setFields(updatedFields);
@@ -79,7 +79,7 @@ const Tab2 = () => {
   };
 
   // Conditionally render the "Remove Extra Cars" button
-  const showRemoveButton = fields.length > 6;
+  const showRemoveButton = fields.length > 4;
 
   return (
     <div id="tab2" className="tabs_item">
@@ -87,48 +87,30 @@ const Tab2 = () => {
 
       <div className="form row">
         {fields.map((field) => (
-          <div key={field.id} className="form-group col-md-6">
-            {field.id === 6 ? (
+          <div
+            key={field.id}
+            className={`form-group col-md-6`}
+          >
+            {field.inputType === "select" ? (
+              <select
+                className="form-select"
+                required={field.required}
+              >
+                <option value="">{field.placeholder}</option>
+                {field.options.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            ) : (
               <input
                 type="text"
                 className="form-control"
                 placeholder={field.placeholder}
                 required={field.required}
+                disabled={field.disabled}
               />
-            ) : (
-              <div>
-                {field.id === 4 ? (
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder={field.placeholder}
-                    disabled
-                    required={field.required}
-                  />
-                ) : (
-                  <select
-                    className="form-select"
-                    id={field.id === 4 ? "CarMarketValue" : field.placeholder}
-                    required={field.required}
-                    disabled={field.disabled}
-                  >
-                    <option value="">{field.placeholder}</option>
-                    {field.id === 3
-                      ? Array.from({ length: 11 }, (_, i) => (
-                          <option key={i} value={2023 - i}>
-                            {2023 - i}
-                          </option>
-                        ))
-                      : field.id === 5
-                      ? ["Basic", "Standard", "Premium"].map((plan, index) => (
-                          <option key={index} value={plan}>
-                            {plan}
-                          </option>
-                        ))
-                      : null}
-                  </select>
-                )}
-              </div>
             )}
           </div>
         ))}

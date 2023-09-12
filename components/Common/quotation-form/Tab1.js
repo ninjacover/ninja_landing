@@ -36,16 +36,7 @@ const Tab1 = () => {
           />
         </div>
 
-        <div className="form-group col-md-6">
-          <select className="form-select" id="Plans" required>
-            <option value="">Plans</option>
-            <option value="Basic">Basic</option>
-            <option value="Standard">Standard</option>
-            <option value="Premium">Premium</option>
-          </select>
-        </div>
-
-        <div className="form-group col-md-6">
+        <div className="form-group col-md-12">
           <input
             type="text"
             className="form-control"
