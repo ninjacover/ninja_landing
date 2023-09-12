@@ -4,6 +4,7 @@
   .row .col-lg-4{
     margin-bottom: 1.5rem;
 
+
   }
 
   .our-service-area .container .row .col-lg-6 .service-img{
@@ -39,6 +40,18 @@ margin-left: 0px;
     margin-left: 15.5rem; */
   }
 
+
+  .popup-content {
+    width: fit-content;
+    margin: 0 -0.5rem 0 -0.5rem;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 3%;
+    background-color: var(--bs-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+}
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -111,6 +124,21 @@ margin-left: 0px;
 
   }
   
+  .popup-content {
+    width: fit-content;
+    margin: 0 -0.5rem 0 -0.5rem;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 3%;
+    background-color: var(--bs-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+
+
 }
 @media only screen and (max-width: 767px) {
 
@@ -1045,6 +1073,19 @@ margin-left: 0px;
 
 
 
+
+
+  .popup-content {
+    width: fit-content;
+    margin: 0 -0.5rem 0 -0.5rem;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 3%;
+    background-color: var(--bs-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1712,6 +1753,21 @@ margin-left: 0px;
   .about-content-six {
     margin-bottom: 30px;
   }
+
+
+
+  .popup-content {
+    width: fit-content;
+    margin: 0 -0.5rem 0 -0.5rem;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 3%;
+    background-color: var(--bs-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 
 
 }

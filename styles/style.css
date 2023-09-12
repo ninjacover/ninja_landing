@@ -7327,7 +7327,51 @@ h2,h3{color:black;}
 }
 
 
+.overlay{
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 9999; 
+  cursor: pointer; 
+}
 
+.popup-content{
+  width: 34%;
+    position: absolute;
+    left: 34%;
+    top: 13%;
+    background-color: var(--bs-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.popup-content div{
+  
+  margin-bottom: 1.5rem;
+}
+
+.popup-content .form-group{
+  margin-bottom: 0;
+}
+.popup-close-icon{
+  position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: var(--bs-red);
+}
+
+.popup-close-icon:hover{
+  background-color: var(--bs-danger);
+  color: var(--bs-body-bg);
+  border-radius: 0 0rem 0rem .2rem ;
+}
 
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
