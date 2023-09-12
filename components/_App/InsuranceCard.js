@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import SwiperCore, { Navigation } from 'swiper/core';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+
 import {
   FaUserMd,
   FaHospital,
@@ -17,74 +18,45 @@ SwiperCore.use([Navigation]);
 
 
 const InsuranceCard = ({ data }) => {
-  const [swiper, setSwiper] = useState(null);
-  const [showScrollHint, setShowScrollHint] = useState(true);
+
   const [isExpanded, setIsExpanded] = useState(false); // State to track expansion
 
-
-  useEffect(() => {
-    // Hide the scroll hint after 1 second
-    const timeoutId = setTimeout(() => {
-      setShowScrollHint(false);
-    }, 1000);
-  
-    // Clear the timeout when the component unmounts
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  const icons = [
-    <FaHospital className="card-icon" />,
-    <FaUserMd className="card-icon" />,
-    <FaPills className="card-icon" />,
-    <FaCapsules className="card-icon" />,
-    <FaTooth className="card-icon" />,
-    <FaEye className="card-icon" />,
-    <FaBabyCarriage className="card-icon" />,
-  ];
-
-  const handleSwipe = (direction) => {
-    if (swiper) {
-      if (direction === 'left') {
-        swiper.slidePrev();
-      } else if (direction === 'right') {
-        swiper.slideNext();
-      }
-    }
-  };
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
+  };
+  const dummyUser = {
+    name: 'John Doe',
+    averageAge: 32,
+    company: 'ABC Insurance',
+    employees: 100,
   };
 
   return (
     <div className={`insurance-card-container ${isExpanded ? 'expanded' : ''}`}>
 
     <div className="insurance-card">
-    <div className="row">
-        <div className="cell">
-          <div className="plan-header"> {data.plan}</div>
+    <div className="card-row">
+        <div className="card-cell">
+        <img src='/images/metlife2.png' className='company-image'></img>
         </div>
-        <div className="cell">
-          <div className=""> {data.groupPremium} EGP</div>
+        <div className="card-cell">
+          <div className="card-price"> {data.groupPremium} </div>
+          <div className='card-small-text'>Avg/Prerson680</div>
         </div>
-        <div className="cell">
+        <div className="card-cell">
           <button className="select-button-responsive">Select</button>
         </div>
       </div>
-      
-      
       <div >
     
-          
-      <SwiperSlide div>
-
     <div className="card-sectors">
     
     {/* Sector for In Patient */}
     <div className="sector">
       <div className="sector-header">In Patient</div>
       <div className="sector-icons">
-        <FaHospital />
-        {data.inPatient ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaHospital className='card-icon'/>
+        {data.inPatient ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.inPatient ? `${data.inPatientCoverage}` : 'Not Covered'}
@@ -96,8 +68,8 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Out Patient</div>
       <div className="sector-icons">
-        <FaUserMd />
-        {data.outPatient ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaUserMd className='card-icon' />
+        {data.outPatient ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross'/>}
       </div>
       <div className="sector-footer">
         {data.outPatient ? 'Covered' : 'Not Covered'}
@@ -109,8 +81,8 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Diseases</div>
       <div className="sector-icons">
-        <FaPills />
-        {data.chronicPreExistingDisease ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaPills className='card-icon' />
+        {data.chronicPreExistingDisease ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.chronicPreExistingDisease ? 'Covered' : 'Not Covered'}
@@ -122,8 +94,8 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Medication</div>
       <div className="sector-icons">
-        <FaCapsules />
-        {data.medication ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaCapsules className='card-icon' />
+        {data.medication ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.medication ? 'Covered' : 'Not Covered'}
@@ -135,8 +107,8 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Dental</div>
       <div className="sector-icons">
-        <FaTooth />
-        {data.dental ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaTooth className='card-icon' />
+        {data.dental ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.dental ? 'Covered' : 'Not Covered'}
@@ -148,8 +120,8 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Optical</div>
       <div className="sector-icons">
-        <FaEye />
-        {data.optical ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaEye className='card-icon' />
+        {data.optical ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross'/>}
       </div>
       <div className="sector-footer">
         {data.optical ? 'Covered' : 'Not Covered'}
@@ -161,15 +133,15 @@ const InsuranceCard = ({ data }) => {
     <div className="sector">
       <div className="sector-header">Maternity</div>
       <div className="sector-icons">
-        <FaBabyCarriage />
-        {data.maternity ? <FaCheckCircle /> : <FaTimesCircle />}
+        <FaBabyCarriage className='card-icon'/>
+        {data.maternity ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.maternity ? 'Covered' : 'Not Covered'}
       </div>
     </div>
   </div>
-</SwiperSlide>
+
 
 
       </div>
@@ -190,9 +162,6 @@ const InsuranceCard = ({ data }) => {
       )}
 
       </div>
-
-      
-
     </div>
     </div>
   );

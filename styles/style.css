@@ -7403,13 +7403,13 @@ h2,h3{color:black;}
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-.row {
+.card-row {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
 }
 
-.cell {
+.card-cell {
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -7422,6 +7422,7 @@ h2,h3{color:black;}
   border: none;
   padding: 1px 15px;
   cursor: pointer;
+  margin-top: 14px;
 }
 .card-sectors {
   display: flex;
@@ -7433,27 +7434,31 @@ h2,h3{color:black;}
 }
 .sector {
   flex: 0 0 auto; /* Prevent sectors from growing or shrinking */
-  padding:30px;
+  padding:25px;
   
 }
+.company-image{
+  max-width: 100%;
+  aspect-ratio: 2.8/2;
+  object-fit: contain;
+}
 
-
-
-
-
-
-
- 
-
-
-  
-
-
-
-
-
-
-
+.card-price{
+  font-size: 20px;
+}
+.card-icon{
+  font-size: 50px;
+}
+.card-cross{
+  color: red;
+  margin-top: 30px;
+  font-size: 15px;
+}
+.card-check{
+  color: green;
+  margin-top: 30px;
+  font-size: 15px;
+}
 
 .expand-link {
   text-align: center; 
@@ -7596,4 +7601,4 @@ color: var(--bs-gray-800);
   margin-bottom: 29px;
 }
 
-
+/* ===============User Info======================== */
