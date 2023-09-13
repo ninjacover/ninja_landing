@@ -11,7 +11,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const InsuranceTable = () => {
+const PersonalInsuranceTable = () => {
   const [selectedRow, setSelectedRow] = useState(null);
 
   const [windowWidth, setWindowWidth] = useState(null);
@@ -566,4 +566,4 @@ const InsuranceTable = () => {
   );
 };
 
-export default InsuranceTable;
+export default PersonalInsuranceTable;

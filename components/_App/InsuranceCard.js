@@ -5,6 +5,7 @@ import InsuranceTable from './InsuranceTable';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import UserInfoMobile from './UserInfoMobile';
 
 
 

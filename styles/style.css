@@ -7539,6 +7539,13 @@ h2,h3{color:black;}
   cursor: pointer;
   margin-top: 14px;
 }
+
+.company-image{
+  max-width: 100%;
+  aspect-ratio: 2.8/2;
+  object-fit: contain;
+}
+
 .card-sectors {
   display: flex;
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -7556,6 +7563,10 @@ h2,h3{color:black;}
   color: #42a5f5; 
   cursor: pointer;
   margin-top: 10px; 
+  text-align: center;
+}
+.extra-details{
+  text-align: left;
 }
 
 
@@ -7705,13 +7716,7 @@ color: var(--bs-gray-800);
 
 }
 
-.your-info-title {
-  font-size: 1.5rem; /* Adjust the font size as needed */
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  
-}
+
 
 .detail-label-mobile{
   color: white;

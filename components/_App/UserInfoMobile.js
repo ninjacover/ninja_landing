@@ -11,7 +11,7 @@ const UserInfoMobile = ({ data }) => {
 
   return (
     <div className="your-detail-mobile">
-      <div className="your-info-title">Your Information</div>
+      <header className="your-info-title">Your Information</header>
       <div className="detail-row-mobile">
         <div className="detail-label-mobile">Name:</div>
         <div className="detail-value-mobile">{data?.name || dummyUser.name}</div>
