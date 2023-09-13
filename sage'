@@ -1,0 +1,209 @@
+[33mcommit d3b77beb5eb8486a3e0e8c57cc4930742ad37ab6[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Merge: c9d7389 7ca3bb0
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Wed Sep 13 01:51:17 2023 +0300
+
+    Merge branch 'quote-form' into dev
+
+[33mcommit 7ca3bb0916747d20778794d963b2c562f53df2aa[m[33m ([m[1;31morigin/quote-form[m[33m, [m[1;32mquote-form[m[33m)[m
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Wed Sep 13 01:42:53 2023 +0300
+
+    Added the landing page quotation form CSS and modified some fields in certain tabs to align with backend integration.
+
+[33mcommit c9d7389b15ca33dc6b812583a8c5f39d77bd952c[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Tue Sep 12 12:25:33 2023 +0300
+
+    insurance card css done
+
+[33mcommit e01e32c33c6d3596e6678ebe72756d23defd9b7b[m
+Merge: 561b71e a488dec
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Mon Sep 11 16:04:54 2023 +0300
+
+    Merge branch 'dev' of https://github.com/ninjacover/ninja_landing into dev
+
+[33mcommit 561b71e165615a44124264b12a0d2846f625ddbc[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Mon Sep 11 16:04:49 2023 +0300
+
+    implemented the logic
+
+[33mcommit a488dec249b7447c1e1ccd9b90667614813255bf[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Mon Sep 11 14:44:44 2023 +0300
+
+    Re-upgrading to react v18.2.0
+
+[33mcommit b1691cbc64c234946948b5221aa54f0c44c37a6c[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sun Sep 10 15:39:16 2023 +0300
+
+    section-title class changed to section-title-custom
+
+[33mcommit 3f554eaadc91e32ef15323688214d8c3163923f4[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sun Sep 10 14:01:42 2023 +0300
+
+    Update InsuranceTable.js
+
+[33mcommit a9b974e13eae5f23e2e586aec8e9f82bc17db19a[m
+Merge: 702e155 a08cf4c
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sun Sep 10 13:37:55 2023 +0300
+
+    Merge branch 'dev' of https://github.com/ninjacover/ninja_landing into dev
+
+[33mcommit 702e1555d653df553ba4c2ff7221807a42535b33[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sun Sep 10 13:37:27 2023 +0300
+
+    import windowWidth
+
+[33mcommit a08cf4c77976b14e1dd165c17f55bc7582de3876[m
+Merge: ee3967a bad8d6a
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sun Sep 10 12:36:32 2023 +0300
+
+    Merge branch 'dev' of https://github.com/ninjacover/ninja_landing into dev
+
+[33mcommit ee3967a713b66986e2d25afdd261b56cd217eeb0[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sun Sep 10 12:36:28 2023 +0300
+
+    new scroll animation for the insuance card and insurance specs
+
+[33mcommit bad8d6abeb96955fa65945363b8d823e46335d44[m
+Merge: 33d78dc 5401aa4
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sat Sep 9 18:00:28 2023 +0300
+
+    Merge pull request #27 from ninjacover/omnia3
+    
+    Omnia3
+
+[33mcommit 5401aa47780853e4b03e6c8f31dd789d65aa8f4b[m[33m ([m[1;31morigin/omnia3[m[33m)[m
+Merge: 135a7c9 33d78dc
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sat Sep 9 18:00:14 2023 +0300
+
+    Merge branch 'dev' into omnia3
+
+[33mcommit 135a7c9e76369f36ba31bfc57aac911069127c73[m[33m ([m[1;31morigin/omnia2[m[33m)[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sat Sep 9 17:57:27 2023 +0200
+
+    some changes on table responsive
+
+[33mcommit 33d78dcf07035e8118dd3b926013e1847af24be8[m
+Merge: fae3454 058e410
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sat Sep 9 16:54:12 2023 +0300
+
+    Merge branch 'dev' of https://github.com/ninjacover/ninja_landing into dev
+
+[33mcommit fae3454f3b2b1c58528bb11d6cd2cd68a479a0bf[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sat Sep 9 16:54:08 2023 +0300
+
+    trying to manipulate some effeects on the icons in the insurance card
+
+[33mcommit f030a544cd83cd873ea0f5b52cce0b70bb36e474[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Sat Sep 9 11:13:30 2023 +0200
+
+    invoic table responsive almost done  and the popup form added
+    
+    there are two screens , I can not make its responsive, yet
+    
+    the popup form added but it does not work when I click in the select button so it still in progress
+
+[33mcommit 058e4109a63af58c83a9e724cd07a8345799a698[m
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Sat Sep 9 04:37:34 2023 +0300
+
+    Downgrade React to v17.0.2 to Resolve Hydration Issue
+    
+    In React v18, we encountered a hydration issue that was causing runtime errors during server-side rendering (SSR). After extensive investigation, we determined that the issue was specific to React v18.
+    
+    To ensure a smooth and error-free hydration process, we've decided to temporarily downgrade our project to React v17.0.2. This version has been stable for SSR and resolves the hydration issue we were experiencing with v18.
+    
+    Please note that this is a temporary solution until React v18 becomes more stable and the issue is resolved in a future release. We'll keep an eye on React's updates and consider upgrading once the issue is addressed.
+
+[33mcommit 1f6605fdec0dcb8cdc2ee40717e26bc724e2500e[m
+Merge: b9d4b3b 8f9a3b9
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sat Sep 9 02:44:17 2023 +0300
+
+    Merge branch 'dev' of https://github.com/ninjacover/ninja_landing into dev
+
+[33mcommit b9d4b3b0314837fb0e28d2591f58f6c97179de08[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Sat Sep 9 02:43:36 2023 +0300
+
+    added the slider option to the icons, insurance card almost done
+
+[33mcommit 8f9a3b9b1f916de62e5c20a1b1ed755977dbee69[m
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Sat Sep 9 01:06:01 2023 +0300
+
+    Updated Site Title and Favicon
+    
+    1- Modified the site title to enhance branding and clarity.
+    
+    2- Replaced the site favicon with a new icon for improved visual identity.
+
+[33mcommit ac15368099c405fa6b7888ab6b160bee409c48c3[m
+Author: Ahmed Wael <a.wael@hadbrok.com>
+Date:   Sat Sep 9 00:45:56 2023 +0300
+
+    Updated Components and Added Dynamic Fields
+    
+    1- Reorganized and refactored Tab1.js, Tab2.js, Tab3.js, and Tab4.js components into separate files.
+    
+    2- Reintegrated these components into the main GetAFreeQuoteForm.js component.
+    
+    3-Implemented dynamic field generation for adding insurance policies, employee age ranges, and family members within Tab1.js, Tab2.js, Tab3.js, and Tab4.js.
+    
+    4- Aligned the form fields with the relevant APIs to ensure seamless integration with backend services.
+    Maintained consistency by updating images in sections where changes were made.
+
+[33mcommit 557c4d738f95112fb8c917aa0d1fe2d1f5bcf335[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Fri Sep 8 14:59:46 2023 +0300
+
+    initial responsive for the quotes table
+
+[33mcommit 4af45033790c2e4250e468fb4415006b5b791521[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Thu Sep 7 18:57:35 2023 +0300
+
+    more styling was added to the table
+
+[33mcommit 85bbcb6d87d2d877e46ad09b0962148a6fd52ea3[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Thu Sep 7 11:01:32 2023 +0300
+
+    insurance option bar(specs bar) finished
+
+[33mcommit f953a857d43ae3ad0e8474389e09dc2a9aa2b773[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Wed Sep 6 16:32:39 2023 +0300
+
+    more updates to the table
+
+[33mcommit c5a24f7e2861c9d3d3302f0bf25e81f68204d3bf[m
+Author: Elkott1 <103424889+Elkott1@users.noreply.github.com>
+Date:   Tue Sep 5 18:54:32 2023 +0300
+
+    updated table
+
+[33mcommit c04fd9f3f95da0944bd76aac019014e35f068516[m
+Author: Omnia Arafat <83679206+Omnia-Arafat@users.noreply.github.com>
+Date:   Tue Sep 5 02:48:46 2023 +0200
+
+    insurance invoice initially added
+
+[33mcommit c57eb08c70c8850347a90a4f5ad53223a04d62ff[m
+Author: Omnia Arafat <83679206+Omnia-

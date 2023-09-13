@@ -1,212 +1,218 @@
-import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage,FaPills } from 'react-icons/fa';
-  import DataTable from 'react-data-table-component';
-  import InsuranceCard from './InsuranceCard';
-  import UserInfo from './UserInfoMobile';
+import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
+import DataTable from 'react-data-table-component';
+import InsuranceCard from './InsuranceCard';
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+ import UserInfo from './UserInfo';
+ import SpecsBar from './SpecsBar';
+ import UserInfoMobile from './UserInfoMobile';
 
-  import React, { useState, useEffect } from 'react';
-import UserInfoMobile from './UserInfoMobile';
-import SpecsBar from './SpecsBar';
 
-  
-  const InsuranceTable = () => {
-    const [selectedRow, setSelectedRow] = useState(null);
 
-    const [windowWidth, setWindowWidth] = useState(null);
+const InsuranceTable = () => {
+  const [selectedRow, setSelectedRow] = useState(null);
 
-    // const [oddRowBackground, setOddRowBackground] = useState(false);
-    
+  const [windowWidth, setWindowWidth] = useState(null);
 
-  
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+  // const [oddRowBackground, setOddRowBackground] = useState(false);
+
+
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    const addResizeListener = () => {
+      if (typeof window !== 'undefined') {
+        window.addEventListener('resize', handleResize);
+        setWindowWidth(window.innerWidth);
+      }
     };
-  
-    useEffect(() => {
-      const addResizeListener = () => {
-        if (typeof window !== 'undefined') {
-          window.addEventListener('resize', handleResize);
-          setWindowWidth(window.innerWidth);
-        }
-      };
-  
-      const removeResizeListener = () => {
-        if (typeof window !== 'undefined') {
-          window.removeEventListener('resize', handleResize);
-        }
-      };
-  
-      addResizeListener();
-  
-      return removeResizeListener;
-    }, []);
-    const isMobile = windowWidth !== null && windowWidth <= 768; // Adjust the breakpoint as needed
 
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const openPopup = () => {
-      setIsPopupOpen(true);
-      console.log(setIsPopupOpen);
+    const removeResizeListener = () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
-    
-    const closePopup = () => {
-      setIsPopupOpen(false);
-    };
-    
+
+    addResizeListener();
+
+    return removeResizeListener;
+  }, []);
+  const isMobile = windowWidth !== null && windowWidth <= 768; // Adjust the breakpoint as needed
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+    console.log(setIsPopupOpen);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
 
 
   const columns = [
 
     {
-        
-        name: <div className='plan-header'>Plan</div>,
-        selector: 'plan',
-        sortable: true,
-        allowOverflow: true,
-        width: '100px'
-   
-      },
-      {
-        name: <div className='group-premium-header'>Premium</div>,
-        selector: 'groupPremium',
-        sortable: true,
-        
-        cell: row => (
-          <div className="group-premium-cell">
-            <div className="big-text">{row.groupPremium}</div>
-            <div className="small-text">Avg/Person: 24,960</div>
-            
-          </div>
-        ),
-        
-      },
-      {
-        name: 'In-Patient',
-        selector: 'inPatient',
-        sortable: true,
-        cell: row => (
-          <div >   
-          <div className= "icon-text"> 
-          <FaHospital className="icon-row" />
-          {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+
+      name: <div className='plan-header'>Plan</div>,
+      selector: 'plan',
+      sortable: true,
+      allowOverflow: true,
+      width: '100px'
+
+    },
+    {
+      name: <div className='group-premium-header'>Premium</div>,
+      selector: 'groupPremium',
+      sortable: true,
+
+      cell: row => (
+        <div className="group-premium-cell">
+          <div className="big-text">{row.groupPremium}</div>
+          <div className="small-text">Avg/Person: 24,960</div>
+
+        </div>
+      ),
+
+    },
+    {
+      name: 'In-Patient',
+      selector: 'inPatient',
+      sortable: true,
+      cell: row => (
+        <div >
+          <div className="icon-text">
+            <FaHospital className="icon-row" />
+            {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className="small-text" >
-          {row.inPatient ? `${row.inPatientCoverage}` : 'Not Covered'}
+            {row.inPatient ? `${row.inPatientCoverage}` : 'Not Covered'}
           </div>
         </div>
-        
-        ),
-      },
-      {
-        name: 'Out-Patient',
-        selector: 'outPatient',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaUserMd className="icon-row" />
-              {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className="small-text">
+
+      ),
+    },
+    {
+      name: 'Out-Patient',
+      selector: 'outPatient',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaUserMd className="icon-row" />
+            {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className="small-text">
             {row.outPatient ? `${row.outPatientCoverage} EGP` : 'Not Covered'}
-            </div>
           </div>
-        ),
-      },
-      {
-        name: 'Diseases',
-        selector: 'chronicPreExistingDisease',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaPills className="icon-row" />
-              {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className="small-text">
+        </div>
+      ),
+    },
+    {
+      name: 'Diseases',
+      selector: 'chronicPreExistingDisease',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaPills className="icon-row" />
+            {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className="small-text">
             {row.chronicPreExistingDisease ? `Covered` : 'Not Covered'}
-            </div>
           </div>
-        ),
-      },
-      {
-        name: 'Medication',
-        selector: 'medication',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaCapsules className="icon-row" />
-              {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className="small-text">
+        </div>
+      ),
+    },
+    {
+      name: 'Medication',
+      selector: 'medication',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaCapsules className="icon-row" />
+            {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className="small-text">
             {row.medication ? `${row.medicationCoverage} EGP` : 'Not Covered'}
 
-            </div>
           </div>
-        ),
-      },
-      {
-        name: 'Dental',
-        selector: 'dental',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaTooth className="icon-row" />
-              {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className='small-text'>
+        </div>
+      ),
+    },
+    {
+      name: 'Dental',
+      selector: 'dental',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaTooth className="icon-row" />
+            {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className='small-text'>
             {row.dental ? `${row.dentalCoverage} EGP` : 'Not Covered'}
-            </div>
           </div>
-        ),
-      },
-      {
-        name: 'Optical',
-        selector: 'optical',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaEye className="icon-row" />
-              {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className="small-text">
+        </div>
+      ),
+    },
+    {
+      name: 'Optical',
+      selector: 'optical',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaEye className="icon-row" />
+            {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className="small-text">
             {row.optical ? `${row.opticalCoverage} EGP` : 'Not Covered'}
-            </div>
           </div>
-        ),
-      },
-      {
-        name: 'Maternity',
-        selector: 'maternity',
-        sortable: true,
-        cell: row => (
-          <div>   
-            <div className="icon-text"> 
-              <FaBabyCarriage className="icon-row" />
-              {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-            </div>
-            <div className='small-text'>
+        </div>
+      ),
+    },
+    {
+      name: 'Maternity',
+      selector: 'maternity',
+      sortable: true,
+      cell: row => (
+        <div>
+          <div className="icon-text">
+            <FaBabyCarriage className="icon-row" />
+            {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
+          </div>
+          <div className='small-text'>
             {row.maternity ? `${row.maternityCoverage} EGP` : 'Not Covered'}
 
-            </div>
           </div>
-        ),
-      },
-      
-      {
-        name: 'Actions',
-        cell: row => (
-          <div className="action-buttons-container" >
-<button className="select-button" onClick={openPopup.bind(this)}>Select</button>
-          </div>
-        ),
-        ignoreRowClick: true,
-        allowOverflow: true,
-        button: true,
-      },
-      
-    ];
+        </div>
+      ),
+    },
+
+
+    {
+      name: 'Actions',
+      cell: row => (
+        <div className="action-buttons-container" >
+          <button className="select-button" onClick={openPopup.bind(this)}>Select</button>
+        </div>
+      ),
+      ignoreRowClick: true,
+      allowOverflow: true,
+      button: true,
+    },
+
+  ];
+
+ 
 
     const data = [
       {
@@ -399,19 +405,27 @@ import SpecsBar from './SpecsBar';
       employees: 100,
     };
     
-    const renderDetails = (rowData) => {
-      if (rowData) {
-        
-        console.log("not found")
-      }
-      ;
    
-    
-    
-      return (
-        
 
-        <div className="details-container">
+
+
+
+  const renderDetails = (rowData) => {
+    if (rowData) {
+
+      console.log("not found")
+    }
+    ;
+
+
+
+    return (
+
+
+
+
+
+      <div className="details-container">
         <p><span className="details-label">Accompanying Family Members:</span> {data[0].accompanyingFamily}</p>
         <p><span className="details-label">Dental Note:</span> {data[0].dentalNote}</p>
         <p><span className="details-label">Optical Note:</span> {data[0].opticalNote}</p>
@@ -420,12 +434,13 @@ import SpecsBar from './SpecsBar';
         <p><span className="details-label">Maternity Note:</span> {data[0].maternityNote}</p>
         <p><span className="details-label">Group Life Insurance Coverage:</span> {data[0].groupLifeInsuranceCoverage}</p>
         {/* Render other details as needed */}
-      </div>
-      
-      );
-    };
 
-  
+
+      </div>
+
+    );
+  };
+
 
     if (isMobile) {
       return (
@@ -464,8 +479,95 @@ import SpecsBar from './SpecsBar';
           {renderDetails(selectedRow)}
         </div>
       )} */}
+
+
+
+
+
+      </div>
+
+      {isPopupOpen && (
+        <div className="popup overlay">
+          <div className="popup-content">
+            {/* Your form content goes here */}
+
+            <div className="form-heading text-center">
+              <h3 className="form-title">Log In to your account!</h3>
+              <p className="form-desc">With your social network.</p>
+            </div>
+
+
+            <form method="post">
+              <div className="row">
+                <div className="col-lg-4 col-md-4 col-sm-12">
+                  <button className="default-btn" type="submit">
+                    Google
+                  </button>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-12">
+                  <button className="default-btn" type="submit">
+                    Facebook
+                  </button>
+                </div>
+                <div className="col-lg-4 col-md-4 col-sm-12">
+                  <button className="default-btn" type="submit">
+                    Twitter
+                  </button>
+                </div>
+
+                <div className="col-12">
+                  <div className="form-group">
+                    <input className="form-control" type="text" name="name" placeholder="Username or Email" />
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div className="form-group">
+                    <input className="form-control" type="password" name="password" placeholder="Password" />
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6 form-condition">
+                  <div className="agree-label">
+                    <input type="checkbox" id="chb1" />
+                    <label htmlFor="chb1">Remember Me</label>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <Link href="/recover-password">
+                    <a className="forget">Forgot my password?</a>
+                  </Link>
+                </div>
+
+                <div className="col-12">
+                  <button className="default-btn btn-two" type="submit">
+                    Log In Now
+                  </button>
+                </div>
+
+                <div className="col-12">
+                  <p className="account-desc">
+                    Not a member?
+                    <Link href="/sign-up"><a>Sign Up</a></Link>
+                  </p>
+                </div>
+              </div>
+            </form>
+
+            <div className='popup-close-icon'>
+
+
+              <FontAwesomeIcon icon={faTimes} onClick={closePopup} />
+            </div>
+          </div>
+        </div>
+      )}
+
+
+
+      
     </div>
-    </div>
+   
   );
 };
 
