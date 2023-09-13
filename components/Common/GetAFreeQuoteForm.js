@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
 import Tab1 from "./quotation-form/Tab1"; 
 import Tab2 from "./quotation-form/Tab2"; 
 import Tab3 from "./quotation-form/Tab3";
 import Tab4 from "./quotation-form/Tab4";
 
+import SafeHydrate from '../SafeHydrate';
 
 export default class GetAFreeQuoteForm extends Component {
     // Tab
@@ -76,13 +76,13 @@ export default class GetAFreeQuoteForm extends Component {
                                     </ul>
 
                                     <div className="tab_content">
-                                        <Tab1 />
+                                        <SafeHydrate> <Tab1 /> </SafeHydrate>
 
-                                        <Tab2 />
+                                        <SafeHydrate> <Tab2 /> </SafeHydrate>
 
-                                        <Tab3 />
+                                        <SafeHydrate> <Tab3 /> </SafeHydrate>
 
-                                        <Tab4 />
+                                        <SafeHydrate> <Tab4 /> </SafeHydrate>
                                     </div>
                                 </div>
                             </div>

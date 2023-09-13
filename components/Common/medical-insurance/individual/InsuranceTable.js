@@ -5,19 +5,13 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import SpecsBar from './SpecsBar';
-import UserInfoMobile from './UserInfoMobile';
+import SpecsBar from '../../_App/SpecsBar';
+import UserInfoMobile from './UserInfo.js';
 
 
 
 const InsuranceTable = () => {
-  const [selectedRow, setSelectedRow] = useState(null);
-
   const [windowWidth, setWindowWidth] = useState(null);
-
-  // const [oddRowBackground, setOddRowBackground] = useState(false);
-
-
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -54,17 +48,14 @@ const InsuranceTable = () => {
   };
 
 
-
   const columns = [
 
     {
-
       name: <div className='plan-header'>Plan</div>,
       selector: 'plan',
       sortable: true,
       allowOverflow: true,
       width: '100px'
-
     },
     {
       name: <div className='group-premium-header'>Premium</div>,

@@ -1622,6 +1622,7 @@ Quat Area Style
   width: 100%;
   margin-bottom: 30px;
   font-weight: 600;
+  font-size: 13px;
 }
 
 
@@ -1652,8 +1653,8 @@ Quat Area Style
 
 .get-quat-area .quat-form .tabs li {
   margin-left: 0 !important;
-  padding-right: 40px;
-  font-size: 15px;
+  padding-right: 25px;
+  font-size: 13px;
   color: #ffffff;
   cursor: pointer;
   font-weight: 600;
@@ -7337,9 +7338,10 @@ h2,h3{color:black;}
 .big-text {
   font-size: 25px;
   display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-  white-space: nowrap; /* Keep the text on one line */
+  justify-content: center;
+  align-items: center; 
+  white-space: nowrap; 
+  font-weight: 400;
 }
 .group-premium-header{
   margin-left: 25px;
@@ -7423,11 +7425,12 @@ h2,h3{color:black;}
 /* ===============insurance specs======================== */
 .insurance-specs-bar {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next row if the container is too narrow */
+  flex-wrap: wrap; 
   justify-content: space-between; 
-  align-items: center; /* Centers items vertically */
-  margin-left: 150px; /* Add left margin */
-  margin-right: 150px; /* Add right margin */
+  align-items: center; 
+  margin-left: 150px; 
+  margin-right: 150px; 
+  margin-top: 10%;
   padding-bottom: 30px;
 
 }

@@ -1,5 +1,7 @@
 import React from "react";
 
+// This tab is for Individual Motor 
+
 const Tab1 = () => {
   return (
     <div id="tab1" className="tabs_item">

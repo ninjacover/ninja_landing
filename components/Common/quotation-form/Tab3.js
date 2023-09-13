@@ -5,6 +5,8 @@ import {
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
+// This tab is for Individual Medical 
+
 const Tab3 = () => {
   const [fields] = useState([
     {

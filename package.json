@@ -21,7 +21,7 @@
         "fslightbox-react": "^1.6.2-2",
         "icons": "^1.0.0",
         "jquery": "^3.7.1",
-        "next": "^12.0.4",
+        "next": "^12.3.4",
         "nodemailer": "^6.7.2",
         "nodemailer-sendgrid-transport": "^0.2.0",
         "react": "^18.2.0",

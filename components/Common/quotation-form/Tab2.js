@@ -5,6 +5,8 @@ import {
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
+// This tab is for Group Motor 
+
 const Tab2 = () => {
   const [fields, setFields] = useState([
     {

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlusCircle,
-  faMinusCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link"; // Import Link from next/link
+import InsuranceTable from "../medical-insurance/group/InsuranceTable";
 
 const Tab4 = () => {
   const [fields] = useState([
@@ -38,6 +37,17 @@ const Tab4 = () => {
 
   const [familyMembers, setFamilyMembers] = useState([]);
   const [showInitialFields, setShowInitialFields] = useState(true);
+
+  const handleStartSaving = () => {
+    return (
+      <Link href="/insurance_modules/group_medical/quotation_results">
+        <a className="default-btn">
+          Start Saving Today
+        </a>
+      </Link>
+    );
+  };
+  
 
   const addEmployeeAgeRanges = () => {
     setShowInitialFields(true);
@@ -164,18 +174,7 @@ const Tab4 = () => {
         </div>
 
         <div className="form-group col-md-12">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Promo code"
-            required
-          />
-        </div>
-
-        <div className="form-group col-md-12">
-          <button type="submit" className="default-btn">
-            Start Saving Today
-          </button>
+          {handleStartSaving()}
         </div>
 
         <ul className="ratings">
