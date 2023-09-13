@@ -1,9 +1,11 @@
 import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage,FaPills } from 'react-icons/fa';
   import DataTable from 'react-data-table-component';
   import InsuranceCard from './InsuranceCard';
-  import UserInfo from './UserInfo';
+  import UserInfo from './UserInfoMobile';
 
   import React, { useState, useEffect } from 'react';
+import UserInfoMobile from './UserInfoMobile';
+import SpecsBar from './SpecsBar';
 
   
   const InsuranceTable = () => {
@@ -427,16 +429,24 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
 
     if (isMobile) {
       return (
+        <div>
+          
+          <UserInfoMobile dummyUser/>
+          <SpecsBar/>
+
         <div className="insurance-card-container">
-         <UserInfo dummyUser/>
+         
           {data.map((entry, index) => (
             <InsuranceCard key={index} data={entry} />
           ))}
         </div>
+        </div>
       );
     }
   return (
-    <div className="table-container table-container-sm">
+   <div>
+    <SpecsBar/>
+   <div className="table-container table-container-sm">
       
       <DataTable
         columns={columns}
@@ -454,6 +464,7 @@ import { FaUserMd,  FaHospital,FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth
           {renderDetails(selectedRow)}
         </div>
       )} */}
+    </div>
     </div>
   );
 };

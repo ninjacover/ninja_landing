@@ -7461,11 +7461,12 @@ h2,h3{color:black;}
 }
 
 .expand-link {
-  text-align: center; 
   color: #42a5f5; 
   cursor: pointer;
   margin-top: 10px; 
 }
+
+
 
 
 
@@ -7601,4 +7602,46 @@ color: var(--bs-gray-800);
   margin-bottom: 29px;
 }
 
-/* ===============User Info======================== */
+/* ===============User Info mobile======================== */
+.your-detail-mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Gap between columns */
+  background-color: #F0702F;
+  justify-content: center;
+  
+
+}
+
+.your-info-title {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+.detail-label-mobile{
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 25px;
+
+}
+
+.detail-row-mobile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.detail-label-mobile {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.detail-value-mobile {
+  flex: 1; /* Grow to fill available space */
+  color: white;
+}
+

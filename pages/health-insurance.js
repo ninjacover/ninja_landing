@@ -22,7 +22,8 @@ const HealthInsurance = () => {
                 homePageText="Home" 
                 activePageText="SME Insurance" 
             /> 
-            <SpecsBar/>
+            
+            
 
                 {/* <div className="choose-us-area-three pt-100 pb-70">
                     <div className="container">
