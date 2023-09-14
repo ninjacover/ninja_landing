@@ -3,7 +3,7 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { FaBuilding } from 'react-icons/fa';
 import { IoMdPerson, IoMdPeople } from 'react-icons/io';
 
-const GroupUserInfo = ({ user }) => {
+const UserInfo = ({ user }) => {
   const isSSR = typeof window === 'undefined'; // Check if running on the server side
 
   // Initialize 'isMobile' state differently depending on whether it's SSR or in the browser
@@ -78,4 +78,4 @@ const GroupUserInfo = ({ user }) => {
   }
 };
 
-export default GroupUserInfo;
+export default UserInfo;

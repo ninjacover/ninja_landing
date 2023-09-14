@@ -1,5 +1,5 @@
 import DataTable from 'react-data-table-component';
-import InsuranceCard from './InsuranceCard';
+import IndividualInsuranceCard from './InsuranceCard';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -61,8 +61,6 @@ const InsuranceTable = () => {
       cell: row => (
         <div className="group-premium-cell">
           <div className="big-text">{row.groupPremium}</div>
-          <div className="small-text">Avg/Person: 24,960</div>
-
         </div>
       ),
 
@@ -413,7 +411,7 @@ const InsuranceTable = () => {
         <div>
         <div className="insurance-card-container">
           {data.map((entry, index) => (
-            <InsuranceCard key={index} data={entry} />
+            <IndividualInsuranceCard key={index} data={entry} />
           ))}
         </div>
         </div>

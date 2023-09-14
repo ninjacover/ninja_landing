@@ -10,7 +10,7 @@ import {
   FaCheckCircle,
   FaTimesCircle,
 } from 'react-icons/fa';
-import GroupUserInfo from '../Common/medical-insurance/group/GroupUserInfo';
+
 
 const SpecsBar = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -44,7 +44,7 @@ const SpecsBar = () => {
         // Render the simplified mobile view
         return (
           <div>
-            <GroupUserInfo user={DummyUser}/>
+            
 
             <div className="insurance-specs-mobile">
               <div className="mobile-row">
@@ -78,7 +78,7 @@ const SpecsBar = () => {
 
   return (
     <div>
-            <GroupUserInfo user={DummyUser} />
+           
     <div className="insurance-specs-bar">
       <div className="insurance-spec">
         <div className="icon-row">

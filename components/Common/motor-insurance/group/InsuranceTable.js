@@ -1,15 +1,10 @@
-import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
 import DataTable from 'react-data-table-component';
 import InsuranceCard from './InsuranceCard';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import SpecsBar from '../../_App/SpecsBar';
-import UserInfoMobile from './UserInfo.js';
-import GroupUserInfo from '../group/GroupUserInfo';
-
-
+import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
 
 const InsuranceTable = () => {
   const [windowWidth, setWindowWidth] = useState(null);
@@ -203,8 +198,6 @@ const InsuranceTable = () => {
 
   ];
 
- 
-
     const data = [
       {
         plan: 'Plan A',
@@ -395,27 +388,13 @@ const InsuranceTable = () => {
       company: 'ABC Insurance',
       employees: 100,
     };
-    
-   
-
-
-
 
   const renderDetails = (rowData) => {
     if (rowData) {
-
       console.log("not found")
-    }
-    ;
-
-
-
+    };
+    
     return (
-
-
-
-
-
       <div className="details-container">
         <p><span className="details-label">Accompanying Family Members:</span> {data[0].accompanyingFamily}</p>
         <p><span className="details-label">Dental Note:</span> {data[0].dentalNote}</p>
@@ -425,23 +404,14 @@ const InsuranceTable = () => {
         <p><span className="details-label">Maternity Note:</span> {data[0].maternityNote}</p>
         <p><span className="details-label">Group Life Insurance Coverage:</span> {data[0].groupLifeInsuranceCoverage}</p>
         {/* Render other details as needed */}
-
-
       </div>
 
     );
   };
-
-
     if (isMobile) {
       return (
         <div>
-          
-        
-          <SpecsBar/>
-
         <div className="insurance-card-container">
-         
           {data.map((entry, index) => (
             <InsuranceCard key={index} data={entry} />
           ))}
@@ -451,11 +421,7 @@ const InsuranceTable = () => {
     }
   return (
    <div>
-    <SpecsBar/>
-
-
    <div className="table-container table-container-sm">
-      
       <DataTable
         columns={columns}
         data={data}
@@ -466,12 +432,6 @@ const InsuranceTable = () => {
         expandOnRowClicked={false} // Disable row expansion on row click
        // Expand the selected row
       />
-
-
-
-
-
-
       </div>
 
       {isPopupOpen && (
@@ -550,9 +510,6 @@ const InsuranceTable = () => {
           </div>
         </div>
       )}
-
-
-
       
     </div>
    

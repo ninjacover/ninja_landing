@@ -48,7 +48,6 @@ const InsuranceCard = ({ data }) => {
         </div>
         <div className="card-cell">
           <div className="card-price"> {data.groupPremium} </div>
-          <div className='card-small-text'>Avg/Prerson680</div>
         </div>
         <div className="card-cell">
           <button className="select-button-responsive">Select</button>

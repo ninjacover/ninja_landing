@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link"; // Import Link from next/link
-import InsuranceTable from "../medical-insurance/group/InsuranceTable";
 
 const Tab4 = () => {
   const [fields] = useState([

@@ -3,6 +3,17 @@ import React from "react";
 // This tab is for Individual Motor 
 
 const Tab1 = () => {
+  
+  // const handleStartSaving = () => {
+  //   return (
+  //     <Link href="/insurance_modules/individual_motor/quotation_results">
+  //       <a className="default-btn">
+  //         Start Saving Today
+  //       </a>
+  //     </Link>
+  //   );
+  // };
+
   return (
     <div id="tab1" className="tabs_item">
       <p>Start with your zip code to compare car insurance</p>
@@ -47,10 +58,8 @@ const Tab1 = () => {
           />
         </div>
 
-        <div className="form-group col-md-12">
-          <button type="submit" className="default-btn">
-            Start Saving Today
-          </button>
+       <div className="form-group col-md-12">
+          {/* {handleStartSaving()} */}
         </div>
 
         <ul className="ratings col-md-12">

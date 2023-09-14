@@ -26,12 +26,7 @@ const InsuranceCard = ({ data }) => {
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
   };
-  const dummyUser = {
-    name: 'John Doe',
-    averageAge: 32,
-    company: 'ABC Insurance',
-    employees: 100,
-  };
+  
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const openPopup = () => {
@@ -53,11 +48,9 @@ const InsuranceCard = ({ data }) => {
         </div>
         <div className="card-cell">
           <div className="card-price"> {data.groupPremium} </div>
-          <div className='card-small-text'>Avg/Prerson680</div>
         </div>
-        <div className="cell">
-          <button className="select-button-responsive" onClick={openPopup.bind(this)}>Select</button>
-
+        <div className="card-cell">
+          <button className="select-button-responsive">Select</button>
         </div>
       </div>
       <div >

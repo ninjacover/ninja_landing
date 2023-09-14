@@ -4,6 +4,7 @@ import {
   faPlusCircle,
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 // This tab is for Individual Medical 
 
@@ -84,6 +85,16 @@ const Tab3 = () => {
       updatedMembers.splice(updatedMembers.length - 2, 2); // Remove last 2 members
       setFamilyMembers(updatedMembers);
     }
+  };
+
+  const handleStartSaving = () => {
+    return (
+      <Link href="/insurance_modules/individual_medical/quotation_results">
+        <a className="default-btn">
+          Start Saving Today
+        </a>
+      </Link>
+    );
   };
 
   return (
@@ -167,10 +178,8 @@ const Tab3 = () => {
           </button>
         </div>
 
-        <div className="form-group">
-          <button type="submit" className="default-btn">
-            Start Saving Today
-          </button>
+        <div className="form-group col-md-12">
+          {handleStartSaving()}
         </div>
 
         <ul className="ratings">
