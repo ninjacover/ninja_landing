@@ -1996,6 +1996,12 @@ margin-left: 2.2rem;
     max-width: fit-content;  }
 
   }
+
+  .information .td-left{
+    /* background-color: #555; */
+    width: 100%;
+
+  }
 @media (max-width: 400px) {
   .invoice-container {
     /* left: 1.5rem; */

@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarTwo from '../components/_App/NavbarTwo';
 import PageBanner from '../components/Common/PageBanner';
 import AchievementContent from '../components/About/AchievementContent';
-import Quotation_invoice from "../pages/insurance_modules/group_medical/quotation_invoice"
+import Quotation_invoice from '../pages/insurance_modules/group_motor/quotation_invoice'
 import Footer from '../components/_App/Footer';
 import Navbar from '../components/_App/Navbar';
 
@@ -22,7 +22,7 @@ const InsuranceDetails = () => {
                 <AchievementContent />
             </div>
 
-<Quotation_invoice/>          
+   <Quotation_invoice/>          
 
             <Footer />
         </>

@@ -2,15 +2,17 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCheck,
-  faHospital,
-  faUserMd,
-  faPills,
-  faTooth,
-  faGlasses,
+  faGlobeAfrica,
   faBabyCarriage,
+  faStopwatch,
+  faBuilding,
+  faGavel,
+  faCarCollision,faWheelchair,
+  faCarCrash
 } from '@fortawesome/free-solid-svg-icons';
 
-const InsuranceTable = () => {
+
+const InsuranceInvoicTable = () => {
   return (
     <div>
       <table className='invoic-table'>
@@ -27,74 +29,98 @@ const InsuranceTable = () => {
                 <tbody>
                   <tr>
                     <td className="td-left">Insurance Company: Libano-Suisse<br />
-                      AGE: 35<br />
-                      Employees: 50</td>
-                    <td className="td-right">Full Name: Ahmed Wael<br />
-                      Email: iahmedwael@gmail.com<br />
-                      Mobile: 01222151085</td>
+                    Car Make/Model:<b> Audi A4</b><br />
+                    Car Year:<b> 2021</b><br/>
+                    Car Market Value:<b> 4,565 EGP</b><br/>
+                    
+                    
+                    </td>
+                    <td className="td-right">Full Name: <b>Ahmed Wael</b><br />
+                      Email: <b>iahmedwael@gmail.com</b><br />
+                      Mobile:<b> 01222151085</b></td>
                   </tr>
                   <tr style={{ backgroundColor: 'var(--bs-gray-200)' }}>
-                    <td className="td-left">Policy Covers</td>
-                    <td className="td-right">Description</td>
+                    <td className="td-left"><b>Quote Details</b></td>
+                    <td className="td-right"><b>Cover Description</b></td>
                   </tr>
                   <tr>
-                    <td className="td-left">In-Patient</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faHospital} className="fa-2x fa-color" />
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faGlobeAfrica} className="fa-2x fa-color" />
                       <p>
-                        50,000 EGP Cover
+                      Primary Cover (General)
                       </p>
                     </td>
+                    <td className="td-right">Collision, Damage, Loss & Thef</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">Out-Patient</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faUserMd} className="fa-2x fa-color" />
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faStopwatch} className="flaticon-stopwatch fa-disabled fa-2x" />
                       <p>
-                        50,000 EGP Cover<br />
-                        Consultations: 50,000 EGP 25% Deductible<br />
-                        Medicines: 7,500 EGP 25% Deductible
+                      Policy Deductible
+
+
                       </p>
                     </td>
+                    <td className="td-right">0.04 Deductible</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">Chronic & Pre-existing disease</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faPills} className="fa-2x fa-color" />
-                      <p>Covered</p>
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faBuilding} className="far fa-building fa-2x fa-color" />
+                      <p>Agency Co-Payment
+
+</p>
                     </td>
+                    <td className="td-right">0% Co-Payment</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">Dental (Left)</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faTooth} className="fa-2x fa-color" />
-                      <p>500 EGP Cover<br />0% Deductible</p>
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faGavel} className="flaticon-gavel fa-2x fa-color" />
+                      <p>Liability</p>
                     </td>
+                    <td className="td-right">10,000 EGP Cover</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">Optical</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faGlasses} className="fa-2x fa-color" />
-                      <p>500 EGP Cover<br />0% Deductible</p>
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faWheelchair} className='fa-2x' />
+                        <p>Personal Accident
+
+</p>
                     </td>
+                    <td className="td-right">Not Covered</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">Maternity</td>
-                    <td className="td-right">
-                      <FontAwesomeIcon icon={faCheck} className='check-icon' style={{ marginRight: '3px' }} />
-                      <FontAwesomeIcon icon={faBabyCarriage} className="fa-2x fa-color" />
-                      <p>1,000 EGP Cover</p>
-                    </td>
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faCarCrash} className='fa-2x'/>
+                      <p>Strikes, Riots & Natural Hazards</p>                      
+                                          </td>
+                    <td className="td-right">Not Covered</td>
+
                   </tr>
                   <tr>
-                    <td className="td-left">TOTAL PREMIUM:</td>
+                    <td className="td-left">
+                      <FontAwesomeIcon icon={faCheck} className='check-icon-motor' style={{ marginRight: '3px' }} />
+                      <FontAwesomeIcon icon={faCarCrash} className='fa-2x' />                      
+                                        <p>Roadside Assistance</p>
+                                        
+                                          </td>
+                    <td className="td-right">Maternity</td>
+
+                  </tr>
+                  <tr>
+                    <td className="td-left"><b>NET PREMIUM:</b></td>
                     <td className="td-right">
-                      <p>149,900 EGP<br />Avg/Person: 2,998 EGP</p>
+                      <p><i className="fw-bold fs-2" >149,900 EGP</i></p>
                     </td>
                   </tr>
                 </tbody>
@@ -107,4 +133,4 @@ const InsuranceTable = () => {
   );
 };
 
-export default InsuranceTable;
+export default InsuranceInvoicTable;

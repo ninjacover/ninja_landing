@@ -7648,6 +7648,18 @@ font-size: 12px;
   position: relative;
   top: 2rem;
 }
+.check-icon-motor{
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: #12bb1a;
+  border-radius: 16px;
+  font-size: .9rem;
+  display: flex;
+  left: 9%;
+  position: relative;
+  top: 2rem;
+}
 .invoice-container table tr:first-child{
   margin-bottom: 2rem;
 }
@@ -7681,20 +7693,20 @@ color: var(--bs-gray-800);
 
 
 .information .td-left {
-  width: 30%;
+  width: 33%;
   text-align: left;
-  padding-left: 10px; /* Adjust this value for spacing */
+  padding-left: 10px; 
 }
 
 .information .td-right {
   width: 70%;
   text-align: right;
-  padding-right: 10px; /* Adjust this value for spacing */
+  /* padding-right: 10px;  */
 }
 .top .td-right {
   width: 70%;
   text-align: right;
-  padding-right: 10px; /* Adjust this value for spacing */
+  padding-right: 10px; 
 }
 .table-img-logo {
   width: 13rem;
