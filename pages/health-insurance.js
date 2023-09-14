@@ -6,7 +6,7 @@ import SpecsBar from '../components/Common/medical-insurance/group/SpecsBar';
 import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 import Navbar from '../components/_App/Navbar';
-import IndividualInsuranceTable from '../components/Common/medical-insurance/individual/InsuranceTable';
+import InsuranceTable from '../components/Common/motor-insurance/group/InsuranceTable';
 import IndividualUserInfo from '../components/Common/medical-insurance/individual/UserInfo';
 const HealthInsurance = () => {
     const DummyUser = {
@@ -22,6 +22,7 @@ const HealthInsurance = () => {
             <Navbar/>
             <IndividualUserInfo user={DummyUser}/>
             <SpecsBar/>
+            <InsuranceTable/>
             
 
             {/* <PageBanner 
@@ -31,7 +32,7 @@ const HealthInsurance = () => {
                 activePageText="SME Insurance" 
             />  */}
             
-                <IndividualInsuranceTable/>
+       
 
             <AboutUsContent />
 
