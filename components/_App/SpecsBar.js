@@ -10,9 +10,17 @@ import {
   FaCheckCircle,
   FaTimesCircle,
 } from 'react-icons/fa';
+import GroupUserInfo from '../Common/medical-insurance/group/GroupUserInfo';
 
 const SpecsBar = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const DummyUser = {
+      name: 'John Doe',
+      company: 'ABC Insurance',
+      averageAge: 35,
+      employees: 250,
+    };
+    
 
     useEffect(() => {
         // Check if the screen width is less than a certain breakpoint (e.g., 768px)
@@ -35,6 +43,9 @@ const SpecsBar = () => {
       if (isMobile) {
         // Render the simplified mobile view
         return (
+          <div>
+            <GroupUserInfo user={DummyUser}/>
+
             <div className="insurance-specs-mobile">
               <div className="mobile-row">
                 <div className="mobile-spec">
@@ -61,10 +72,13 @@ const SpecsBar = () => {
                 </div>
               </div>
             </div>
+            </div>
           );
       }
 
   return (
+    <div>
+            <GroupUserInfo user={DummyUser} />
     <div className="insurance-specs-bar">
       <div className="insurance-spec">
         <div className="icon-row">
@@ -143,6 +157,7 @@ const SpecsBar = () => {
           Maternity
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -7525,6 +7525,7 @@ h2,h3{color:black;}
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
 .card-cell {
@@ -7554,13 +7555,29 @@ h2,h3{color:black;}
   overflow-x: auto; /* Enable horizontal scrolling */
   width: 100%; /* Set the width to 100% of the container */
 }
+
 .card-sectors::-webkit-scrollbar {
   display: none;
 }
+
 .sector {
   flex: 0 0 auto; /* Prevent sectors from growing or shrinking */
   padding:25px;
 }
+
+.card-price{
+  font-weight: bold;
+}
+
+.sector-header{
+  font-weight: bold;
+}
+
+.sector-footer{
+font-size: 12px;
+
+}
+
 
 .expand-link {
   color: #42a5f5; 
@@ -7633,58 +7650,10 @@ color: var(--bs-gray-800);
 }
 
 
-/* *********** */
 
 
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  
 
-  /* Center the table within the container */
-  table {
-    margin: 0 auto;
-  }
-
-  /* Increase padding for better readability on smaller screens */
-  table tr td {
-    padding: 1rem;
-  }
-
-  /* Center-align text in table cells */
-  table tr td {
-    text-align: center;
-  }
-
-  /* Reduce the font size for smaller screens */
-  .contact-title {
-    font-size: 24px;
-  }
-
-  /* Adjust the width of the logo image */
-  .table-img-logo {
-    width: 100px;
-    
-  }
-}
-
-/* Additional responsive styles for even smaller screens */
-@media (max-width: 480px) {
-  /* Further reduce padding for very small screens */
-  table tr td {
-    padding: 0.5rem;
-  }
-
-  /* Reduce font size for very small screens */
-  .contact-title {
-    font-size: 20px;
-  }
-}
 /* ================invoice-table=============================== */
-
-
-
-
-
 
 
 .information .td-left {
@@ -7708,40 +7677,79 @@ color: var(--bs-gray-800);
   margin-bottom: 29px;
 }
 
-/* ===============User Info mobile======================== */
-.your-detail-mobile {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 10px; /* Gap between columns */
-  background-color: #F0702F;
+/* ===============User  Info======================== */
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex;
+  margin-top: 0px;
+  align-items: center; /* Center horizontally */
   justify-content: center;
+  position: relative;
+  top: 140px;
+
+  background-color: #F0702F;
   
 
 }
 
-
-
-.detail-label-mobile{
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  margin-left: 25px;
-
-}
-
-.detail-row-mobile {
+.user-info-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-right: 100px;
+  color: white;
+
 }
 
-.detail-label-mobile {
+.user-info-icon {
+  font-size: 24px; 
+  margin-right: 10px;
+}
+
+.user-info-label {
   font-weight: bold;
   margin-right: 5px;
 }
 
-.detail-value-mobile {
-  flex: 1; /* Grow to fill available space */
+
+.mobile-user-info {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 100px;
+  background-color: #F0702F;
+}
+
+.mobile-user-info h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
   color: white;
 }
+
+.mobile-info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.mobile-info-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mobile-info-value {
+  /* font-size: 1.2rem; */
+}
+.mobile-info-label,
+.mobile-info-value {
+  flex: 1;
+  text-align: left;
+  color: white;
+  margin-left: 20px;
+}
+
 

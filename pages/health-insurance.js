@@ -8,8 +8,8 @@ import OffersArea from '../components/Common/OffersArea';
 import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 import Navbar from '../components/_App/Navbar';
-import InsuranceTable from '../components/_App/InsuranceTable';
-import SpecsBar from '../components/_App/SpecsBar';
+import InsuranceTable from '../components/Common/medical-insurance/group/InsuranceTable';
+
 const HealthInsurance = () => {
     return (
         <>

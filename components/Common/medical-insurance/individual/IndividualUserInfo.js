@@ -11,7 +11,7 @@ const UserInfo = ({ data }) => {
 
   return (
     <div className="card text-center" style={{ marginTop: '9px', marginBottom: '20px' }}>
-      <div className="card-header" style={{ backgroundColor: '#0c1c40', color: 'white', whiteSpace: 'nowrap' }}>
+      <div className="card-header" style={{ backgroundColor: '#0c1c40', color: 'black', whiteSpace: 'nowrap' }}>
         <div className="container compare" style={{ textAlign: 'left' }}>
           <h2 className="text-center ystitle d-xs-block d-sm-block d-md-none">Your Information</h2>
           <div className="row">

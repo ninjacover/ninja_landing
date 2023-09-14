@@ -5,9 +5,9 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import SpecsBar from '../../../_App/SpecsBar';
-import UserInfoMobile from './UserInfo.js';
+import UserInfoMobile from './GroupUserInfo.js';
 import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
-
+import GroupUserInfo from './GroupUserInfo.js';
 const InsuranceTable = () => {
   const [windowWidth, setWindowWidth] = useState(null);
 
@@ -386,7 +386,7 @@ const InsuranceTable = () => {
         groupLifeInsuranceCoverage: 50000,
       },
     ];
-    const dummyUser = {
+    const DummyUser = {
       name: 'John Doe',
       averageAge: 32,
       company: 'ABC Insurance',
@@ -434,7 +434,6 @@ const InsuranceTable = () => {
       return (
         <div>
           
-          <UserInfoMobile dummyUser/>
           <SpecsBar/>
 
         <div className="insurance-card-container">
@@ -448,6 +447,8 @@ const InsuranceTable = () => {
     }
   return (
    <div>
+    
+     
     <SpecsBar/>
    <div className="table-container table-container-sm">
       

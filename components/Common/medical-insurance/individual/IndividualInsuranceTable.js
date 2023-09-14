@@ -5,20 +5,14 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
- import UserInfo from './UserInfo';
- import SpecsBar from './SpecsBar';
- import UserInfoMobile from './UserInfoMobile';
+import SpecsBar from '../../_App/SpecsBar';
+import UserInfoMobile from './UserInfo.js';
+import GroupUserInfo from '../group/GroupUserInfo';
 
 
 
-const PersonalInsuranceTable = () => {
-  const [selectedRow, setSelectedRow] = useState(null);
-
+const InsuranceTable = () => {
   const [windowWidth, setWindowWidth] = useState(null);
-
-  // const [oddRowBackground, setOddRowBackground] = useState(false);
-
-
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -55,17 +49,14 @@ const PersonalInsuranceTable = () => {
   };
 
 
-
   const columns = [
 
     {
-
       name: <div className='plan-header'>Plan</div>,
       selector: 'plan',
       sortable: true,
       allowOverflow: true,
       width: '100px'
-
     },
     {
       name: <div className='group-premium-header'>Premium</div>,
@@ -398,7 +389,7 @@ const PersonalInsuranceTable = () => {
         groupLifeInsuranceCoverage: 50000,
       },
     ];
-    const dummyUser = {
+    const DummyUser = {
       name: 'John Doe',
       averageAge: 32,
       company: 'ABC Insurance',
@@ -446,7 +437,7 @@ const PersonalInsuranceTable = () => {
       return (
         <div>
           
-          <UserInfoMobile dummyUser/>
+        
           <SpecsBar/>
 
         <div className="insurance-card-container">
@@ -461,6 +452,8 @@ const PersonalInsuranceTable = () => {
   return (
    <div>
     <SpecsBar/>
+
+
    <div className="table-container table-container-sm">
       
       <DataTable
@@ -566,4 +559,4 @@ const PersonalInsuranceTable = () => {
   );
 };
 
-export default PersonalInsuranceTable;
+export default InsuranceTable;
