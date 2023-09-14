@@ -1,10 +1,17 @@
 import DataTable from 'react-data-table-component';
 import InsuranceCard from './InsuranceCard';
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
+import {
+  FaFileInvoice, // Policy Deductible
+  FaMoneyBill, // Agency Co-Payment
+  FaBalanceScale,
+  FaCheckCircle,
+  FaTimesCircle, // Liability
+  FaCarCrash, // Personal Accident
+  FaFire, // Strikes, Riots, Natural Hazards
+} from 'react-icons/fa';
 
 const InsuranceTable = () => {
   const [windowWidth, setWindowWidth] = useState(null);
@@ -61,20 +68,18 @@ const InsuranceTable = () => {
       cell: row => (
         <div className="group-premium-cell">
           <div className="big-text">{row.groupPremium}</div>
-          <div className="small-text">Avg/Person: 24,960</div>
-
         </div>
       ),
 
     },
     {
-      name: 'In-Patient',
-      selector: 'inPatient',
+      name: 'Policy Deductible',
+      selector: 'plicyDeductible',
       sortable: true,
       cell: row => (
         <div >
           <div className="icon-text">
-            <FaHospital className="icon-row" />
+            <FaFileInvoice className="icon-row" />
             {row.inPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className="small-text" >
@@ -85,13 +90,13 @@ const InsuranceTable = () => {
       ),
     },
     {
-      name: 'Out-Patient',
-      selector: 'outPatient',
+      name: 'Agency Co-Payment',
+      selector: 'AgencyCoPayment',
       sortable: true,
       cell: row => (
         <div>
           <div className="icon-text">
-            <FaUserMd className="icon-row" />
+            <FaMoneyBill className="icon-row" />
             {row.outPatient ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className="small-text">
@@ -101,13 +106,13 @@ const InsuranceTable = () => {
       ),
     },
     {
-      name: 'Diseases',
+      name: 'Liability',
       selector: 'chronicPreExistingDisease',
       sortable: true,
       cell: row => (
         <div>
           <div className="icon-text">
-            <FaPills className="icon-row" />
+            < FaBalanceScale className="icon-row" />
             {row.chronicPreExistingDisease ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className="small-text">
@@ -117,13 +122,13 @@ const InsuranceTable = () => {
       ),
     },
     {
-      name: 'Medication',
+      name: 'Personal Accident',
       selector: 'medication',
       sortable: true,
       cell: row => (
         <div>
           <div className="icon-text">
-            <FaCapsules className="icon-row" />
+            <FaCarCrash className="icon-row" />
             {row.medication ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className="small-text">
@@ -134,13 +139,13 @@ const InsuranceTable = () => {
       ),
     },
     {
-      name: 'Dental',
-      selector: 'dental',
+      name: <div className='plan-header'>Strikes, Riots, Natural Hazards</div>,
+      selector: 'StrikesRiotsNaturalHazards',
       sortable: true,
       cell: row => (
         <div>
           <div className="icon-text">
-            <FaTooth className="icon-row" />
+            <FaFire className="icon-row" />
             {row.dental ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
           </div>
           <div className='small-text'>
@@ -149,40 +154,6 @@ const InsuranceTable = () => {
         </div>
       ),
     },
-    {
-      name: 'Optical',
-      selector: 'optical',
-      sortable: true,
-      cell: row => (
-        <div>
-          <div className="icon-text">
-            <FaEye className="icon-row" />
-            {row.optical ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-          </div>
-          <div className="small-text">
-            {row.optical ? `${row.opticalCoverage} EGP` : 'Not Covered'}
-          </div>
-        </div>
-      ),
-    },
-    {
-      name: 'Maternity',
-      selector: 'maternity',
-      sortable: true,
-      cell: row => (
-        <div>
-          <div className="icon-text">
-            <FaBabyCarriage className="icon-row" />
-            {row.maternity ? <FaCheckCircle className="tick-icon" /> : <FaTimesCircle className="cross-icon" />}
-          </div>
-          <div className='small-text'>
-            {row.maternity ? `${row.maternityCoverage} EGP` : 'Not Covered'}
-
-          </div>
-        </div>
-      ),
-    },
-
 
     {
       name: 'Actions',
@@ -436,78 +407,45 @@ const InsuranceTable = () => {
 
       {isPopupOpen && (
         <div className="popup overlay">
-          <div className="popup-content">
-            {/* Your form content goes here */}
-
-            <div className="form-heading text-center">
-              <h3 className="form-title">Log In to your account!</h3>
-              <p className="form-desc">With your social network.</p>
-            </div>
-
-
-            <form method="post">
-              <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Google
-                  </button>
+          <div class="container form-custom"><div class="row">
+            <div class="col-12"><div class="contact-form-action">
+              <div class="form-heading text-center">
+                <h3 class="form-title">Log In to your account!</h3><p class="form-desc">With your social network.</p>
+              </div><form method="post"><div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Google</button>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Facebook
-                  </button>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Facebook</button>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Twitter
-                  </button>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-group">
-                    <input className="form-control" type="text" name="name" placeholder="Username or Email" />
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Twitter</button>
                   </div>
-                </div>
-                <div className="col-12">
-                  <div className="form-group">
-                    <input className="form-control" type="password" name="password" placeholder="Password" />
-                  </div>
-                </div>
+                  <div class="col-12"><div class="form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Username or Email" />
+                  </div></div><div class="col-12"><div class="form-group"><input type="password" class="form-control" name="password" placeholder="Password" /></div></div><div class="col-lg-6 col-sm-6 form-condition"><div class="agree-label">
+                    <input type="checkbox" id="chb1" /><label for="chb1">Remember Me</label>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                      <a class="forget" href="/recover-password/">Forgot my password?</a>
+                      </div><div class="col-12"><button class="default-btn btn-two" type="submit">Log In Now</button></div><div class="col-12"><p class="account-desc">Not a member?<a href="/sign-up/">Sign Up</a></p>
+                      </div>
+                     
+                      </div>
 
-                <div className="col-lg-6 col-sm-6 form-condition">
-                  <div className="agree-label">
-                    <input type="checkbox" id="chb1" />
-                    <label htmlFor="chb1">Remember Me</label>
-                  </div>
-                </div>
+                      </form>
+                      <div className='popup-close-icon'>
 
-                <div className="col-lg-6 col-sm-6">
-                  <Link href="/recover-password">
-                    <a className="forget">Forgot my password?</a>
-                  </Link>
-                </div>
-
-                <div className="col-12">
-                  <button className="default-btn btn-two" type="submit">
-                    Log In Now
-                  </button>
-                </div>
-
-                <div className="col-12">
-                  <p className="account-desc">
-                    Not a member?
-                    <Link href="/sign-up"><a>Sign Up</a></Link>
-                  </p>
-                </div>
-              </div>
-            </form>
-
-            <div className='popup-close-icon'>
-
-
-              <FontAwesomeIcon icon={faTimes} onClick={closePopup} />
-            </div>
-          </div>
+<FontAwesomeIcon icon={faTimes} onClick={closePopup} />
+</div>
+                     
+                      </div>
+                      </div>
+                      </div>      
+                      </div>
+        
+        
         </div>
       )}
       

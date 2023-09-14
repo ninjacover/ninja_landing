@@ -1,6 +1,5 @@
 import DataTable from 'react-data-table-component';
 import IndividualInsuranceCard from './InsuranceCard';
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
