@@ -11,10 +11,9 @@ const quotation_invoice = () => {
         <div>
             <Navbar /> {/* Render the Navbar component */}
             <PageBanner
-                pageTitle="Insurance Details"
+                pageTitle="Group Medical"
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText="Insurance Details"
             />
 
             <div className="pt-100">
@@ -70,6 +69,7 @@ const quotation_invoice = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

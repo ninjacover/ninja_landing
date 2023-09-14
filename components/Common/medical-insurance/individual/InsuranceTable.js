@@ -1,6 +1,8 @@
 import DataTable from 'react-data-table-component';
 import IndividualInsuranceCard from './InsuranceCard';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FaUserMd, FaHospital, FaCheckCircle, FaTimesCircle, FaCapsules, FaTooth, FaEye, FaBabyCarriage, FaPills } from 'react-icons/fa';
@@ -455,7 +457,16 @@ const InsuranceTable = () => {
                     </div>
                     <div class="col-lg-6 col-sm-6">
                       <a class="forget" href="/recover-password/">Forgot my password?</a>
-                      </div><div class="col-12"><button class="default-btn btn-two" type="submit">Log In Now</button></div><div class="col-12"><p class="account-desc">Not a member?<a href="/sign-up/">Sign Up</a></p>
+                      </div><div class="col-12">
+                        <button class="default-btn btn-two" type="submit">
+                        <Link href="/insurance_modules/individual_medical/quotation_invoice">
+
+<a  style={{color:'white'}}>
+  Log In Now
+  </a>
+  </Link>
+                          
+                          </button></div><div class="col-12"><p class="account-desc">Not a member?<a href="/sign-up/">Sign Up</a></p>
                       </div>
                      
                       </div>

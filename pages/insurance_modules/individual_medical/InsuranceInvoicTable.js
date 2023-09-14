@@ -10,7 +10,7 @@ import {
   faBabyCarriage,
 } from '@fortawesome/free-solid-svg-icons';
 
-const InsuranceTable = () => {
+const InsuranceInvoicTable = () => {
   return (
     <div>
       <table className='invoic-table'>
@@ -27,15 +27,15 @@ const InsuranceTable = () => {
                 <tbody>
                   <tr>
                     <td className="td-left">Insurance Company: Libano-Suisse<br />
-                      AGE: 35<br />
-                      Employees: 50</td>
-                    <td className="td-right">Full Name: Ahmed Wael<br />
-                      Email: iahmedwael@gmail.com<br />
-                      Mobile: 01222151085</td>
+                      AGE:<b> 35</b><br />
+                      Employees:<b> 50</b></td>
+                    <td className="td-right">Full Name: <b>Ahmed Wael</b><br />
+                      Email: <b>iahmedwael@gmail.com</b><br />
+                      Mobile:<b> 01222151085</b></td>
                   </tr>
                   <tr style={{ backgroundColor: 'var(--bs-gray-200)' }}>
-                    <td className="td-left">Policy Covers</td>
-                    <td className="td-right">Description</td>
+                    <td className="td-left"><b>Policy Covers</b></td>
+                    <td className="td-right"><b>Description</b></td>
                   </tr>
                   <tr>
                     <td className="td-left">In-Patient</td>
@@ -92,9 +92,9 @@ const InsuranceTable = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td className="td-left">TOTAL PREMIUM:</td>
+                    <td className="td-left"><b>TOTAL PREMIUM:</b></td>
                     <td className="td-right">
-                      <p>149,900 EGP<br />Avg/Person: 2,998 EGP</p>
+                      <p><i className="fw-bold fs-2" >149,900 EGP</i><br /><i className='fs-6'>Avg/Person: 2,998 EGP</i></p>
                     </td>
                   </tr>
                 </tbody>
@@ -107,4 +107,4 @@ const InsuranceTable = () => {
   );
 };
 
-export default InsuranceTable;
+export default InsuranceInvoicTable;
