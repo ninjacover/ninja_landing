@@ -2,7 +2,9 @@
 
 @media only screen and (max-width: 575px) {
   .row .col-lg-4{
-    margin-bottom: 1.5rem;
+    width: 33.33333333%;
+
+
 
 
   }
@@ -41,17 +43,13 @@ margin-left: 0px;
   }
 
 
-  .popup-content {
-    width: fit-content;
-    margin: 0 -0.5rem 0 -0.5rem;
-    position: absolute;
-    left: 2%;
-    right: 2%;
-    top: 3%;
-    background-color: var(--bs-body-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-}
+   
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }
+
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -124,19 +122,14 @@ margin-left: 0px;
 
   }
   
-  .popup-content {
-    width: fit-content;
-    margin: 0 -0.5rem 0 -0.5rem;
-    position: absolute;
-    left: 2%;
-    right: 2%;
-    top: 3%;
-    background-color: var(--bs-body-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-}
+   
 
 
+
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }
 
 
 }
@@ -584,30 +577,30 @@ margin-left: 0px;
   .page-navigation-area {
     margin-top: 0;
   }
-  .user-area-all-style .contact-form-action {
+    .contact-form-action {
     padding: 20px;
   }
-  .user-area-all-style .contact-form-action .form-heading .form-title {
+    .contact-form-action .form-heading .form-title {
     font-size: 25px;
   }
-  .user-area-all-style .contact-form-action .form-heading .form-desc {
+    .contact-form-action .form-heading .form-desc {
     font-size: 15px;
   }
-  .user-area-all-style .contact-form-action .default-btn {
+    .contact-form-action .default-btn {
     display: block;
     width: 100%;
   }
-  .user-area-all-style .contact-form-action .agree-label {
+    .contact-form-action .agree-label {
     text-align: center;
   }
-  .user-area-all-style .contact-form-action .forget {
+    .contact-form-action .forget {
     float: unset;
     float: unset;
     margin-bottom: 30px;
     text-align: center;
     display: block;
   }
-  .user-area-all-style .contact-form-action .now-register {
+    .contact-form-action .now-register {
     float: unset;
     margin-top: 10px;
   }
@@ -1080,17 +1073,12 @@ margin-left: 0px;
 
 
 
-  .popup-content {
-    width: fit-content;
-    margin: 0 -0.5rem 0 -0.5rem;
-    position: absolute;
-    left: 2%;
-    right: 2%;
-    top: 3%;
-    background-color: var(--bs-body-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-}
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }   
+
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1576,13 +1564,13 @@ margin-left: 0px;
   .page-navigation-area {
     margin-top: 0;
   }
-  .user-area-all-style .contact-form-action {
+    .contact-form-action {
     padding: 20px;
   }
-  .user-area-all-style .contact-form-action .form-heading .form-title {
+    .contact-form-action .form-heading .form-title {
     font-size: 25px;
   }
-  .user-area-all-style .contact-form-action .form-heading .form-desc {
+    .contact-form-action .form-heading .form-desc {
     font-size: 15px;
   }
   .contact-area {
@@ -1761,18 +1749,13 @@ margin-left: 0px;
 
 
 
-  .popup-content {
-    width: fit-content;
-    margin: 0 -0.5rem 0 -0.5rem;
-    position: absolute;
-    left: 2%;
-    right: 2%;
-    top: 3%;
-    background-color: var(--bs-body-bg);
-    padding: 2rem;
-    border-radius: 1rem;
-}
+   
 
+
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }
 
 
 }
@@ -1904,11 +1887,21 @@ margin-left: 0px;
   }
   /* Home demo 4,5,6 */
  
+
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .navbar-area .others-option .subscribe {
     display: none;
+  }
+
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
   }
 }
 
@@ -1940,7 +1933,7 @@ margin-left: 0px;
   }
 
   .row .col-lg-4{
-    margin-bottom: 1.5rem;
+    width: 33.33333333%;
 
   }
 
@@ -1971,6 +1964,11 @@ margin-left: 2.2rem;
   }
 
   
+
+  .popup-close-icon{
+    top: -5px;
+    left: 85%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

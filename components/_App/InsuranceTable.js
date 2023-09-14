@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
- import UserInfo from './UserInfo';
+import UserInfo from './UserInfo';
 
 
 
@@ -210,200 +210,200 @@ const InsuranceTable = () => {
 
   ];
 
- 
 
-    const data = [
-      {
-        plan: 'Plan A',
-        groupPremium: '24,000',
-        inPatient: true,
-        inPatientCoverage: '3,500 EGP',
-        outPatient: false,
-        outPatientCoverage: "Not Covered",
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '2,000',
-        medication: true,
-        medicationCoverage: '15,000',
-        dental: false,
-        dentalCoverage: "Not Covered",
-        optical: false,
-        opticalCoverage: "Not Covered",
-        maternity: false,
-        maternityCoverage: "Not Covered",
-        accompanyingFamily: 'Not Covered',
-        physiotherapy: '10 Sessions',
-        dentalNote: 'Not Covered',
-        opticalNote: 'Not Covered',
-        maternityWaitingPeriod: 'Not Covered',
-        newBornBabyCoverage: 'Not Covered',
-        maternityNote: 'Intensive baby care limit 1K Caesarean limit 5K Natural birth limit 4K Legal miscarriage limit 3K',
-     groupLifeInsuranceCoverage: 25000,
-      },
-      {
-        plan: 'Plan B',
-        groupPremium: '29,000',
-        inPatient: true,
-        inPatientCoverage: '2,500 EGP',
-        outPatient: true,
-        outPatientCoverage: '10,800',
-        chronicPreExistingDisease: false,
-        chronicPreExistingDiseaseCoverage: "Not Covered",
-        medication: true,
-        medicationCoverage: '2,000',
-        dental: false,
-        dentalCoverage: "Not Covered",
-        optical: true,
-        opticalCoverage: '2,800',
-        maternity: true,
-        maternityCoverage: '2,200',
-        accompanyingFamily: 'Covered',
-        physiotherapy: '12 Sessions',
-        dentalNote: 'Covered for Basic Procedures',
-        opticalNote: 'Covered for Eye Exams',
-        maternityWaitingPeriod: '6 months waiting period',
-        newBornBabyCoverage: 'Covered',
-        maternityNote: 'Covered with conditions',
-        groupLifeInsuranceCoverage: 30000,
-      },
-      {
-        plan: 'Plan C',
-        groupPremium: '30,000',
-        inPatient: true,
-        inPatientCoverage: '10,000 EGP',
-        outPatient: true,
-        outPatientCoverage: '20,220',
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '2,000',
-        medication: true,
-        medicationCoverage: '1,500',
-        dental: true,
-        dentalCoverage: '2,800',
-        optical: false,
-        opticalCoverage: "Not Covered",
-        maternity: false,
-        maternityCoverage: "Not Covered",
-        accompanyingFamily: 'Not Covered',
-        physiotherapy: '8 Sessions',
-        dentalNote: 'Not Covered',
-        opticalNote: 'Not Covered',
-        maternityWaitingPeriod: 'Not Covered',
-        newBornBabyCoverage: 'Not Covered',
-        maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: 20000,
-      },
-      {
-        plan: 'Plan D',
-        groupPremium: '45,000',
-        inPatient: true,
-        inPatientCoverage: '3,000 EGP',
-        outPatient: true,
-        outPatientCoverage: '20,500',
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '2,000',
-        medication: true,
-        medicationCoverage: '2,200',
-        dental: true,
-        dentalCoverage: '2,800',
-        optical: true,
-        opticalCoverage: '3,000',
-        maternity: true,
-        maternityCoverage: '2,500',
-        accompanyingFamily: 'Covered',
-        physiotherapy: '15 Sessions',
-        dentalNote: 'Covered for Major Procedures',
-        opticalNote: 'Covered for Glasses and Lenses',
-        maternityWaitingPeriod: '3 months waiting period',
-        newBornBabyCoverage: 'Covered',
-        maternityNote: 'Covered without conditions',
-        groupLifeInsuranceCoverage: 35000,
-      },
-      {
-        plan: 'Plan E',
-        groupPremium: '50,000',
-        inPatient: true,
-        inPatientCoverage: '2,800 EGP',
-        outPatient: true,
-        outPatientCoverage: '21,200',
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '1,800',
-        medication: true,
-        medicationCoverage: '2,000',
-        dental: false,
-        dentalCoverage: "Not Covered",
-        optical: true,
-        opticalCoverage: '2,500',
-        maternity: false,
-        maternityCoverage: "Not Covered",
-        accompanyingFamily: 'Not Covered',
-        physiotherapy: '10 Sessions',
-        dentalNote: 'Not Covered',
-        opticalNote: 'Covered for Eye Exams',
-        maternityWaitingPeriod: 'Not Covered',
-        newBornBabyCoverage: 'Not Covered',
-        maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: 40000,
-      },
-      {
-        plan: 'Plan F',
-        groupPremium: '52,000',
-        inPatient: true,
-        inPatientCoverage: '3,000 EGP' ,
-        outPatient: true,
-        outPatientCoverage: '22,200',
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '1,500',
-        medication: true,
-        medicationCoverage: '1,880',
-        dental: false,
-        dentalCoverage: "Not Covered",
-        optical: false,
-        opticalCoverage: "Not Covered",
-        maternity: false,
-        maternityCoverage: "Not Covered",
-        accompanyingFamily: 'Covered',
-        physiotherapy: '20 Sessions',
-        dentalNote: 'Not Covered',
-        opticalNote: 'Not Covered',
-        maternityWaitingPeriod: 'Not Covered',
-        newBornBabyCoverage: 'Not Covered',
-        maternityNote: 'Not Covered',
-        groupLifeInsuranceCoverage: 45000,
-      },
-      {
-        plan: 'Plan G',
-        groupPremium: '100,000',
-        inPatient: true,
-        inPatientCoverage: '35,000 EGP',
-        outPatient: true,
-        outPatientCoverage: '22,800',
-        chronicPreExistingDisease: true,
-        chronicPreExistingDiseaseCoverage: '2,220',
-        medication: true,
-        medicationCoverage: '2,500',
-        dental: true,
-        dentalCoverage: '3,000',
-        optical: true,
-        opticalCoverage: '2,200',
-        maternity: true,
-        maternityCoverage: '2,800',
-        accompanyingFamily: 'Covered',
-        physiotherapy: '25 Sessions',
-        dentalNote: 'Covered for All Procedures',
-        opticalNote: 'Covered for Glasses and Lenses',
-        maternityWaitingPeriod: '3 months waiting period',
-        newBornBabyCoverage: 'Covered',
-        maternityNote: 'Covered with conditions',
-        groupLifeInsuranceCoverage: 50000,
-      },
-    ];
-    const dummyUser = {
-      name: 'John Doe',
-      averageAge: 32,
-      company: 'ABC Insurance',
-      employees: 100,
-    };
-    
-   
+
+  const data = [
+    {
+      plan: 'Plan A',
+      groupPremium: '24,000',
+      inPatient: true,
+      inPatientCoverage: '3,500 EGP',
+      outPatient: false,
+      outPatientCoverage: "Not Covered",
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '2,000',
+      medication: true,
+      medicationCoverage: '15,000',
+      dental: false,
+      dentalCoverage: "Not Covered",
+      optical: false,
+      opticalCoverage: "Not Covered",
+      maternity: false,
+      maternityCoverage: "Not Covered",
+      accompanyingFamily: 'Not Covered',
+      physiotherapy: '10 Sessions',
+      dentalNote: 'Not Covered',
+      opticalNote: 'Not Covered',
+      maternityWaitingPeriod: 'Not Covered',
+      newBornBabyCoverage: 'Not Covered',
+      maternityNote: 'Intensive baby care limit 1K Caesarean limit 5K Natural birth limit 4K Legal miscarriage limit 3K',
+      groupLifeInsuranceCoverage: 25000,
+    },
+    {
+      plan: 'Plan B',
+      groupPremium: '29,000',
+      inPatient: true,
+      inPatientCoverage: '2,500 EGP',
+      outPatient: true,
+      outPatientCoverage: '10,800',
+      chronicPreExistingDisease: false,
+      chronicPreExistingDiseaseCoverage: "Not Covered",
+      medication: true,
+      medicationCoverage: '2,000',
+      dental: false,
+      dentalCoverage: "Not Covered",
+      optical: true,
+      opticalCoverage: '2,800',
+      maternity: true,
+      maternityCoverage: '2,200',
+      accompanyingFamily: 'Covered',
+      physiotherapy: '12 Sessions',
+      dentalNote: 'Covered for Basic Procedures',
+      opticalNote: 'Covered for Eye Exams',
+      maternityWaitingPeriod: '6 months waiting period',
+      newBornBabyCoverage: 'Covered',
+      maternityNote: 'Covered with conditions',
+      groupLifeInsuranceCoverage: 30000,
+    },
+    {
+      plan: 'Plan C',
+      groupPremium: '30,000',
+      inPatient: true,
+      inPatientCoverage: '10,000 EGP',
+      outPatient: true,
+      outPatientCoverage: '20,220',
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '2,000',
+      medication: true,
+      medicationCoverage: '1,500',
+      dental: true,
+      dentalCoverage: '2,800',
+      optical: false,
+      opticalCoverage: "Not Covered",
+      maternity: false,
+      maternityCoverage: "Not Covered",
+      accompanyingFamily: 'Not Covered',
+      physiotherapy: '8 Sessions',
+      dentalNote: 'Not Covered',
+      opticalNote: 'Not Covered',
+      maternityWaitingPeriod: 'Not Covered',
+      newBornBabyCoverage: 'Not Covered',
+      maternityNote: 'Not Covered',
+      groupLifeInsuranceCoverage: 20000,
+    },
+    {
+      plan: 'Plan D',
+      groupPremium: '45,000',
+      inPatient: true,
+      inPatientCoverage: '3,000 EGP',
+      outPatient: true,
+      outPatientCoverage: '20,500',
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '2,000',
+      medication: true,
+      medicationCoverage: '2,200',
+      dental: true,
+      dentalCoverage: '2,800',
+      optical: true,
+      opticalCoverage: '3,000',
+      maternity: true,
+      maternityCoverage: '2,500',
+      accompanyingFamily: 'Covered',
+      physiotherapy: '15 Sessions',
+      dentalNote: 'Covered for Major Procedures',
+      opticalNote: 'Covered for Glasses and Lenses',
+      maternityWaitingPeriod: '3 months waiting period',
+      newBornBabyCoverage: 'Covered',
+      maternityNote: 'Covered without conditions',
+      groupLifeInsuranceCoverage: 35000,
+    },
+    {
+      plan: 'Plan E',
+      groupPremium: '50,000',
+      inPatient: true,
+      inPatientCoverage: '2,800 EGP',
+      outPatient: true,
+      outPatientCoverage: '21,200',
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '1,800',
+      medication: true,
+      medicationCoverage: '2,000',
+      dental: false,
+      dentalCoverage: "Not Covered",
+      optical: true,
+      opticalCoverage: '2,500',
+      maternity: false,
+      maternityCoverage: "Not Covered",
+      accompanyingFamily: 'Not Covered',
+      physiotherapy: '10 Sessions',
+      dentalNote: 'Not Covered',
+      opticalNote: 'Covered for Eye Exams',
+      maternityWaitingPeriod: 'Not Covered',
+      newBornBabyCoverage: 'Not Covered',
+      maternityNote: 'Not Covered',
+      groupLifeInsuranceCoverage: 40000,
+    },
+    {
+      plan: 'Plan F',
+      groupPremium: '52,000',
+      inPatient: true,
+      inPatientCoverage: '3,000 EGP',
+      outPatient: true,
+      outPatientCoverage: '22,200',
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '1,500',
+      medication: true,
+      medicationCoverage: '1,880',
+      dental: false,
+      dentalCoverage: "Not Covered",
+      optical: false,
+      opticalCoverage: "Not Covered",
+      maternity: false,
+      maternityCoverage: "Not Covered",
+      accompanyingFamily: 'Covered',
+      physiotherapy: '20 Sessions',
+      dentalNote: 'Not Covered',
+      opticalNote: 'Not Covered',
+      maternityWaitingPeriod: 'Not Covered',
+      newBornBabyCoverage: 'Not Covered',
+      maternityNote: 'Not Covered',
+      groupLifeInsuranceCoverage: 45000,
+    },
+    {
+      plan: 'Plan G',
+      groupPremium: '100,000',
+      inPatient: true,
+      inPatientCoverage: '35,000 EGP',
+      outPatient: true,
+      outPatientCoverage: '22,800',
+      chronicPreExistingDisease: true,
+      chronicPreExistingDiseaseCoverage: '2,220',
+      medication: true,
+      medicationCoverage: '2,500',
+      dental: true,
+      dentalCoverage: '3,000',
+      optical: true,
+      opticalCoverage: '2,200',
+      maternity: true,
+      maternityCoverage: '2,800',
+      accompanyingFamily: 'Covered',
+      physiotherapy: '25 Sessions',
+      dentalNote: 'Covered for All Procedures',
+      opticalNote: 'Covered for Glasses and Lenses',
+      maternityWaitingPeriod: '3 months waiting period',
+      newBornBabyCoverage: 'Covered',
+      maternityNote: 'Covered with conditions',
+      groupLifeInsuranceCoverage: 50000,
+    },
+  ];
+  const dummyUser = {
+    name: 'John Doe',
+    averageAge: 32,
+    company: 'ABC Insurance',
+    employees: 100,
+  };
+
+
 
 
 
@@ -440,31 +440,31 @@ const InsuranceTable = () => {
   };
 
 
-    if (isMobile) {
-      return (
-        <div className="insurance-card-container">
-         <UserInfo dummyUser/>
-          {data.map((entry, index) => (
-            <InsuranceCard key={index} data={entry} />
-          ))}
-        </div>
-      );
-    }
+  if (isMobile) {
+    return (
+      <div className="insurance-card-container">
+        <UserInfo dummyUser />
+        {data.map((entry, index) => (
+          <InsuranceCard key={index} data={entry} />
+        ))}
+      </div>
+    );
+  }
   return (
     <div>
-    <div className="table-container table-container-sm">
-      
-      <DataTable
-        columns={columns}
-        data={data}
-        noHeader
-        highlightOnHover
-        expandableRows // Enable row expansion
-        expandableRowsComponent={renderDetails} // Use renderDetails function as the component
-        expandOnRowClicked={false} // Disable row expansion on row click
-       // Expand the selected row
-      />
-{/* 
+      <div className="table-container table-container-sm">
+
+        <DataTable
+          columns={columns}
+          data={data}
+          noHeader
+          highlightOnHover
+          expandableRows // Enable row expansion
+          expandableRowsComponent={renderDetails} // Use renderDetails function as the component
+          expandOnRowClicked={false} // Disable row expansion on row click
+        // Expand the selected row
+        />
+        {/* 
       {selectedRow && (
         <div className="selected-row-details">
           {renderDetails(selectedRow)}
@@ -479,84 +479,55 @@ const InsuranceTable = () => {
 
       {isPopupOpen && (
         <div className="popup overlay">
-          <div className="popup-content">
-            {/* Your form content goes here */}
-
-            <div className="form-heading text-center">
-              <h3 className="form-title">Log In to your account!</h3>
-              <p className="form-desc">With your social network.</p>
-            </div>
-
-
-            <form method="post">
-              <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Google
-                  </button>
+          <div class="container form-custom"><div class="row">
+            <div class="col-12"><div class="contact-form-action">
+              <div class="form-heading text-center">
+                <h3 class="form-title">Log In to your account!</h3><p class="form-desc">With your social network.</p>
+              </div><form method="post"><div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Google</button>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Facebook
-                  </button>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Facebook</button>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <button className="default-btn" type="submit">
-                    Twitter
-                  </button>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-group">
-                    <input className="form-control" type="text" name="name" placeholder="Username or Email" />
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <button class="default-btn" type="submit">Twitter</button>
                   </div>
-                </div>
-                <div className="col-12">
-                  <div className="form-group">
-                    <input className="form-control" type="password" name="password" placeholder="Password" />
-                  </div>
-                </div>
-
-                <div className="col-lg-6 col-sm-6 form-condition">
-                  <div className="agree-label">
-                    <input type="checkbox" id="chb1" />
-                    <label htmlFor="chb1">Remember Me</label>
-                  </div>
-                </div>
-
-                <div className="col-lg-6 col-sm-6">
-                  <Link href="/recover-password">
-                    <a className="forget">Forgot my password?</a>
-                  </Link>
-                </div>
-
-                <div className="col-12">
-                  <button className="default-btn btn-two" type="submit">
-                    Log In Now
-                  </button>
-                </div>
-
-                <div className="col-12">
-                  <p className="account-desc">
-                    Not a member?
-                    <Link href="/sign-up"><a>Sign Up</a></Link>
-                  </p>
-                </div>
-              </div>
-            </form>
-
-            <div className='popup-close-icon'>
+                  <div class="col-12"><div class="form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Username or Email" />
+                  </div></div><div class="col-12"><div class="form-group"><input type="password" class="form-control" name="password" placeholder="Password" /></div></div><div class="col-lg-6 col-sm-6 form-condition"><div class="agree-label">
+                    <input type="checkbox" id="chb1" /><label for="chb1">Remember Me</label>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                      <a class="forget" href="/recover-password/">Forgot my password?</a>
+                      </div><div class="col-12"><button class="default-btn btn-two" type="submit">Log In Now</button></div><div class="col-12"><p class="account-desc">Not a member?<a href="/sign-up/">Sign Up</a></p>
+                      </div>
+                     
+                      </div>
+                      
+                      
+                      </form>
+                      <div className='popup-close-icon'>
 
 
-              <FontAwesomeIcon icon={faTimes} onClick={closePopup} />
-            </div>
-          </div>
+<FontAwesomeIcon icon={faTimes} onClick={closePopup} />
+</div>
+                     
+                      </div>
+                      </div>
+                      </div>
+                      
+                      
+                      </div>
+        
+        
         </div>
       )}
 
 
 
-      
+
     </div>
   );
 };

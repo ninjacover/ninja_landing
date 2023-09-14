@@ -307,6 +307,8 @@ Default Btn Area Style*/
   right: 0;
 }
 
+
+
 /*
 Read More Area Style*/
 .read-more {
@@ -594,6 +596,7 @@ Nav Area Style
   padding-top: 4px;
   padding-left: 15px;
 }
+
 
 .navbar-area .others-option .option-item .search-overlay.search-popup .search-form .search-input:focus {
   border-color: #F0702F;
@@ -3257,12 +3260,12 @@ Page Title Area Style
 /*
 Sign In & Log In  Area Style
 =====================================================*/
-.user-area-all-style {
+.form-custom {
   position: relative;
   z-index: 1;
 }
 
-.user-area-all-style .contact-form-action {
+ .contact-form-action {
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 40px rgba(82, 85, 90, 0.1);
@@ -3272,124 +3275,128 @@ Sign In & Log In  Area Style
   margin: auto;
 }
 
-.user-area-all-style .contact-form-action .form-heading {
+ .contact-form-action .form-heading {
   margin-bottom: 33px;
 }
 
-.user-area-all-style .contact-form-action .form-heading .form-title {
+ .contact-form-action .form-heading .form-title {
   font-size: 35px;
   color: #233d63;
   margin-bottom: 10px;
   text-transform: capitalize;
 }
 
-.user-area-all-style .contact-form-action .form-heading .form-desc {
+ .contact-form-action .form-heading .form-desc {
   font-size: 18px;
   color: #677286;
   font-weight: 500;
 }
 
-.user-area-all-style .contact-form-action .form-heading .reset-desc {
+ .contact-form-action .form-heading .reset-desc {
   line-height: 30px;
   margin-top: 15px;
 }
 
-.user-area-all-style .contact-form-action .form-heading .reset-desc a {
+.contact-form-action .form-heading .reset-desc a {
   color: #31abfc;
 }
 
-.user-area-all-style .contact-form-action .form-heading .reset-desc {
+ .contact-form-action .form-heading .reset-desc {
   font-size: 16px;
 }
 
-.user-area-all-style .contact-form-action .form-heading .reset-desc a {
+ .contact-form-action .form-heading .reset-desc a {
   font-weight: 600;
 }
 
-.user-area-all-style .contact-form-action form .submit-btn {
+ .contact-form-action form .submit-btn {
   margin-top: 24px;
 }
 
-.user-area-all-style .contact-form-action form .default-btn {
+ .contact-form-action form .default-btn {
   font-size: 14px;
   padding: 15px 40px;
   margin-bottom: 30px;
   font-weight: 600;
 }
 
-.user-area-all-style .contact-form-action form .default-btn.btn-two {
+ .contact-form-action form .default-btn.btn-two {
   display: table;
   margin: 0 auto 0;
   padding: 15px 40px;
 }
 
-.user-area-all-style .contact-form-action form .col-lg-4:nth-child(1) .default-btn {
+ .contact-form-action form .col-lg-4:nth-child(1) .default-btn {
   background-color: #000000;
 }
 
-.user-area-all-style .contact-form-action form .col-lg-4:nth-child(2) .default-btn {
+ .contact-form-action form .col-lg-4:nth-child(2) .default-btn {
   background-color: #000000;
   display: table;
   margin: 0 auto 30px;
 }
 
-.user-area-all-style .contact-form-action form .col-lg-4:nth-child(3) .default-btn {
+ .contact-form-action form .col-lg-4:nth-child(3) .default-btn {
   background-color: #000000;
   float: right;
 }
 
-.user-area-all-style .contact-form-action form .reset-btn {
+ .contact-form-action form .reset-btn {
   margin-top: 0;
 }
 
-.user-area-all-style .contact-form-action form .form-condition {
+ .contact-form-action form .form-condition {
   margin-bottom: 20px;
 }
 
-.user-area-all-style .contact-form-action form .form-condition .agree-label a {
+ .contact-form-action form .form-condition .agree-label a {
   color: #31abfc;
   padding-left: 5px;
 }
 
-.user-area-all-style .contact-form-action form .form-group {
+ .contact-form-action form .form-group {
   margin-bottom: 30px;
 }
 
-.user-area-all-style .contact-form-action .account-desc {
+ .contact-form-action .account-desc {
   margin: 25px auto 0;
   display: table;
 }
 
-.user-area-all-style .contact-form-action .account-desc a {
+ .contact-form-action .account-desc a {
   color: #31abfc;
   margin-left: 10px;
 }
 
-.user-area-all-style .contact-form-action #chb1 {
+ .contact-form-action #chb1 {
   position: relative;
   top: 1px;
   margin-right: 10px;
 }
 
-.user-area-all-style .contact-form-action #chb2 {
+ .contact-form-action #chb2 {
   position: relative;
   top: 1px;
   margin-right: 10px;
 }
 
-.user-area-all-style .contact-form-action .forget {
+ .contact-form-action .forget {
   float: right;
   color: #31abfc;
 }
 
-.user-area-all-style .contact-form-action .now-register {
+ .contact-form-action .now-register {
   float: right;
   margin-bottom: 30px;
 }
 
-.user-area-all-style .contact-form-action .now-register a {
+ .contact-form-action .now-register a {
   color: #31abfc;
   padding-left: 5px;
+}
+
+.contact-form-action form .form-group {
+  margin-bottom: 30px;
 }
 
 /* 
@@ -7396,19 +7403,38 @@ h2,h3{color:black;}
     padding: 2rem;
     border-radius: 1rem;
 }
+.contact-form-action form .default-btn{
+  color: white;
+}
+
+.contact-form-action form .col-lg-4:first-child .default-btn {
+  background-color: #ff5733;
+}
+
+.contact-form-action form .col-lg-4:nth-child(2) .default-btn {
+  background-color: #3955bc;
+  display: table;
+  /* margin: 0 auto 30px; */
+}
+.contact-form-action form .col-lg-4:nth-child(3) .default-btn {
+  background-color: #31abfc;
+  float: right;
+}
+
+.btn-two{
+  background-color:#31abfc ;
+}
 
 .popup-content div{
   
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 
-.popup-content .form-group{
-  margin-bottom: 0;
-}
+
 .popup-close-icon{
   position: absolute;
     top: 0;
-    right: 0;
+    left: 68%;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
     color: var(--bs-red);
