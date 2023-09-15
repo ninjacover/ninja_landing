@@ -1,18 +1,19 @@
 import React from "react";
+import Link from "next/link";
 
 // This tab is for Individual Motor 
 
 const Tab1 = () => {
   
-  // const handleStartSaving = () => {
-  //   return (
-  //     <Link href="/insurance_modules/individual_motor/quotation_results">
-  //       <a className="default-btn">
-  //         Start Saving Today
-  //       </a>
-  //     </Link>
-  //   );
-  // };
+  const handleStartSaving = () => {
+    return (
+      <Link href="/insurance_modules/individual_motor/quotation_results">
+        <a className="default-btn">
+          Start Saving Today
+        </a>
+      </Link>
+    );
+  };
 
   return (
     <div id="tab1" className="tabs_item">
@@ -59,7 +60,7 @@ const Tab1 = () => {
         </div>
 
        <div className="form-group col-md-12">
-          {/* {handleStartSaving()} */}
+          {handleStartSaving()}
         </div>
 
         <ul className="ratings col-md-12">

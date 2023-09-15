@@ -4,6 +4,7 @@ import {
   faPlusCircle,
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 // This tab is for Group Motor 
 
@@ -38,15 +39,15 @@ const Tab2 = () => {
     },
   ]);
 
-  // const handleStartSaving = () => {
-  //   return (
-  //     <Link href="/insurance_modules/group_motor/quotation_results">
-  //       <a className="default-btn">
-  //         Start Saving Today
-  //       </a>
-  //     </Link>
-  //   );
-  // };
+  const handleStartSaving = () => {
+    return (
+      <Link href="/insurance_modules/group_motor/quotation_results">
+        <a className="default-btn">
+          Start Saving Today
+        </a>
+      </Link>
+    );
+  };
 
   const addField = () => {
     const newId = fields.length + 1;
@@ -149,7 +150,7 @@ const Tab2 = () => {
         )}
 
 <div className="form-group col-md-12">
-          {/* {handleStartSaving()} */}
+          {handleStartSaving()}
         </div>
 
         <ul className="ratings col-md-12">

@@ -7612,11 +7612,6 @@ font-size: 12px;
 .extra-details{
   text-align: left;
 }
-
-
-
-
-
 /* ===============invoice Area======================== */
 .contact-title{
   text-align: center;
@@ -7680,13 +7675,8 @@ table table tr td{
   margin: 3rem 0rem;
   text-align: center;
   margin: 3rem 17rem;
-color: var(--bs-gray-800);
-  
-
+  color: var(--bs-gray-800);
 }
-
-
-
 
 
 /* ================invoice-table=============================== */
@@ -7786,6 +7776,37 @@ color: var(--bs-gray-800);
   text-align: left;
   color: white;
   margin-left: 20px;
+}
+/* ===============Motor spec Bar======================== */
+
+
+.motor-specs-bar { 
+  border-radius: 5px;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: black;
+
+
+}
+
+.motor-insurance-policy {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.motor-quotes-info {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.motor-user-details{
+  text-decoration: underline;
 }
 
 

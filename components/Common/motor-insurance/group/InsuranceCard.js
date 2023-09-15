@@ -3,18 +3,17 @@ import SwiperCore, { Navigation } from 'swiper/core';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
 import {
-  FaUserMd,
-  FaHospital,
+  FaFileInvoice, // Policy Deductible
+  FaMoneyBill, // Agency Co-Payment
+  FaBalanceScale,
   FaCheckCircle,
-  FaTimesCircle,
-  FaCapsules,
-  FaTooth,
-  FaEye,
-  FaBabyCarriage,
-  FaPills,
-} from 'react-icons/fa';
+  FaTimesCircle, // Liability
+  FaCarCrash, // Personal Accident
+  FaFire, // Strikes, Riots, Natural Hazards
+}from 'react-icons/fa';
+
+
 
 SwiperCore.use([Navigation]);
 
@@ -58,11 +57,11 @@ const InsuranceCard = ({ data }) => {
     
     <div className="card-sectors">
     
-    {/* Sector for In Patient */}
+
     <div className="sector">
-      <div className="sector-header">In Patient</div>
+      <div className="sector-header">Policy Deductible</div>
       <div className="sector-icons">
-        <FaHospital className='card-icon'/>
+        <FaFileInvoice className='card-icon'/>
         {data.inPatient ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
@@ -70,12 +69,11 @@ const InsuranceCard = ({ data }) => {
       </div>
     </div>
 
-    {/* Sector for Out Patient */}
     
     <div className="sector">
-      <div className="sector-header">Out Patient</div>
+      <div className="sector-header">Agency Co-Payment</div>
       <div className="sector-icons">
-        <FaUserMd className='card-icon' />
+        <FaMoneyBill className='card-icon' />
         {data.outPatient ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross'/>}
       </div>
       <div className="sector-footer">
@@ -83,12 +81,12 @@ const InsuranceCard = ({ data }) => {
       </div>
     </div>
 
-    {/* Sector for Diseases */}
+
    
     <div className="sector">
-      <div className="sector-header">Diseases</div>
+      <div className="sector-header">Liability</div>
       <div className="sector-icons">
-        <FaPills className='card-icon' />
+        <FaBalanceScale className='card-icon' />
         {data.chronicPreExistingDisease ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
@@ -96,12 +94,12 @@ const InsuranceCard = ({ data }) => {
       </div>
     </div>
 
-    {/* Sector for Medication */}
+
 
     <div className="sector">
-      <div className="sector-header">Medication</div>
+      <div className="sector-header">Personal Accident</div>
       <div className="sector-icons">
-        <FaCapsules className='card-icon' />
+        <FaCarCrash className='card-icon' />
         {data.medication ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
@@ -109,42 +107,15 @@ const InsuranceCard = ({ data }) => {
       </div>
     </div>
 
-    {/* Sector for dental */}
 
     <div className="sector">
-      <div className="sector-header">Dental</div>
+      <div className="sector-header">Strikes, Riots, Natural Hazards</div>
       <div className="sector-icons">
-        <FaTooth className='card-icon' />
+        <FaFire className='card-icon' />
         {data.dental ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
       </div>
       <div className="sector-footer">
         {data.dental ? 'Covered' : 'Not Covered'}
-      </div>
-    </div>
-
-    {/* Sector for Optical */}
-
-    <div className="sector">
-      <div className="sector-header">Optical</div>
-      <div className="sector-icons">
-        <FaEye className='card-icon' />
-        {data.optical ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross'/>}
-      </div>
-      <div className="sector-footer">
-        {data.optical ? 'Covered' : 'Not Covered'}
-      </div>
-    </div>
-
-    {/* Sector for Maternity */}
-
-    <div className="sector">
-      <div className="sector-header">Maternity</div>
-      <div className="sector-icons">
-        <FaBabyCarriage className='card-icon'/>
-        {data.maternity ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross' />}
-      </div>
-      <div className="sector-footer">
-        {data.maternity ? 'Covered' : 'Not Covered'}
       </div>
     </div>
   </div>

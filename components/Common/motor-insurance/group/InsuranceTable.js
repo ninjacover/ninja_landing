@@ -74,7 +74,7 @@ const InsuranceTable = () => {
     },
     {
       name: 'Policy Deductible',
-      selector: 'plicyDeductible',
+      selector: 'policyDeductible',
       sortable: true,
       cell: row => (
         <div >
