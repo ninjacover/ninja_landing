@@ -3,6 +3,7 @@ import InsuranceCard from './InsuranceCard';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+// import gig_policy from './gig_policy.pdf'
 import {
   FaFileInvoice, // Policy Deductible
   FaMoneyBill, // Agency Co-Payment
@@ -68,6 +69,8 @@ const InsuranceTable = () => {
       cell: row => (
         <div className="group-premium-cell">
           <div className="big-text">{row.groupPremium}</div>
+          <div>3,420/month</div>
+          <div className='small-text'>Rate: 1.80%</div>
         </div>
       ),
 
@@ -159,8 +162,14 @@ const InsuranceTable = () => {
       name: 'Actions',
       cell: row => (
         <div className="action-buttons-container" >
+          <div>
           <button className="select-button" onClick={openPopup.bind(this)}>Select</button>
+          </div>
+          <div>
+          <button className="select-button" onClick={openPopup.bind(this)}>Policy</button>
+          </div>
         </div>
+        
       ),
       ignoreRowClick: true,
       allowOverflow: true,
@@ -398,8 +407,8 @@ const InsuranceTable = () => {
         data={data}
         noHeader
         highlightOnHover
-        expandableRows // Enable row expansion
-        expandableRowsComponent={renderDetails} // Use renderDetails function as the component
+        // expandableRows // Enable row expansion
+        // expandableRowsComponent={renderDetails} // Use renderDetails function as the component
         expandOnRowClicked={false} // Disable row expansion on row click
        // Expand the selected row
       />

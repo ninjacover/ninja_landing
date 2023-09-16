@@ -58,8 +58,8 @@ const InsuranceCard = ({ data }) => {
     <div className="card-sectors">
     
 
-    <div className="sector">
-      <div className="sector-header">Policy Deductible</div>
+    <div className="sector-motor">
+      <div className="sector-header-motor">Policy Deductible</div>
       <div className="sector-icons">
         <FaFileInvoice className='card-icon'/>
         {data.inPatient ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
@@ -70,8 +70,8 @@ const InsuranceCard = ({ data }) => {
     </div>
 
     
-    <div className="sector">
-      <div className="sector-header">Agency Co-Payment</div>
+    <div className="sector-motor">
+      <div className="sector-header-motor">Agency Co-Payment</div>
       <div className="sector-icons">
         <FaMoneyBill className='card-icon' />
         {data.outPatient ? <FaCheckCircle className='card-check' /> : <FaTimesCircle className='card-cross'/>}
@@ -83,8 +83,8 @@ const InsuranceCard = ({ data }) => {
 
 
    
-    <div className="sector">
-      <div className="sector-header">Liability</div>
+    <div className="sector-motor">
+      <div className="sector-header-motor">Liability</div>
       <div className="sector-icons">
         <FaBalanceScale className='card-icon' />
         {data.chronicPreExistingDisease ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
@@ -96,8 +96,8 @@ const InsuranceCard = ({ data }) => {
 
 
 
-    <div className="sector">
-      <div className="sector-header">Personal Accident</div>
+    <div className="sector-motor">
+      <div className="sector-header-motor">Personal Accident</div>
       <div className="sector-icons">
         <FaCarCrash className='card-icon' />
         {data.medication ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}
@@ -108,8 +108,8 @@ const InsuranceCard = ({ data }) => {
     </div>
 
 
-    <div className="sector">
-      <div className="sector-header">Strikes, Riots, Natural Hazards</div>
+    <div className="sector-motor">
+      <div className="sector-header-motor">Strikes, Riots, Natural Hazards</div>
       <div className="sector-icons">
         <FaFire className='card-icon' />
         {data.dental ? <FaCheckCircle className='card-check'/> : <FaTimesCircle className='card-cross' />}

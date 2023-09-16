@@ -7253,7 +7253,8 @@ Nice select Area Style*/
 h2,h3{color:black;}
 /* End New CSS For Home 5, 6 */
 /*# sourceMappingURL=style.css.map */
-/* insurance table css: */
+/* ===============insurance table======================== */
+
 .table-container {
   margin-left: 110px; /* Adjust as needed for the left margin */
   margin-right: 110px; /* Adjust as needed for the right margin */
@@ -7266,7 +7267,6 @@ h2,h3{color:black;}
   margin-bottom: 10px; /* Adjust the margin value as needed */
 }
 
-/* Header icons */
 .header-icon {
   font-size: 24px; 
 }
@@ -7325,13 +7325,23 @@ h2,h3{color:black;}
   
 }
 .select-button {
- margin-left: 15px;
- font-size: 16px; /* Adjust the font size to increase the button size */
- padding: 10px 20px; /* Adjust the padding to increase the button size */
- white-space: nowrap; 
- background-color: #F0702F;
- /* Add any additional styles you need for the "Select" button */
+  margin-left: 15px;
+  font-size: 16px;
+  padding: 5px 20px;
+  white-space: nowrap;
+  background-color: #F0702F;
+  margin-top: 5px;
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Add border-radius for smooth edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  color: white; /* Text color */
 }
+
+.select-button:hover {
+  background-color: #E25E1C; /* Change the background color on hover */
+}
+
 /* Add these styles to your CSS */
 .group-premium-cell {
 
@@ -7360,6 +7370,9 @@ h2,h3{color:black;}
   font-size: 10px; 
   white-space: nowrap;
   vertical-align: middle; 
+  text-align: center;
+  padding: 5px;
+  
 }
 
 .sPapY{
@@ -7485,13 +7498,7 @@ h2,h3{color:black;}
   color: red;
 }
 
-/* .mobile-spec {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-} */
+
 .insurance-specs-mobile {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -7588,12 +7595,20 @@ h2,h3{color:black;}
   flex: 0 0 auto; /* Prevent sectors from growing or shrinking */
   padding:25px;
 }
+.sector-motor{
+  flex: 0 0 auto; /* Prevent sectors from growing or shrinking */
+  padding:25px;
+}
 
 .card-price{
   font-weight: bold;
 }
 
 .sector-header{
+  font-weight: bold;
+}
+.sector-header-motor {
+  white-space: pre-line;
   font-weight: bold;
 }
 
@@ -7612,6 +7627,24 @@ font-size: 12px;
 .extra-details{
   text-align: left;
 }
+/* Add this to your CSS */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px); /* Adjust this value to control the scroll distance */
+  }
+}
+
+.sector {
+  padding: 25px;
+  animation: scroll 3s; /* Adjust the animation duration and style as needed */
+}
+
+
+
+
 /* ===============invoice Area======================== */
 .contact-title{
   text-align: center;

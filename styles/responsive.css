@@ -1066,18 +1066,26 @@ margin-left: 0px;
     font-size: 14px !important;
     padding: 8px 16px !important; /* Override the original padding */
   }
-
-
-
-
-
-
-
   .popup-close-icon{
     top: -5px;
     left: 85%;
   }   
+  .motor-specs-bar {
+    margin-top: 80px; /* Adjust the top margin for smaller screens */
+  }
 
+  .motor-insurance-policy {
+    font-size: 20px; /* Decrease font size for smaller screens */
+    text-align: center;
+  }
+
+  .motor-quotes-info {
+    margin-top: 20px;
+    font-size: 16px; /* Decrease font size for smaller screens */
+    text-align: center;
+
+  
+  }
 
 }
 
