@@ -120,7 +120,7 @@ const InsuranceInvoicTable = () => {
                   <tr>
                     <td className="td-left"><b>NET PREMIUM:</b></td>
                     <td className="td-right">
-                      <p><i className="fw-bold fs-2" >149,900 EGP</i></p>
+                      <p><i className="fw-bold fs-4" >149,900 EGP</i></p>
                     </td>
                   </tr>
                 </tbody>

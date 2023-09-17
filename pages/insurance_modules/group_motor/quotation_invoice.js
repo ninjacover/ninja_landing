@@ -3,7 +3,7 @@ import PageBanner from '../../../components/Common/PageBanner';
 import AchievementContent from '../../../components/About/AchievementContent';
 import Footer from '../../../components/_App/Footer';
 import Navbar from '../../../components/_App/Navbar';
-import InvoicTable from '../../../components/Common/medical-insurance/individual/InsuranceInvoicTable'
+import InvoicTable from '../../../components/Common/motor-insurance/group/InsuranceInvoicTable'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 const quotation_invoice = () => {
@@ -11,8 +11,8 @@ const quotation_invoice = () => {
         <div>
             <Navbar /> {/* Render the Navbar component */}
             <PageBanner
-                pageTitle="Insurance Details"
-                homePageUrl="/"
+                pageTitle=" Group motor"
+                homePageUrl="/insurance_modules/group_motor/quotation_invoice/"
                 homePageText="Home"
                 activePageText="Insurance Details"
             />

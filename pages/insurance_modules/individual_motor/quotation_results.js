@@ -1,5 +1,5 @@
 import React from 'react';
-import InsuranceTable from '../../../components/Common/motor-insurance/individual/InsuranceTable.js';
+import InsuranceTable from '../../../components/Common/motor-insurance/individual/InsuranceTable';
 import Navbar from '../../../components/_App/Navbar.js';
 import SpecsBar from '../../../components/Common/motor-insurance/group/SpecsBar.js';
 
